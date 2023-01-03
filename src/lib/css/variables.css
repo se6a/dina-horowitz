@@ -1,0 +1,90 @@
+@import "./breakpoints.css";
+
+/*  PAGE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --page-width: 100%;
+  --page-padding-x: 100px;
+  --page-padding-y: 35px;
+  --page-padding: var(--page-padding-y) var(--page-padding-x);
+
+  --header-height: 80px;
+
+  --main-marginTop: 0px;
+  --main-minHeight: calc(100vh - var(--footer-height) - var(--header-height));
+
+  --footer-height: auto;
+}
+
+/*  COLUMNS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --columns: 8;
+  --subColumns-m: 4;
+  --subColumns-s: 3;
+  --columns-gap: 2rem;
+  --columns-layout-std: 3 / span 4;
+}
+
+/*  SPACE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --space: var(--font-size-m);
+  --space-quarter: calc(var(--space) * 0.25);
+  --space-third: calc(var(--space) * 0.33);
+  --space-half: calc(var(--space) * 0.5);
+  --space-1: calc(var(--space) * 1);
+  --space-2: calc(var(--space) * 2);
+  --space-3: calc(var(--space) * 3);
+  --space-4: calc(var(--space) * 4);
+  --space-5: calc(var(--space) * 5);
+  --space-6: calc(var(--space) * 6);
+  --space-7: calc(var(--space) * 7);
+  --space-8: calc(var(--space) * 8);
+}
+
+/* Z-INDEX
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --zPos-front: 100;
+  --zPos-midFront: 75;
+  --zPos-center: 50;
+  --zPos-midBack: 25;
+  --zPos-back: 0;
+  --zPos-negative: -1;
+}
+
+/*  COLORS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --hsl-black: 0, 0%, 22%;
+  --hsl-blue: 189, 59%, 65%;
+  --hsl-green: 67, 57%, 47%;
+  --hsl-red: 8, 100%, 77%;
+  --hsl-yellow: 51, 100%, 68%;
+
+  --black: hsl(var(--hsl-black));
+  --blue: hsl(var(--hsl-blue));
+  --red: hsl(var(--hsl-red));
+  --green: hsl(var(--hsl-green));
+  --yellow: hsl(var(--hsl-yellow));
+
+  --blue-light: hsla(var(--hsl-blue), 0.1);
+  --red-light: hsla(var(--hsl-red), 0.1);
+  --green-light: hsla(var(--hsl-green), 0.1);
+  --yellow-light: hsla(var(--hsl-yellow), 0.1);
+}
+
+/*  FONT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --font-size-s: 14px;
+  --font-size-m: 26px;
+  --font-size-l: 50px;
+  --font-size-xl: 70px;
+  --font-size-xxl: 100px;
+
+  --duration-slow: 600ms;
+  --duration-middle: 300ms;
+  --duration-fast: 100ms;
+}

@@ -1,0 +1,7 @@
+@custom-media --vw-s (max-width: 400px);
+@custom-media --vw-m (max-width: 900px);
+@custom-media --vw-l (max-width: 1440px);
+@custom-media --vw-xl (min-width: 1441px);
+/*  */
+@custom-media --vw-above-s (min-width: 401px);
+@custom-media --vw-above-m (min-width: 901px);

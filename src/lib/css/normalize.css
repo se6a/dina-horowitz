@@ -1,0 +1,71 @@
+html {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-height: inherit;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body > * {
+  isolation: isolate;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+button,
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+}
+
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+iframe,
+img,
+svg {
+  display: block;
+}
+
+label {
+  cursor: pointer;
+}

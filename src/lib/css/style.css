@@ -1,0 +1,94 @@
+@import "./breakpoints.css";
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  font-size: var(--fontSize-l);
+}
+
+h1 {
+  font-size: var(--fontSize-l);
+}
+
+p {
+  font-size: var(--fontSize-m);
+}
+
+/* Links
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Space
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.space-var,
+.space-1,
+.space-2,
+.space-3,
+.space-4,
+.space-5,
+.space-6,
+.space-7,
+.space-8 {
+  display: block;
+}
+
+.space-var {
+  height: var(--space);
+  width: var(--space);
+}
+
+.space-quarter {
+  height: var(--space-quarter);
+  width: var(--space-quarter);
+}
+
+.space-third {
+  height: var(--space-third);
+  width: var(--space-third);
+}
+
+.space-half {
+  height: var(--space-half);
+  width: var(--space-half);
+}
+
+.space-1 {
+  height: var(--space-1);
+  width: var(--space-1);
+}
+
+.space-2 {
+  height: var(--space-2);
+  width: var(--space-2);
+}
+
+.space-3 {
+  height: var(--space-3);
+  width: var(--space-3);
+}
+
+.space-4 {
+  height: var(--space-4);
+  width: var(--space-4);
+}
+
+.space-5 {
+  height: var(--space-5);
+  width: var(--space-5);
+}
+
+.space-6 {
+  height: var(--space-6);
+  width: var(--space-6);
+}
+
+.space-7 {
+  height: var(--space-7);
+  width: var(--space-7);
+}
+
+.space-8 {
+  height: var(--space-8);
+  width: var(--space-8);
+}
