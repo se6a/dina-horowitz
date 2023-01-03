@@ -27,25 +27,12 @@
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    border: 10px solid green;
+    padding: 0 var(--page-padding-x);
+    max-width: 1000px;
+    margin: 0 auto;
   }
 
   .page > :global(*) {
     flex-shrink: 0;
-  }
-
-  :global(.layout) {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    padding: 0 var(--page-padding-x);
-  }
-
-  :global(.layout > *) {
-    grid-column: 2;
-    max-width: 1000px;
   }
 </style>

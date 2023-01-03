@@ -10,12 +10,11 @@
   //   : () => null;
   function goUp() {
     console.log("up");
-    window.scrollTo(0, 0);
-    // window.scrollTo({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: "smooth"
-    // });
+    document?.body?.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
   }
 </script>
 

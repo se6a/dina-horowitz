@@ -1,4 +1,4 @@
-<div class="SECTION-TITLE layout">
+<div class="SECTION-TITLE layout useFullwidthBg">
   <h1>Für Familien</h1>
   <p>Beratung und Case Management</p>
 
@@ -13,8 +13,7 @@
 
 <style>
   .SECTION-TITLE {
-    background-color: var(--green);
-    padding: 3rem;
+    --background: var(--green);
   }
 
   .SECTION-TITLE h1,
@@ -36,5 +35,22 @@
 
   .pageNavigation > * {
     flex-shrink: 0;
+  }
+
+  .useFullwidthBg {
+    position: relative;
+  }
+
+  .useFullwidthBg::after {
+    content: "";
+    display: block;
+    background-color: var(--background, silver);
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    margin-left: 50%;
+    left: -50vw;
+    z-index: -1;
   }
 </style>
