@@ -44,13 +44,13 @@
   .useFullwidthBg::after {
     content: "";
     display: block;
-    background-color: var(--background, silver);
+    position: absolute;
     width: 100vw;
     top: 0;
     bottom: 0;
-    position: absolute;
     margin-left: 50%;
     left: -50vw;
     z-index: -1;
+    background-color: var(--background, silver);
   }
 </style>

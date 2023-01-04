@@ -13,6 +13,6 @@
 
   .HEADER {
     height: var(--header-height);
-    padding: 0 var(--page-padding-x);
+    /* padding: 0 var(--page-padding-x); */
   }
 </style>

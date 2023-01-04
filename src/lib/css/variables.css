@@ -4,6 +4,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
   --page-width: 100%;
+  --page-maxWidth: 1440px;
   --page-padding-x: 100px;
   --page-padding-y: 35px;
   --page-padding: var(--page-padding-y) var(--page-padding-x);
