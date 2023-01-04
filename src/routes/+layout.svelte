@@ -12,9 +12,14 @@
   import Main from "$lib/components/layout/Main.svelte";
 
   export let data = {};
+  const {isIE = false} = data;
 </script>
 
-<div class="page">
+<svelte:head>
+  <link rel="stylesheet" href={isIE ? "/css/ie.css" : ""} />
+</svelte:head>
+
+<div class="page" class:isIE>
   <Header />
   <Main>
     <slot />
@@ -56,5 +61,11 @@
     padding: 2rem 0.5rem;
     margin: auto;
     transform: rotate(180deg);
+  }
+
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+    .page {
+      border: 10px solid blue;
+    }
   }
 </style>
