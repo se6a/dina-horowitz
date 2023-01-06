@@ -1,11 +1,9 @@
 <script>
   import Navigation from "$lib/components/layout/Navigation.svelte";
-
-  export let navigation = [];
 </script>
 
-<header class="HEADER" class:useBorder={true}>
-  <Navigation {navigation} />
+<header class="HEADER" class:useBorder={false}>
+  <Navigation />
 </header>
 
 <style global lang="postcss">

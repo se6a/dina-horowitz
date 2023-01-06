@@ -1,36 +1,44 @@
-<div class="SECTION-TITLE layout useFullwidthBg">
-  <h1>Für Familien</h1>
-  <p>Beratung und Case Management</p>
+<script>
+  import ScrollDragX from "../elements/ScrollDragX-2.svelte";
+  export let color = "blue";
+  export let pageNav = [];
+</script>
 
-  <div class="space-4" />
+<div class="SECTION-TITLE layout useFullwidthBg" style:--background="var(--{color})">
+  <slot />
 
-  <nav class="pageNavigation anchors">
-    <a class="anchor" href="#xyz">Problemstellung</a>
-    <a class="anchor" href="#xyz">Herausforderung</a>
-    <a class="anchor" href="#xyz">Konditionen</a>
-  </nav>
+  <div class="space-2" />
+
+  <ScrollDragX>
+    <nav class="pageNavigation anchors">
+      {#each pageNav as { title, href }}
+        <a class="anchor" {href}>{title}</a>
+      {/each}
+    </nav>
+  </ScrollDragX>
 </div>
 
 <style>
   .SECTION-TITLE {
-    --background: var(--green);
+    padding: var(--space-2) 0 var(--space-1);
   }
 
-  .SECTION-TITLE h1,
-  .SECTION-TITLE p {
+  .SECTION-TITLE :global(h1),
+  .SECTION-TITLE :global(p) {
     font-weight: 400;
-    font-size: 100px;
+    font-size: var(--font-size-xl);
+    max-width: 20ch;
   }
 
-  h1 {
+  .SECTION-TITLE :global(h1) {
     color: white;
   }
 
   .pageNavigation {
-    font-size: 26px;
+    font-size: var(--font-size-m);
     display: flex;
     gap: var(--space-2);
-    overflow-x: auto;
+    width: fit-content;
   }
 
   .pageNavigation > * {
@@ -52,5 +60,13 @@
     left: -50vw;
     z-index: -1;
     background-color: var(--background, silver);
+  }
+
+  .anchor {
+    transition: color var(--duration-fast);
+  }
+
+  .anchor:hover {
+    color: white;
   }
 </style>

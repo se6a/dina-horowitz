@@ -1,16 +1,8 @@
 <script>
   import IconGoUp from "$lib/components/icons/GoUp.svelte";
 
-  // const goUp = window
-  //   ? window.scrollUp.bind(null, {
-  //       top: 0,
-  //       left: 0,
-  //       behavior: "smooth"
-  //     })
-  //   : () => null;
   function goUp() {
-    console.log("up");
-    document?.body?.scrollTo({
+    window.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth"

@@ -10,6 +10,7 @@
   import Footer from "$lib/components/layout/Footer.svelte";
   import Header from "$lib/components/layout/Header.svelte";
   import Main from "$lib/components/layout/Main.svelte";
+  import Button from "$lib/components/elements/Button.svelte";
 
   export let data = {};
   const {isIE = false} = data;
@@ -24,14 +25,19 @@
   <Main>
     <slot />
   </Main>
-  <div class="fixed">
-    <button> Kontakt </button>
+  <div class="fixedButton">
+    <Button href="/kontakt" isVertical={true}>Kontakt</Button>
   </div>
   <Footer />
 </div>
 
 <style>
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
   .page {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -44,23 +50,13 @@
     flex-shrink: 0;
   }
 
-  .fixed {
+  .fixedButton {
     position: fixed;
-    top: 0;
     right: 0;
     bottom: 0;
     display: flex;
     align-items: center;
-    writing-mode: vertical-rl;
-  }
-
-  button {
-    background-color: hsla(0, 0%, 100%, 0.5);
-    position: relative;
-    display: block;
-    padding: 2rem 0.5rem;
-    margin: auto;
-    transform: rotate(180deg);
+    --button-background: hsla(0, 0%, 100%, 0.8);
   }
 
   @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {

@@ -1,5 +1,5 @@
 <script>
-  import Icon from "../_Icon.svelte";
+  import Icon from "./_Icon.svelte";
   export let preserveRatio = true;
 </script>
 

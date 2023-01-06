@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<main class="MAIN" class:useBorder={true}>
+<main class="MAIN" class:useBorder={false}>
   <slot />
 </main>
 
@@ -11,7 +11,6 @@
   .MAIN {
     display: flex;
     flex-direction: column;
-    background-color: var(--green-light);
     flex: 1;
     margin-top: var(--main-marginTop);
   }

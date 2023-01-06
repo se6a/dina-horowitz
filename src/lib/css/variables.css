@@ -17,6 +17,20 @@
   --footer-height: auto;
 }
 
+@media (--vw-l) {
+  :root {
+    --page-padding-x: 40px;
+    --page-padding-y: 35px;
+  }
+}
+
+@media (--vw-m) {
+  :root {
+    --page-padding-x: 20px;
+    --page-padding-y: 35px;
+  }
+}
+
 /*  COLUMNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
@@ -79,12 +93,22 @@
 /*  FONT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-  --font-size-s: 14px;
-  --font-size-m: 26px;
-  --font-size-l: 50px;
-  --font-size-xl: 70px;
-  --font-size-xxl: 100px;
+  --font-size-s: 1.4rem;
+  --font-size-m: 2.6rem;
+  --font-size-l: 4rem;
+  --font-size-xl: 7rem;
+  --font-size-xxl: 10rem;
+}
 
+@media (--vw-m) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+/*  TIME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
   --duration-slow: 600ms;
   --duration-middle: 300ms;
   --duration-fast: 100ms;
