@@ -70,6 +70,7 @@
     user-select: none;
     pointer-events: none;
     position: absolute;
+    visibility: hidden;
   }
 
   .contentWrapper {
