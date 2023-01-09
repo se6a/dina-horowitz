@@ -1,46 +1,5 @@
 @import "./breakpoints.css";
 
-/*  PAGE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
-  --page-width: 100%;
-  --page-maxWidth: 1440px;
-  --page-padding-x: 100px;
-  --page-padding-y: 35px;
-  --page-padding: var(--page-padding-y) var(--page-padding-x);
-
-  --header-height: 80px;
-
-  --main-marginTop: 0px;
-  --main-minHeight: calc(100vh - var(--footer-height) - var(--header-height));
-
-  --footer-height: auto;
-}
-
-@media (--vw-l) {
-  :root {
-    --page-padding-x: 40px;
-    --page-padding-y: 35px;
-  }
-}
-
-@media (--vw-m) {
-  :root {
-    --page-padding-x: 20px;
-    --page-padding-y: 35px;
-  }
-}
-
-/*  COLUMNS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
-  --columns: 8;
-  --subColumns-m: 4;
-  --subColumns-s: 3;
-  --columns-gap: 2rem;
-  --columns-layout-std: 3 / span 4;
-}
-
 /*  SPACE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
@@ -52,10 +11,30 @@
   --space-2: calc(var(--space) * 2);
   --space-3: calc(var(--space) * 3);
   --space-4: calc(var(--space) * 4);
-  --space-5: calc(var(--space) * 5);
-  --space-6: calc(var(--space) * 6);
-  --space-7: calc(var(--space) * 7);
-  --space-8: calc(var(--space) * 8);
+
+  --space-xs: 4rem;
+  --space-s: 5rem;
+  --space-m: 7.5rem;
+  --space-l: 8rem;
+  --space-xl: 10rem;
+}
+
+@media (--vw-m) {
+  :root {
+    --space-xs: 3rem;
+    --space-s: 4rem;
+    --space-m: 5rem;
+  }
+}
+
+@media (--vw-s) {
+  :root {
+    --space-xs: 2rem;
+    --space-s: 3rem;
+    --space-m: 4rem;
+    --space-l: 5rem;
+    --space-xl: 8rem;
+  }
 }
 
 /* Z-INDEX
@@ -67,6 +46,124 @@
   --zPos-midBack: 25;
   --zPos-back: 0;
   --zPos-negative: -1;
+}
+
+/*  FONT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --font-size-xs: 1.4rem;
+  --font-size-s: 2rem;
+  --font-size-m: 2.6rem;
+  --font-size-l: 3rem;
+  --font-size-xl: 5rem;
+  --font-size-xxl: 10rem;
+}
+
+@media (--vw-m) {
+  :root {
+    --font-size-xxl: 7rem;
+  }
+}
+
+@media (--vw-s) {
+  :root {
+    --font-size-m: 2rem;
+    --font-size-l: 2rem;
+    --font-size-xl: 2.8rem;
+    --font-size-xxl: 3.8rem;
+  }
+}
+
+/*  PAGE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --page-width: 100%;
+  --page-maxWidth: 1440px;
+
+  --page-padding-x: 7.5rem;
+
+  --header-height: 8rem;
+
+  --main-minHeight: calc(100vh - var(--footer-height) - var(--header-height));
+
+  --footer-height: auto;
+}
+
+@media (--vw-m) {
+  :root {
+    --page-padding-x: 4rem;
+    --header-height: 6rem;
+  }
+}
+
+@media (--vw-s) {
+  :root {
+    --page-padding-x: 2rem;
+    --header-height: 5rem;
+  }
+}
+
+/*  LAYOUT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+:root {
+  --layoutSection-padding-t: 10rem;
+  --layoutSection-padding-b: 10rem;
+  --layoutSection-spacing-y: 10rem;
+
+  --layoutTitle-padding-t: 10rem;
+  --layoutTitle-padding-b: 4rem;
+}
+
+@media (--vw-m) {
+  :root {
+    --layoutSection-padding-t: 8rem;
+    --layoutSection-padding-b: 8rem;
+    --layoutSection-spacing-y: 8rem;
+  }
+}
+
+@media (--vw-s) {
+  :root {
+    --layoutSection-padding-b: 4rem;
+    --layoutSection-spacing-y: 4rem;
+    --layoutSection-spacing-x: 3rem;
+
+    --layoutTitle-padding-t: 4rem;
+    --layoutTitle-padding-b: 3rem;
+  }
+}
+
+/*  COLUMNS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+  --useColumns: 8;
+  --subColumns-m: 4;
+  --subColumns-s: 3;
+  --useColumns-gap-x: 3rem;
+  --useColumns-gap-y: 3rem;
+  --useColumns-layout-std: 3 / span 4;
+}
+
+/*  TYPO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+:root {
+  --title-inset: 10rem;
+  --layoutNav-font-size: 2.6rem;
+  --layoutNavSub-font-size: 4.2rem;
+}
+
+@media (--vw-m) {
+  :root {
+    --title-inset: 0rem;
+  }
+}
+
+@media (--vw-s) {
+  :root {
+    --layoutNav-font-size: 1.8rem;
+  }
 }
 
 /*  COLORS
@@ -88,28 +185,6 @@
   --red-light: hsla(var(--hsl-red), 0.1);
   --green-light: hsla(var(--hsl-green), 0.1);
   --yellow-light: hsla(var(--hsl-yellow), 0.1);
-}
-
-/*  FONT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
-  --font-size-s: 1.4rem;
-  --font-size-m: 2.6rem;
-  --font-size-l: 4rem;
-  --font-size-xl: 7rem;
-  --font-size-xxl: 10rem;
-}
-
-@media (--vw-m) {
-  :root {
-    font-size: 8px;
-  }
-}
-
-@media (--vw-s) {
-  :root {
-    font-size: 6px;
-  }
 }
 
 /*  TIME

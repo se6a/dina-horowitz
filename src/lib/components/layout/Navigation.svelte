@@ -3,7 +3,7 @@
   import IconClose from "$lib/components/icons/Close.svelte";
   import IconArrow from "$lib/components/icons/ArrowBig.svelte";
   import {createId} from "$lib/functions/utility";
-  import LabelArrow from "../fragments/LabelArrow.svelte";
+  import HoverArrow from "../elements/HoverArrow.svelte";
 
   const items = [
     {title: "Dina Horowitz", href: "/"},
@@ -43,9 +43,9 @@
         {#if "subItems" in item}
           {@const id = createId()}
           <label for={id}>
-            <LabelArrow>
+            <HoverArrow>
               {item.title}
-            </LabelArrow>
+            </HoverArrow>
           </label>
           <input class="toggle toggleSubNav" type="checkbox" bind:checked={isOpen} name="" {id} />
 
@@ -99,6 +99,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    font-size: var(--layoutNav-font-size);
   }
 
   /* SubNav
@@ -167,9 +168,9 @@
     flex: 1;
     height: auto;
     display: flex;
-    padding: var(--space-2);
+    padding: var(--space-l);
     background-color: var(--background);
-    font-size: var(--font-size-l);
+    font-size: var(--layoutNavSub-font-size);
     position: relative;
     width: 100%;
   }

@@ -1,3 +1,52 @@
+@import "$lib/css/breakpoints.css";
+
+/* Main Layout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Columns
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.useColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--useColumns-gap-y) var(--useColumns-gap-x);
+}
+
+@media (--vw-m) {
+  .useColumns {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+}
+
+.useColumns > .column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.useGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-auto-flow: row;
+}
+
+.useGrid > .cell {
+  padding: var(--space-m);
+}
+
+@media (--vw-m) {
+  .useGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Border
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 .useBorder {
   position: relative;
 }
@@ -12,4 +61,139 @@
   left: 0;
   border: 1px solid hsla(0, 0%, 50%, 0.2);
   pointer-events: none;
+}
+
+/* Fullwidth Background
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.useFullwidthBg {
+  position: relative;
+}
+
+.useFullwidthBg::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  margin-left: 50%;
+  left: -50vw;
+  z-index: -1;
+  background-color: var(--background, silver);
+}
+
+/* Typo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.useBasicText > * + * {
+  margin-top: var(--space-1);
+}
+
+.useBasicText > * + h3 {
+  margin-top: var(--space-2);
+}
+
+.useBigText {
+  font-size: var(--font-size-xl);
+}
+
+/* Space
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.space-var,
+.space-1,
+.space-2,
+.space-3,
+.space-4,
+.space-5,
+.space-6,
+.space-7,
+.space-8 {
+  display: block;
+}
+
+.space-var {
+  height: var(--space);
+  width: var(--space);
+}
+
+.space-quarter {
+  height: var(--space-quarter);
+  width: var(--space-quarter);
+}
+
+.space-third {
+  height: var(--space-third);
+  width: var(--space-third);
+}
+
+.space-half {
+  height: var(--space-half);
+  width: var(--space-half);
+}
+
+.space-1 {
+  height: var(--space-1);
+  width: var(--space-1);
+}
+
+.space-2 {
+  height: var(--space-2);
+  width: var(--space-2);
+}
+
+.space-3 {
+  height: var(--space-3);
+  width: var(--space-3);
+}
+
+.space-4 {
+  height: var(--space-4);
+  width: var(--space-4);
+}
+
+.space-5 {
+  height: var(--space-5);
+  width: var(--space-5);
+}
+
+.space-6 {
+  height: var(--space-6);
+  width: var(--space-6);
+}
+
+.space-7 {
+  height: var(--space-7);
+  width: var(--space-7);
+}
+
+.space-8 {
+  height: var(--space-8);
+  width: var(--space-8);
+}
+
+.space-xl {
+  height: var(--space-xl);
+  width: var(--space-xl);
+}
+
+.space-l {
+  height: var(--space-l);
+  width: var(--space-l);
+}
+
+.space-m {
+  height: var(--space-m);
+  width: var(--space-m);
+}
+
+.space-s {
+  height: var(--space-s);
+  width: var(--space-s);
+}
+
+.space-s {
+  height: var(--space-xs);
+  width: var(--space-xs);
 }

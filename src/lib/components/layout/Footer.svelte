@@ -2,7 +2,7 @@
   import IconGoUp from "$lib/components/icons/GoUp.svelte";
 
   function goUp() {
-    window.scrollTo({
+    document.body.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth"

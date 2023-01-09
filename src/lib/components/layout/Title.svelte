@@ -4,7 +4,7 @@
   export let pageNav = [];
 </script>
 
-<div class="SECTION-TITLE layout useFullwidthBg" style:--background="var(--{color})">
+<div class="LAYOUT-TITLE layout useFullwidthBg" style:--background="var(--{color})">
   <slot />
 
   <div class="space-2" />
@@ -19,25 +19,20 @@
 </div>
 
 <style>
-  .SECTION-TITLE {
-    padding: var(--space-2) 0 var(--space-1);
-  }
-
-  .SECTION-TITLE :global(h1),
-  .SECTION-TITLE :global(p) {
-    font-weight: 400;
-    font-size: var(--font-size-xl);
-    max-width: 20ch;
-  }
-
-  .SECTION-TITLE :global(h1) {
-    color: white;
+  .LAYOUT-TITLE {
+    padding: var(--layoutTitle-padding-t) var(--title-inset) var(--layoutTitle-padding-b)
+      var(--title-inset);
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .pageNavigation {
     font-size: var(--font-size-m);
     display: flex;
     gap: var(--space-2);
+    margin-top: auto;
     width: fit-content;
   }
 

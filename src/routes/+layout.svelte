@@ -32,7 +32,7 @@
 </div>
 
 <style>
-  :global(html) {
+  :global(body) {
     scroll-behavior: smooth;
   }
 

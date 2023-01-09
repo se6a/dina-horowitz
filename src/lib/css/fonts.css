@@ -12,15 +12,14 @@
     url("/fonts/MaisonNeue-Demi.woff") format("woff");
 }
 
-:root {
-  font-family: "MaisonNeue", sans-serif;
+@font-face {
+  font-family: "MaisonNeue-TEST";
   font-weight: 500;
-  font-size: 10px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--black);
+  src: url("/fonts/MaisonNeue-Medium.otf") format("opentype");
 }
 
-body {
-  font-size: var(--font-size-m);
+@font-face {
+  font-family: "MaisonNeue-TEST";
+  font-weight: 600;
+  src: url("/fonts/MaisonNeue-Demi.otf") format("opentype");
 }

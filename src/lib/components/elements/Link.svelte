@@ -1,14 +1,14 @@
 <script>
-  import LabelArrow from "../fragments/LabelArrow.svelte";
+  import HoverArrow from "../elements/HoverArrow.svelte";
   export let data = {};
   const {title = "", href = ""} = data;
   const target = href.startsWith("/") || href.startsWith("#") ? "_self" : "_blank";
 </script>
 
 <a class="LINK" {href} {target}>
-  <LabelArrow>
+  <HoverArrow>
     {title}
-  </LabelArrow>
+  </HoverArrow>
 </a>
 
 <style>

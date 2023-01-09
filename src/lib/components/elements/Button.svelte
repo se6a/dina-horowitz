@@ -1,5 +1,5 @@
 <script>
-  import LabelArrow from "../fragments/LabelArrow.svelte";
+  import HoverArrow from "../elements/HoverArrow.svelte";
   export let isVertical = false;
   export let href = "";
   export let onClick = () => null;
@@ -8,11 +8,11 @@
 {#if href}
   {@const target = href.startsWith("/") ? "_self" : "_blank"}
   <a class="BUTTON" class:isVertical {href} {target}>
-    <LabelArrow {isVertical}><slot /></LabelArrow>
+    <HoverArrow {isVertical}><slot /></HoverArrow>
   </a>
 {:else}
   <button class="BUTTON" class:isVertical on:click={onClick}>
-    <LabelArrow {isVertical}><slot /></LabelArrow>
+    <HoverArrow {isVertical}><slot /></HoverArrow>
   </button>
 {/if}
 

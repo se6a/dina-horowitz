@@ -1,9 +1,7 @@
 <script>
   import Title from "$lib/components/layout/Title.svelte";
-  import MainSection from "$lib/components/layout/MainSection.svelte";
-  import Columns from "$lib/components/fragments/Columns.svelte";
+  import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
-  import Text from "$lib/components/fragments/Text.svelte";
   import List from "$lib/components/fragments/List.svelte";
 
   const pageNav = [
@@ -14,38 +12,40 @@
 </script>
 
 <Title {pageNav} color="yellow">
-  <h1>Dina Horowitz</h1>
-  <p>Familienberaterin, Supervisorin und Coach</p>
+  <h1 class="titleGroup">
+    <span>Dina Horowitz</span>
+    <span>Familienberaterin, Supervisorin und Coach</span>
+  </h1>
 </Title>
 
 <MainSection id="persoenlich" color="yellow">
   <svelte:fragment slot="title">Persönlich</svelte:fragment>
-  <Columns>
+  <div class="useColumns">
     <!--  -->
     <Image />
-    <Text>
+    <div class="useBasicText">
       <p style="font-size: var(--font-size-l)">
         Entwicklung- und Persönlichkeits&shy;psychologin, Fachpsychologin für Kinder- &
         Jugend-psychologie FSP
       </p>
       <p style="font-size: var(--font-size-l)">*1984</p>
       <p style="font-size: var(--font-size-l)">wohnhaft in Basel</p>
-    </Text>
-  </Columns>
+    </div>
+  </div>
 </MainSection>
 
 <MainSection id="fokus" color="yellow">
   <svelte:fragment slot="title">Fokus</svelte:fragment>
 
-  <Columns>
-    <Text>
+  <div class="useColumns">
+    <div class="useBasicText">
       <p style="font-size: var(--font-size-l)">
         Wertschätzend, strukturiert, neugierig, herausfordernd, transparent, das Grosse und Ganze im
         Blick, vernetzt und vernetzend
       </p>
-    </Text>
+    </div>
 
-    <Text>
+    <div class="useBasicText">
       <p>
         Neugierde führt mich durch mein privates wie auch berufliches Leben. Ich bin fasziniert von
         der menschlichen Vielfalt, Kreativität und Energie. Die unbedingte Wertschätzung einer
@@ -66,14 +66,14 @@
         <li>bin ich achtsam, sorgfältig, authentisch und direkt</li>
         <li>stehe ich für meine Werte ein und kommuniziere diese auch</li>
       </ul>
-    </Text>
-  </Columns>
+    </div>
+  </div>
 </MainSection>
 
 <MainSection id="werdegang" color="yellow">
   <svelte:fragment slot="title">Werdegang</svelte:fragment>
-  <Columns>
-    <Text>
+  <div class="useColumns">
+    <div class="useBasicText">
       <h4>Ausbildung</h4>
 
       <List>
@@ -84,9 +84,9 @@
         <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</li>
         <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</li>
       </List>
-    </Text>
+    </div>
 
-    <Text>
+    <div class="useBasicText">
       <h4>Beruflicher Werdegang</h4>
 
       <List>
@@ -97,9 +97,9 @@
         <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</li>
         <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</li>
       </List>
-    </Text>
+    </div>
 
-    <Text>
+    <div class="useBasicText">
       <h4>Berufsverbände</h4>
 
       <List>
@@ -110,8 +110,8 @@
         <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</li>
         <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam</li>
       </List>
-    </Text>
-  </Columns>
+    </div>
+  </div>
 </MainSection>
 
 <style>

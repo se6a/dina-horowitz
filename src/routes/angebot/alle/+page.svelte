@@ -1,9 +1,7 @@
 <script>
   import Title from "$lib/components/layout/Title.svelte";
-  import MainSection from "$lib/components/layout/MainSection.svelte";
-  import Columns from "$lib/components/fragments/Columns.svelte";
+  import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
-  import Text from "$lib/components/fragments/Text.svelte";
   import List from "$lib/components/fragments/List.svelte";
   import TextBoxCollapsible from "$lib/components/elements/TextBoxCollapsible.svelte";
   import TextBox from "$lib/components/fragments/TextBox.svelte";
@@ -14,20 +12,22 @@
     {title: "Konditionen", href: "#konditionen"}
   ];
 
-  const color = "red";
+  const color = "green";
 </script>
 
 <div class="style" />
 
 <Title {pageNav} {color}>
-  <h1>Für Alle</h1>
-  <p>Coaching & psychologische Beratung</p>
+  <h1 class="titleGroup">
+    <span>Für Alle</span>
+    <span>Coaching & psychologische Beratung</span>
+  </h1>
 </Title>
 
 <MainSection id="angebot" {color}>
   <svelte:fragment slot="title">Angebot</svelte:fragment>
 
-  <Columns>
+  <div class="useColumns">
     <TextBoxCollapsible>
       <svelte:fragment slot="title">
         Sie haben ein berufliches und / oder privates Anliegen?
@@ -60,42 +60,46 @@
         <li>Sie begegnen neuen Herausforderungen nachhaltig gestärkt.</li>
       </List>
     </TextBoxCollapsible>
-  </Columns>
+  </div>
 </MainSection>
 
 <MainSection id="konditionen" {color}>
   <svelte:fragment slot="title">Konditionen</svelte:fragment>
 
-  <Columns>
+  <div class="useColumns">
     <div class="column">
-      <h3>Kosten</h3>
-      <Offers {color} />
+      <div class="useBasicText">
+        <h4>Kosten</h4>
+        <Offers {color} />
+      </div>
     </div>
 
     <div class="column">
-      <h3>Örtlichkeiten</h3>
-      <List>
-        <li>In meinen Räumlichkeiten</li>
-        <li>bei Ihnen zuhause</li>
-        <li>ab 2. Termin online möglich</li>
-        <li>bei einem Spaziergang draussen an der frischen Luft</li>
-      </List>
-      <h3>Tarife</h3>
-      <p>
-        Aktuell werden die Kosten für die Familienberatung und das freiwillige Case Management von
-        Ihnen selbst übernommen. Ich bin bemüht Lösungen mit Stiftungen zu finden, um die Tarife
-        besser nach Ihren familiären Möglichkeiten gestalten zu können.
-      </p>
-      <p>
-        Sollte es Ihnen nicht möglich sein, die aufgeführten Tarife zu leisten, bin ich bereit mit
-        Ihnen nach einer passenden Lösung zu suchen.
-      </p>
+      <div class="useBasicText">
+        <h4>Örtlichkeiten</h4>
+        <List>
+          <li>In meinen Räumlichkeiten</li>
+          <li>bei Ihnen zuhause</li>
+          <li>ab 2. Termin online möglich</li>
+          <li>bei einem Spaziergang draussen an der frischen Luft</li>
+        </List>
+        <h4>Tarife</h4>
+        <p>
+          Aktuell werden die Kosten für die Familienberatung und das freiwillige Case Management von
+          Ihnen selbst übernommen. Ich bin bemüht Lösungen mit Stiftungen zu finden, um die Tarife
+          besser nach Ihren familiären Möglichkeiten gestalten zu können.
+        </p>
+        <p>
+          Sollte es Ihnen nicht möglich sein, die aufgeführten Tarife zu leisten, bin ich bereit mit
+          Ihnen nach einer passenden Lösung zu suchen.
+        </p>
+      </div>
     </div>
-  </Columns>
+  </div>
 </MainSection>
 
 <style>
   .style ~ :global(*) {
-    --highlighter-color: var(--red);
+    --highlighter-color: var(--green);
   }
 </style>

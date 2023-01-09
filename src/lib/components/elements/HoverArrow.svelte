@@ -6,7 +6,7 @@
   export let useBigArrow = false;
 </script>
 
-<div class="LABEL-ARROW" class:isVertical>
+<div class="HOVER-ARROW" class:isVertical>
   <div class="icon">
     {#if useBigArrow}
       <Big />
@@ -14,13 +14,13 @@
       <Small />
     {/if}
   </div>
-  <div class="text">
+  <div class="content">
     <slot />
   </div>
 </div>
 
 <style>
-  .LABEL-ARROW {
+  .HOVER-ARROW {
     display: flex;
     position: relative;
     --slide: var(--label-slide, 1em);
@@ -44,7 +44,7 @@
     transition: opacity var(--duration-middle);
   }
 
-  .isVertical .icon {
+  .isVertical > .icon {
     transform: translate(0, -100%);
     --icon-width: 100%;
     width: 100%;
@@ -53,24 +53,24 @@
     padding-bottom: var(--slide);
   }
 
-  .isVertical :global(.ICON) {
+  .isVertical .icon :global(.ICON) {
     transform: rotate(90deg);
   }
 
-  .isVertical .text {
+  .isVertical .content {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
   }
 
-  .LABEL-ARROW:hover {
+  .HOVER-ARROW:hover {
     transform: translate(var(--slide), 0);
   }
 
-  .LABEL-ARROW.isVertical:hover {
+  .HOVER-ARROW.isVertical:hover {
     transform: translate(0, var(--slide));
   }
 
-  .LABEL-ARROW:hover .icon {
+  .HOVER-ARROW:hover > .icon {
     pointer-events: all;
     opacity: 1;
   }

@@ -15,7 +15,7 @@
   }
 </script>
 
-<section class="TEXT-BOX-COLLAPSIBLE" style:--background="var(--{color})">
+<section class="TEXT-BOX-COLLAPSIBLE useBasicText" style:--background="var(--{color})">
   <input {id} type="checkbox" tabindex="-1" />
 
   <header class="header">

@@ -2,7 +2,7 @@
   export let color = "";
 </script>
 
-<section class="TEXT-BOX" style:--background="var(--{color}-light">
+<section class="TEXT-BOX useBasicText" style:--background="var(--{color}-light">
   <header class="header">
     <h3>
       <slot name="title" />
