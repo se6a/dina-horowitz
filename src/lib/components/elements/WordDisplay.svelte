@@ -49,19 +49,21 @@
     return newDisplay;
   }
 
-  let flipDur = 100;
+  const interval = 10000;
+  const flipDur = 100;
   const rows = 4;
   const cols = 13;
 
   let display = createDisplay([], randomWords());
 
+  let init = true;
   onMount(() => {
     if (!browser) return;
     const t = setInterval(() => {
       requestAnimationFrame(() => {
         display = createDisplay(display, randomWords());
       });
-    }, 8000);
+    }, interval);
 
     return () => clearInterval(t);
   });
@@ -89,13 +91,14 @@
           <div class="flipBox">
             {#each seq as ch, i}
               {@const isCurrent = i === seq.length - 1}
-              {@const thisDur = 100 + 1.5 * col + 1.5 * row + 1.5 * i}
+              {@const thisDur = 100 + 1.5 * col + 1.5 * row + 3 * i}
               {@const thisDel = i * thisDur + col * 100 + row * 300}
               <div
                 class="char"
                 class:isCurrent
                 style:--flipFrom={i === 0 ? "0deg" : "-90deg"}
                 style:--flipTo={isCurrent ? "0deg" : "90deg"}
+                style:--flipEase={isCurrent ? "easeOut" : "linear"}
                 style:--flipDur="{thisDur}ms"
                 style:--flipDelay="{thisDel}ms"
               >
@@ -181,7 +184,7 @@
     animation-duration: var(--flipDur);
     animation-delay: var(--flipDelay);
     animation-fill-mode: both;
-    animation-timing-function: linear;
+    animation-timing-function: var(--flipEase);
     background-color: var(--blue);
     /* box-shadow: inset 0px 0px 100px hsla(189, 93%, 18%, 0.1); */
   }
