@@ -93,8 +93,9 @@
                 <div
                   class="char"
                   class:isCurrent
+                  style:--flipFrom={i === 0 ? "0deg" : "-90deg"}
                   style:--flipTo={isCurrent ? "0deg" : "90deg"}
-                  style:--flipDelay="{i * flipDur}ms"
+                  style:--flipDelay="{i * flipDur + col * 100}ms"
                 >
                   {ch}
                 </div>
@@ -163,6 +164,7 @@
     align-items: center;
     text-transform: uppercase;
     animation: flip;
+    transform: rotateX(0deg);
     animation-duration: var(--flipDur);
     animation-delay: var(--flipDelay);
     animation-fill-mode: both;
@@ -170,23 +172,9 @@
     background-color: hsl(189, 59%, 65%);
   }
 
-  /* .char.isCurrent {
-    animation: flipstop;
-  } */
-
   @keyframes flip {
     0% {
-      transform: rotateX(-90deg);
-    }
-
-    100% {
-      transform: rotateX(var(--flipTo));
-    }
-  }
-
-  @keyframes flipstop {
-    0% {
-      transform: rotateX(-90deg);
+      transform: rotateX(var(--flipFrom));
     }
 
     100% {
