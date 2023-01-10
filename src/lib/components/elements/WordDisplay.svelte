@@ -95,7 +95,7 @@
                   class:isCurrent
                   style:--flipFrom={i === 0 ? "0deg" : "-90deg"}
                   style:--flipTo={isCurrent ? "0deg" : "90deg"}
-                  style:--flipDelay="{i * flipDur + col * 100}ms"
+                  style:--flipDelay="{i * flipDur + col * 100 + row * 300}ms"
                 >
                   {ch}
                 </div>
