@@ -81,6 +81,7 @@
   style:--cols={cols}
   style:--rows={rows}
 >
+  <div class="pushHeight" />
   <div class="display" use:observeSize>
     {#key display}
       {#each Array(rows).fill("") as _, row}
@@ -111,10 +112,10 @@
   .WORD-DISPLAY {
     --box-width: calc(var(--display-width) / var(--cols));
     --box-height: calc(var(--box-width) * 1.5);
-    --letter-size: calc(var(--box-height) * 0.75);
+    --letter-size: calc(var(--box-height) * 0.8);
     --perspective: perspective(100em);
     width: 100%;
-    height: 40vmin;
+    height: 30vmin;
     position: relative;
   }
 
@@ -125,7 +126,7 @@
     bottom: 0;
     left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
@@ -148,7 +149,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    margin: 0.05em;
+    margin: em;
     position: absolute;
     font-size: var(--letter-size);
     font-weight: 600;

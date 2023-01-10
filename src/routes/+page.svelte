@@ -56,6 +56,14 @@
     position: relative;
   }
 
+  .cell:nth-child(odd) {
+    padding-left: 0;
+  }
+
+  .cell:nth-child(even) {
+    padding-right: 0;
+  }
+
   .cell::after {
     content: "";
     position: absolute;
