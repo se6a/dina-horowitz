@@ -159,7 +159,7 @@
     width: var(--box-width);
     background-color: hsla(189, 40%, 55%, 0.4);
     border: 1px solid var(--blue);
-    box-shadow: inset 2px 2px 3px hsla(189, 93%, 18%, 0.7);
+    box-shadow: inset 2px 2px 4px hsla(189, 93%, 18%, 0.5);
     padding: 1px;
   }
 
@@ -183,6 +183,7 @@
     animation-fill-mode: both;
     animation-timing-function: linear;
     background-color: var(--blue);
+    /* box-shadow: inset 0px 0px 100px hsla(189, 93%, 18%, 0.1); */
   }
 
   @keyframes flip {
