@@ -114,7 +114,7 @@
     --letter-size: calc(var(--box-height) * 0.75);
     --perspective: perspective(100em);
     width: 100%;
-    height: 100%;
+    height: 40vmin;
     position: relative;
   }
 
