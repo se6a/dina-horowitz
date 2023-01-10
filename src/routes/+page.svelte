@@ -54,6 +54,7 @@
 
   .cell {
     position: relative;
+    display: flex;
   }
 
   .cell:nth-child(odd) {

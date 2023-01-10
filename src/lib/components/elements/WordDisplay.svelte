@@ -81,7 +81,6 @@
   style:--cols={cols}
   style:--rows={rows}
 >
-  <div class="pushHeight" />
   <div class="display" use:observeSize>
     {#key display}
       {#each Array(rows).fill("") as _, row}
@@ -106,6 +105,8 @@
       {/each}
     {/key}
   </div>
+
+  <div class="pushHeight" />
 </article>
 
 <style>
@@ -115,8 +116,12 @@
     --letter-size: calc(var(--box-height) * 0.8);
     --perspective: perspective(100em);
     width: 100%;
-    height: 30vmin;
+    height: 100%;
     position: relative;
+  }
+
+  .pushHeight {
+    margin-bottom: 40%;
   }
 
   .display {
