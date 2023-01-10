@@ -158,7 +158,7 @@
     height: var(--box-height);
     width: var(--box-width);
     background-color: hsla(189, 40%, 55%, 0.4);
-    box-shadow: inset 2px 2px 3px hsla(0, 0%, 0%, 0.5);
+    box-shadow: inset 2px 2px 3px hsla(189, 93%, 18%, 0.7);
   }
 
   .char {
