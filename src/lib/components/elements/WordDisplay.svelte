@@ -84,25 +84,26 @@
   <div class="display" use:observeSize>
     {#key display}
       {#each Array(rows).fill("") as _, row}
-        <div class="row">
-          {#each Array(cols).fill("") as _, col}
-            {@const seq = display?.[row]?.[col] || " "}
-            <div class="flipBox">
-              {#each seq as ch, i}
-                {@const isCurrent = i === seq.length - 1}
-                <div
-                  class="char"
-                  class:isCurrent
-                  style:--flipFrom={i === 0 ? "0deg" : "-90deg"}
-                  style:--flipTo={isCurrent ? "0deg" : "90deg"}
-                  style:--flipDelay="{i * flipDur + col * 100 + row * 300}ms"
-                >
-                  {ch}
-                </div>
-              {/each}
-            </div>
-          {/each}
-        </div>
+        {#each Array(cols).fill("") as _, col}
+          {@const seq = display?.[row]?.[col] || " "}
+          <div class="flipBox">
+            {#each seq as ch, i}
+              {@const isCurrent = i === seq.length - 1}
+              {@const thisDur = 100 + 1.5 * col + 1.5 * row + 1.5 * i}
+              {@const thisDel = i * thisDur + col * 100 + row * 300}
+              <div
+                class="char"
+                class:isCurrent
+                style:--flipFrom={i === 0 ? "0deg" : "-90deg"}
+                style:--flipTo={isCurrent ? "0deg" : "90deg"}
+                style:--flipDur="{thisDur}ms"
+                style:--flipDelay="{thisDel}ms"
+              >
+                {ch}
+              </div>
+            {/each}
+          </div>
+        {/each}
       {/each}
     {/key}
   </div>
@@ -112,7 +113,8 @@
 
 <style>
   .WORD-DISPLAY {
-    --box-width: calc(var(--display-width) / var(--cols));
+    --box-gap: 2px;
+    --box-width: calc(var(--display-width) / var(--cols) - var(--box-gap));
     --box-height: calc(var(--box-width) * 1.5);
     --letter-size: calc(var(--box-height) * 0.8);
     --perspective: perspective(100em);
@@ -125,7 +127,7 @@
     margin-bottom: 40%;
   }
 
-  .display {
+  /* .display {
     position: absolute;
     top: 0;
     right: 0;
@@ -136,11 +138,18 @@
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-  }
+  } */
 
-  .row {
-    display: flex;
-    gap: var(--gap);
+  .display {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--cols), var(--box-width));
+    grid-template-rows: repeat(var(--rows), var(--box-height));
+    gap: var(--box-gap);
   }
 
   .flipBox {
@@ -148,6 +157,8 @@
     display: flex;
     height: var(--box-height);
     width: var(--box-width);
+    background-color: hsla(189, 40%, 55%, 0.4);
+    box-shadow: inset 2px 2px 3px hsla(0, 0%, 0%, 0.5);
   }
 
   .char {
