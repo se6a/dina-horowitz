@@ -158,14 +158,16 @@
     height: var(--box-height);
     width: var(--box-width);
     background-color: hsla(189, 40%, 55%, 0.4);
+    border: 1px solid var(--blue);
     box-shadow: inset 2px 2px 3px hsla(189, 93%, 18%, 0.7);
+    padding: 1px;
   }
 
   .char {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
     margin: em;
     position: absolute;
     font-size: var(--letter-size);
@@ -180,7 +182,7 @@
     animation-delay: var(--flipDelay);
     animation-fill-mode: both;
     animation-timing-function: linear;
-    background-color: hsl(189, 59%, 65%);
+    background-color: var(--blue);
   }
 
   @keyframes flip {
