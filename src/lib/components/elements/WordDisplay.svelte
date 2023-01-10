@@ -51,7 +51,7 @@
 
   let flipDur = 100;
   const rows = 4;
-  const cols = 15;
+  const cols = 13;
 
   let display = createDisplay([], randomWords());
 
