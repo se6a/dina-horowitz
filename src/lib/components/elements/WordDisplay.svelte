@@ -56,7 +56,6 @@
 
   let display = createDisplay([], randomWords());
 
-  let init = true;
   onMount(() => {
     if (!browser) return;
     const t = setInterval(() => {
