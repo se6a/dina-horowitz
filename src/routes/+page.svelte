@@ -56,14 +56,6 @@
     position: relative;
   }
 
-  .cell:nth-child(1) {
-    padding-left: 0;
-  }
-
-  .cell:nth-child(2) {
-    padding-right: 0;
-  }
-
   .cell::after {
     content: "";
     position: absolute;
