@@ -171,11 +171,11 @@
 
   @keyframes flip {
     0% {
-      transform: var(--perspective) rotateX(-90deg);
+      transform: rotateX(-90deg);
     }
 
     100% {
-      transform: var(--perspective) rotateX(var(--flipTo));
+      transform: rotateX(var(--flipTo));
     }
   }
 
