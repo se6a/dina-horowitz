@@ -11,15 +11,3 @@
   src: url("/fonts/MaisonNeue-Demi.woff2") format("woff2"),
     url("/fonts/MaisonNeue-Demi.woff") format("woff");
 }
-
-@font-face {
-  font-family: "MaisonNeue-TEST";
-  font-weight: 500;
-  src: url("/fonts/MaisonNeue-Medium.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "MaisonNeue-TEST";
-  font-weight: 600;
-  src: url("/fonts/MaisonNeue-Demi.otf") format("opentype");
-}
