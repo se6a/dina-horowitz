@@ -12,6 +12,12 @@
   color: var(--black);
 }
 
+@media (min-width: 600px) and (max-width: 1200px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
 body {
   font-size: var(--font-size-m);
 }
