@@ -56,7 +56,7 @@
   }
 
   .LAYOUT-SECTION h2 {
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-l);
     text-transform: uppercase;
     margin-left: var(--layout-inset-l);
     letter-spacing: 0.08em;
