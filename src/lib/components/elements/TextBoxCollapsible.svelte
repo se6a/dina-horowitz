@@ -39,15 +39,16 @@
   .TEXT-BOX-COLLAPSIBLE {
     width: 100%;
     margin-bottom: auto;
-    background-color: var(--colorPage);
+    background-color: var(--colorPage-light);
+    --textBox-padding: var(--box-padding, 3rem);
   }
 
   .header {
-    padding: var(--space-1);
+    padding: var(--textBox-padding);
   }
 
   .content {
-    padding: 0 var(--space-1) var(--space-1) var(--space-1);
+    padding: 0 var(--textBox-padding) var(--textBox-padding) var(--textBox-padding);
   }
 
   .header {

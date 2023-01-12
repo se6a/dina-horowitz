@@ -52,7 +52,7 @@
 
   .LAYOUT h3 {
     text-transform: uppercase;
-    margin-left: var(--title-inset);
+    margin-left: var(--layout-inset-l);
     letter-spacing: 0.08em;
   }
 

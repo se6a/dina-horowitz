@@ -7,7 +7,7 @@
 
 <style>
   .LAYOUT-TITLE {
-    padding: var(--layoutTitle-padding-t) 0 var(--layoutTitle-padding-b) var(--title-inset);
+    padding: var(--layoutTitle-padding-t) 0 var(--layoutTitle-padding-b) var(--layout-inset-l);
     height: auto;
     display: flex;
     flex-direction: column;

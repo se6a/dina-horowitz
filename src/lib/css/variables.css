@@ -113,6 +113,8 @@
 
   --layoutTitle-padding-t: 10rem;
   --layoutTitle-padding-b: 4rem;
+
+  --layout-inset-l: 10rem;
 }
 
 @media (--vw-m) {
@@ -120,6 +122,8 @@
     --layoutSection-padding-t: 8rem;
     --layoutSection-padding-b: 8rem;
     --layoutSection-spacing-y: 8rem;
+
+    --layout-inset-l: 0rem;
   }
 }
 
@@ -134,8 +138,16 @@
   }
 }
 
+/*  ELEMENTS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+:root {
+  --box-padding: 3rem;
+}
+
 /*  COLUMNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 :root {
   --useColumns: 8;
   --subColumns-m: 4;
@@ -149,15 +161,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-  --title-inset: 10rem;
   --layoutNav-font-size: 2.6rem;
   --layoutNavSub-font-size: 4.2rem;
-}
-
-@media (--vw-m) {
-  :root {
-    --title-inset: 0rem;
-  }
 }
 
 @media (--vw-s) {

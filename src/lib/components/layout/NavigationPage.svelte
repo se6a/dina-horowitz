@@ -1,16 +1,14 @@
 <script>
-  import ScrollDragX from "../elements/ScrollDragX-2.svelte";
+  import ScrollDragX from "../elements/ScrollDragX.svelte";
 
   export let pageNav = [];
 </script>
 
 <nav class="PAGE-NAVIGATION anchors useFullwidthBg">
   <ScrollDragX>
-    <div class="anchorContainer">
-      {#each pageNav as { title, href }}
-        <a class="anchor" {href}>{title}</a>
-      {/each}
-    </div>
+    {#each pageNav as { title, href }}
+      <a class="anchor" {href}>{title}</a>
+    {/each}
   </ScrollDragX>
 </nav>
 
@@ -20,7 +18,6 @@
     height: var(--header-height);
     background-color: var(--color);
     display: flex;
-    gap: var(--space-2);
     margin-top: auto;
     width: 100%;
     align-items: center;
@@ -31,18 +28,24 @@
     z-index: var(--zPos-front);
   }
 
-  .anchorContainer {
-    display: flex;
-    gap: var(--space-2);
-    padding-left: var(--title-inset);
-  }
-
   .PAGE-NAVIGATION > * {
     flex-shrink: 0;
   }
 
+  .anchor:first-child {
+    margin-left: var(--layout-inset-l);
+  }
+
+  .anchor:last-child {
+    margin-right: var(--page-padding-x);
+  }
+
   .anchor {
     transition: color var(--duration-fast);
+  }
+
+  .anchor + .anchor {
+    margin-left: var(--space-m);
   }
 
   .anchor:hover {
