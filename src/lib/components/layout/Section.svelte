@@ -50,7 +50,7 @@
     z-index: -1;
   }
 
-  .LAYOUT h3 {
+  .LAYOUT-SECTION h3 {
     text-transform: uppercase;
     margin-left: var(--layout-inset-l);
     letter-spacing: 0.08em;
