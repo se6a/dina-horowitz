@@ -3,7 +3,6 @@
   import IconArrow from "$lib/components/icons/ArrowSmall.svelte";
 
   const id = createId();
-  export let color = "";
 
   let contentHeight = 0;
 
@@ -15,7 +14,7 @@
   }
 </script>
 
-<section class="TEXT-BOX-COLLAPSIBLE useBasicText" style:--background="var(--{color})">
+<section class="TEXT-BOX-COLLAPSIBLE useBasicText">
   <input {id} type="checkbox" tabindex="-1" />
 
   <header class="header">
@@ -40,7 +39,7 @@
   .TEXT-BOX-COLLAPSIBLE {
     width: 100%;
     margin-bottom: auto;
-    background-color: var(--background, silver);
+    background-color: var(--colorPage);
   }
 
   .header {

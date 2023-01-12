@@ -3,7 +3,7 @@
 <style>
   .QUOTE {
     position: relative;
-    font-size: var(--quote-size, var(--font-size-l));
+    font-size: var(--quote-size, var(--font-size-xl));
   }
   .QUOTE::before {
     content: "«";

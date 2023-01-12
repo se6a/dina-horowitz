@@ -29,7 +29,7 @@
   }
 
   .isVertical {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .icon {
@@ -45,16 +45,15 @@
   }
 
   .isVertical > .icon {
-    transform: translate(0, -100%);
+    transform: translate(0, calc(100% + var(--slide)));
     --icon-width: 100%;
     width: 100%;
-    padding-right: 0;
     height: fit-content;
-    padding-bottom: var(--slide);
+    padding: 0;
   }
 
   .isVertical .icon :global(.ICON) {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
   }
 
   .isVertical .content {
@@ -67,7 +66,7 @@
   }
 
   .HOVER-ARROW.isVertical:hover {
-    transform: translate(0, var(--slide));
+    transform: translate(0, calc(-1 * var(--slide)));
   }
 
   .HOVER-ARROW:hover > .icon {

@@ -8,7 +8,7 @@
 
 .useColumns {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
   gap: var(--useColumns-gap-y) var(--useColumns-gap-x);
 }
 
@@ -80,7 +80,43 @@
   margin-left: 50%;
   left: -50vw;
   z-index: -1;
-  background-color: var(--background, silver);
+  background-color: var(--colorPage, silver);
+}
+
+/* Quote
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.useQuote {
+  position: relative;
+  font-size: var(--quote-size, var(--font-size-xl));
+}
+
+.useQuote::before {
+  content: "«";
+  transform: translateX(-105%);
+  position: absolute;
+}
+
+.useQuote::after {
+  content: "»";
+}
+
+/* Typo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.useHighlight {
+  position: relative;
+}
+
+.useHighlight::before {
+  content: "";
+  position: absolute;
+  bottom: 0.25em;
+  left: -0.1em;
+  right: -0.1em;
+  height: 0.5em;
+  z-index: -1;
+  background-color: var(--colorPage, gainsboro);
 }
 
 /* Typo
@@ -94,7 +130,8 @@
   margin-top: var(--space-2);
 }
 
-.useBigText {
+.useBigText,
+.useBigText * {
   font-size: var(--font-size-xl);
 }
 

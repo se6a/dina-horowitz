@@ -1,6 +1,8 @@
 <script>
   import IconGoUp from "$lib/components/icons/GoUp.svelte";
 
+  export let hasGoTopButton = true;
+
   function goUp() {
     document.body.scrollTo({
       top: 0,
@@ -11,9 +13,11 @@
 </script>
 
 <footer class="FOOTER">
-  <button class="button button-goUp" on:click={goUp}>
-    <IconGoUp />
-  </button>
+  {#if hasGoTopButton}
+    <button class="button button-goUp" on:click={goUp}>
+      <IconGoUp />
+    </button>
+  {/if}
 
   <div class="space-2" />
 

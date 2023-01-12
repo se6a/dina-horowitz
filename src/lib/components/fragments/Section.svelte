@@ -1,14 +1,14 @@
 <script>
-  export let background = "transparent";
+  export let color = "transparent";
 </script>
 
-<section class="SECTION" style:--background={background}>
+<section class="SECTION" style:--colorSection={color}>
   <slot />
 </section>
 
 <style>
   .SECTION {
-    background-color: var(--background);
+    background-color: var(--colorSection);
   }
 
   .SECTION :global(p) {

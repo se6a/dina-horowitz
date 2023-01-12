@@ -1,10 +1,10 @@
 <script>
-  import {afterUpdate, beforeUpdate, onDestroy, onMount} from "svelte";
+  import {afterUpdate, beforeUpdate, onDestroy} from "svelte";
 
   let observer;
   const observerOptions = {
     rootMargin: "0px",
-    threshold: 0.3
+    threshold: 0.15
   };
 
   let NMain;

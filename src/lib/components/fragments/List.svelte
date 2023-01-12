@@ -8,7 +8,7 @@
   }
 
   .LIST > :global(li) {
-    padding-left: var(--space-2);
+    padding-left: 1em;
   }
 
   .LIST > :global(li::before) {

@@ -1,10 +1,11 @@
 <script>
+  import Page from "$lib/components/layout/Page.svelte";
   import Title from "$lib/components/layout/Title.svelte";
+  import NavigationPage from "$lib/components/layout/NavigationPage.svelte";
   import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
   import TextBoxCollapsible from "$lib/components/elements/TextBoxCollapsible.svelte";
-  import TextBox from "$lib/components/fragments/TextBox.svelte";
   import Offers from "$lib/components/elements/Offers.svelte";
 
   const pageNav = [
@@ -17,144 +18,180 @@
   const color = "blue";
 </script>
 
-<div class="style" />
+<Page {color}>
+  <svelte:fragment slot="header">
+    <Title>
+      <h1 class="titleGroup">
+        <span>Für Familien</span>
+        <span>Beratung &<br />Case Management</span>
+      </h1>
+    </Title>
+  </svelte:fragment>
+  <NavigationPage {pageNav} />
 
-<Title {pageNav} {color}>
-  <h1 class="titleGroup">
-    <span>Für Familien</span>
-    <span>Beratung & Case Management</span>
-  </h1>
-</Title>
-
-<MainSection id="problemstellung" {color}>
-  <svelte:fragment slot="title">Problemstellung</svelte:fragment>
-  <div class="useColumns">
-    <Image />
-    <TextBox {color}>
-      <svelte:fragment slot="title">Sie fragen sich...</svelte:fragment>
-      <List>
-        <li>Haben wir etwas falsch gemacht?</li>
-        <li>Was kommt auf uns zu?</li>
-        <li>Was müssen wir / was dürfen wir?</li>
-        <li>Was wird von uns erwartet?</li>
-        <li>Wird unser Kind stigmatisiert?</li>
-        <li>Landen wir in einer Abklärungssprirale?</li>
-        <li>Welchen Fachpersonen werden wir begegnen?</li>
-      </List>
-    </TextBox>
-  </div>
-</MainSection>
-
-<MainSection id="herausforderungen" {color}>
-  <svelte:fragment slot="title">Herausforderungen</svelte:fragment>
-
-  <div class="useColumns">
-    <Image />
-    <TextBox {color}>
-      <svelte:fragment slot="title">Sie kennen folgende Stressfaktoren</svelte:fragment>
-      <List>
-        <li>
-          Sie fühlen sich von der Schule, von Fachstellen oder Institutionen unter Druck gesetzt?
-        </li>
-        <li>Sie fühlen sich nicht gehört, alleine gelassen oder ohnmächtig?</li>
-        <li>Sie werden von der einen zur nächsten Fachstelle geschickt?</li>
-        <li>Es fehlt eine Gesamtbetrachtung aller Empfehlungen?</li>
-        <li>Sie haben das Gefühl niemand übernimmt die Koordination?</li>
-        <li>Sie verlieren den Überblick über Fachstellen, Empfehlungen, Massnahmen und Termine?</li>
-        <li>
-          Ihr Familienleben gerät durcheinander, weil Sie sich nur noch mit Organisatorischem für
-          Ihr/e Kind/er beschäftigen müssen?
-        </li>
-      </List>
-    </TextBox>
-  </div>
-</MainSection>
-
-<MainSection id="angebot" {color}>
-  <svelte:fragment slot="title">Angebot</svelte:fragment>
-
-  <div class="useColumns">
-    <div class="column">
-      <TextBox {color}>
-        <svelte:fragment slot="title">Ihr Bedarf</svelte:fragment>
+  <MainSection id="problemstellung">
+    <svelte:fragment slot="title">Problemstellung</svelte:fragment>
+    <div class="useColumns">
+      <blockquote class="useQuote">
+        Wir möchten Ihr Kind gerne beim Schulpsychologischen Dienst abklären lassen.
+      </blockquote>
+      <p>
+        Ein grosser Schritt im Leben Ihres Kindes, im Leben Ihrer Familie: Ihr Kind kommt in den
+        Kindergarten / in die Schule. Viele Eltern kennen und fürchten diesen Satz. Und müssen
+        erstmal leer schlucken.
+      </p>
+    </div>
+    <div class="useColumns">
+      <Image src="/images/Dina_1_web.png" />
+      <TextBoxCollapsible>
+        <svelte:fragment slot="title">Sie fragen sich...</svelte:fragment>
         <List>
-          <li>Sie möchten erfahren, was auf Sie als Familie zukommt</li>
-          <li>Sie suchen Orientierung in der Vielfalt der Institutionen / Angebote</li>
-          <li>Sie wollen Antworten auf Fragen im Zusammenhang mit Abklärungen</li>
-          <li>Sie benötigen fachliche Einordnung von bisherigen Berichten und Empfehlungen</li>
-          <li>
-            Sie wünschen sich Klarheit über konkrete nächste Schritte und angestrebte Lösungen
-          </li>
-          <li>
-            Sie suchen eine neutrale Vertrauensperson, um Ihre Sorgen zu besprechen oder Sie zu
-            Gesprächen zu begleiten
-          </li>
-          <li>Sie möchten administrativen und organisatorische Arbeiten abgeben können.</li>
+          <li>Haben wir etwas falsch gemacht?</li>
+          <li>Was kommt auf uns zu?</li>
+          <li>Was müssen wir / was dürfen wir?</li>
+          <li>Was wird von uns erwartet?</li>
+          <li>Wird unser Kind stigmatisiert?</li>
+          <li>Landen wir in einer Abklärungssprirale?</li>
+          <li>Welchen Fachpersonen werden wir begegnen?</li>
         </List>
-      </TextBox>
-      <Image />
+      </TextBoxCollapsible>
+    </div>
+  </MainSection>
+
+  <MainSection id="herausforderungen">
+    <svelte:fragment slot="title">Herausforderungen</svelte:fragment>
+
+    <div class="useColumns">
+      <p class="useBigText">
+        Die Fragen sind schier endlos, die Sorgen und Nöte gross, das System, in dem Ihr/e Kind/er
+        und Sie sich bewegen komplex.
+      </p>
+      <p>
+        Der Aufwand solche Abklärungsprozesse zu durchgehen und zu managen kann einer unbezahlten
+        Teilzeitstelle gleichkommen und Familien an ihre Grenzen bringen. Viele Fachpersonen in
+        Kinder-, Jugend- und Familien-Fachstellen haben aufgrund enormer Fallzahlen oft wenig Zeit.
+        Wegen des begrenzten Auftrags dürfen sie Sie nur punktuell begleiten.
+      </p>
     </div>
 
-    <div class="column">
-      <TextBox {color}>
-        <svelte:fragment slot="title">Ihre Ziele</svelte:fragment>
+    <div class="useColumns">
+      <Image src="/images/Dina_2_web.png" />
+      <TextBoxCollapsible>
+        <svelte:fragment slot="title">Sie kennen folgende Stressfaktoren</svelte:fragment>
         <List>
           <li>
-            Sie haben eine Klarheit, welche Unterstützung Sie für Ihr Kind in Anspruch wollen.
+            Sie fühlen sich von der Schule, von Fachstellen oder Institutionen unter Druck gesetzt?
           </li>
-          <li>Sie kennen Ihre Möglichkeiten.</li>
-          <li>Sie fühlen sich handlungsfähig.</li>
-          <li>Sie sind gestärkt, mit dem Druck von aussen umzugehen</li>
-          <li>Sie verfügen als Familie wieder über mehr zeitliche und emotionale Ressourcen.</li>
-          <li>Sie erlangen mehr Sicherheit im Gespräch mit Fachpersonen.</li>
+          <li>Sie fühlen sich nicht gehört, alleine gelassen oder ohnmächtig?</li>
+          <li>Sie werden von der einen zur nächsten Fachstelle geschickt?</li>
+          <li>Es fehlt eine Gesamtbetrachtung aller Empfehlungen?</li>
+          <li>Sie haben das Gefühl niemand übernimmt die Koordination?</li>
           <li>
-            Bei neu auftauchen Fragen haben Sie eine fachliche Ansprechperson, die Sie und Ihr Kind
-            kennt
+            Sie verlieren den Überblick über Fachstellen, Empfehlungen, Massnahmen und Termine?
+          </li>
+          <li>
+            Ihr Familienleben gerät durcheinander, weil Sie sich nur noch mit Organisatorischem für
+            Ihr/e Kind/er beschäftigen müssen?
           </li>
         </List>
-      </TextBox>
-      <Image />
+      </TextBoxCollapsible>
     </div>
-  </div>
-</MainSection>
+  </MainSection>
 
-<MainSection id="konditionen" {color}>
-  <svelte:fragment slot="title">Konditionen</svelte:fragment>
+  <MainSection id="angebot">
+    <svelte:fragment slot="title">Angebot</svelte:fragment>
 
-  <div class="useColumns">
-    <div class="column">
-      <div class="useBasicText">
-        <h3>Kosten</h3>
-        <Offers {color} />
+    <div class="useColumns">
+      <p class="useBigText">Ich begleite Sie von Anfang bis zum Ende.</p>
+      <p>
+        Fachberaterin, Coach, Case Managerin, Vertrauensperson - Sie entscheiden, welche Rolle Sie
+        sich von mir wünschen.
+      </p>
+    </div>
+    <div class="useColumns">
+      <div class="column">
+        <TextBoxCollapsible>
+          <svelte:fragment slot="title">Ihr Bedarf</svelte:fragment>
+          <List>
+            <li>Sie möchten erfahren, was auf Sie als Familie zukommt</li>
+
+            <li>Sie suchen Orientierung in der Vielfalt der Institutionen / Angebote</li>
+
+            <li>Sie wollen Antworten auf Fragen im Zusammenhang mit Abklärungen</li>
+
+            <li>Sie benötigen fachliche Einordnung von bisherigen Berichten und Empfehlungen</li>
+
+            <li>
+              Sie wünschen sich Klarheit über konkrete nächste Schritte und angestrebte Lösungen
+            </li>
+
+            <li>
+              Sie suchen eine neutrale Vertrauensperson, um Ihre Sorgen zu besprechen oder Sie zu
+              Gesprächen zu begleiten
+            </li>
+
+            <li>Sie möchten administrativen und organisatorische Arbeiten abgeben können.</li>
+          </List>
+        </TextBoxCollapsible>
+        <Image src="/images/Dina_3_web.png" />
+      </div>
+
+      <div class="column">
+        <TextBoxCollapsible>
+          <svelte:fragment slot="title">Ihre Ziele</svelte:fragment>
+          <List>
+            <li>
+              Sie haben eine Klarheit, welche Unterstützung Sie für Ihr Kind in Anspruch wollen.
+            </li>
+            <li>Sie kennen Ihre Möglichkeiten.</li>
+            <li>Sie fühlen sich handlungsfähig.</li>
+            <li>Sie sind gestärkt, mit dem Druck von aussen umzugehen</li>
+            <li>Sie verfügen als Familie wieder über mehr zeitliche und emotionale Ressourcen.</li>
+            <li>Sie erlangen mehr Sicherheit im Gespräch mit Fachpersonen.</li>
+            <li>
+              Bei neu auftauchen Fragen haben Sie eine fachliche Ansprechperson, die Sie und Ihr
+              Kind kennt
+            </li>
+          </List>
+        </TextBoxCollapsible>
       </div>
     </div>
+  </MainSection>
 
-    <div class="column">
-      <div class="useBasicText">
-        <h3>Örtlichkeiten</h3>
-        <List>
-          <li>In meinen Räumlichkeiten</li>
-          <li>bei Ihnen zuhause</li>
-          <li>ab 2. Termin online möglich</li>
-          <li>bei einem Spaziergang draussen an der frischen Luft</li>
-        </List>
-        <h3>Tarife</h3>
-        <p>
-          Aktuell werden die Kosten für die Familienberatung und das freiwillige Case Management von
-          Ihnen selbst übernommen. Ich bin bemüht Lösungen mit Stiftungen zu finden, um die Tarife
-          besser nach Ihren familiären Möglichkeiten gestalten zu können.
-        </p>
-        <p>
-          Sollte es Ihnen nicht möglich sein, die aufgeführten Tarife zu leisten, bin ich bereit mit
-          Ihnen nach einer passenden Lösung zu suchen.
-        </p>
+  <MainSection id="konditionen">
+    <svelte:fragment slot="title">Konditionen</svelte:fragment>
+
+    <div class="useColumns">
+      <div class="column">
+        <div class="useBasicText">
+          <h3>Kosten</h3>
+          <Offers>
+            <li class="offer">
+              <div class="prize">180.- pro 60 Min.</div>
+              <div class="space-1" />
+              <p>
+                Aktuell werden die Kosten für die Familienberatung und das freiwillige Case
+                Management von Ihnen selbst übernommen.
+              </p>
+            </li>
+          </Offers>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="useBasicText">
+          <h3>Örtlichkeiten</h3>
+          <List>
+            <li>In meinen Räumlichkeiten</li>
+            <li>bei Ihnen zuhause</li>
+            <li>ab 2. Termin online möglich</li>
+            <li>bei einem Spaziergang draussen an der frischen Luft</li>
+          </List>
+        </div>
       </div>
     </div>
-  </div>
-</MainSection>
+  </MainSection>
+</Page>
 
 <style>
-  .style ~ :global(*) {
-    --highlighter-color: var(--blue);
-  }
 </style>

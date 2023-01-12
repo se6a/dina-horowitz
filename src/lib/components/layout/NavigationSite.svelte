@@ -54,7 +54,7 @@
               {#each item.subItems as { title, text, color, href }}
                 <a
                   class="subItem"
-                  style:--background={color}
+                  style:--colorItem={color}
                   {href}
                   on:click={() => (isOpen = false)}
                 >
@@ -87,7 +87,7 @@
 
   .NAVIGATION {
     position: relative;
-    height: 100%;
+    height: var(--header-height);
     z-index: 100;
   }
 
@@ -153,6 +153,8 @@
     right: var(--space-1);
     top: var(--space-1);
     --icon-size: 3rem;
+    --icon-strokeWidth: 1px;
+    --icon-color: currentColor;
     transform: rotate(0deg);
     transition: var(--duration-middle);
   }
@@ -169,7 +171,7 @@
     height: auto;
     display: flex;
     padding: var(--space-l);
-    background-color: var(--background);
+    background-color: var(--colorItem);
     font-size: var(--layoutNavSub-font-size);
     position: relative;
     width: 100%;

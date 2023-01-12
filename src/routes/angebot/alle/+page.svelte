@@ -1,5 +1,7 @@
 <script>
+  import Page from "$lib/components/layout/Page.svelte";
   import Title from "$lib/components/layout/Title.svelte";
+  import NavigationPage from "$lib/components/layout/NavigationPage.svelte";
   import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
@@ -15,91 +17,109 @@
   const color = "green";
 </script>
 
-<div class="style" />
+<Page {color}>
+  <svelte:fragment slot="header">
+    <Title>
+      <h1 class="titleGroup">
+        <span>Für Alle</span>
+        <span>Coaching &<br />psychologische Beratung</span>
+      </h1>
+    </Title>
+  </svelte:fragment>
 
-<Title {pageNav} {color}>
-  <h1 class="titleGroup">
-    <span>Für Alle</span>
-    <span>Coaching & psychologische Beratung</span>
-  </h1>
-</Title>
+  <NavigationPage {pageNav} />
 
-<MainSection id="angebot" {color}>
-  <svelte:fragment slot="title">Angebot</svelte:fragment>
+  <MainSection id="angebot">
+    <svelte:fragment slot="title">Angebot</svelte:fragment>
 
-  <div class="useColumns">
-    <TextBoxCollapsible>
-      <svelte:fragment slot="title">
-        Sie haben ein berufliches und / oder privates Anliegen?
-      </svelte:fragment>
-      <List>
-        <li>Sie wollen aus einer belastenden oder herausfordernden Situation rauskommen.</li>
-        <li>Sie finden sich in immer gleichen Konflikten wieder und wollen Muster aufbrechen.</li>
-        <li>Ihre Lebens- oder Arbeitsqualität ist einschränkt.</li>
-        <li>Sie wissen nicht, was Sie verändern und was Sie beibehalten wollen.</li>
-        <li>Sie fragen sich welche nächsten Schritte Sie angehen; und wie.</li>
-        <li>Sie wünschen sich wieder mehr Handlungsspielraum.</li>
-        <li>
-          Sie suchen eine vertrauensvolle, neutrale Sparringpartnerin und einen Reflexionsraum.
-        </li>
-      </List>
-    </TextBoxCollapsible>
+    <div class="useColumns">
+      <p class="useBigText">
+        Sie geben das Ziel vor, ich begleite Sie auf Ihrem Weg – hypnosystemisch und
+        lösungsfokussiert.
+      </p>
 
-    <TextBoxCollapsible>
-      <svelte:fragment slot="title">So begleite ich Sie:</svelte:fragment>
-      <List>
-        <li>
-          In einem vertrauensvollen, zeitlich überschaubaren Rahmen mit professionellen Methoden und
-          vielen Fragen.
-        </li>
-        <li>Ich fordere Sie auf und heraus.</li>
-        <li>Gemeinsam entdecken wir Ihre Stärken und Ressourcen neu.</li>
-        <li>Ich helfe Ihnen sich zu strukturieren.</li>
-        <li>Ich unterstütze Sie dabei Ihre Sichtweise zu erweitern und Klarheit zu gewinnen.</li>
-        <li>Sie erweitern Ihre Möglichkeiten und entwickeln daraus Ihre eigenen Lösungen.</li>
-        <li>Sie begegnen neuen Herausforderungen nachhaltig gestärkt.</li>
-      </List>
-    </TextBoxCollapsible>
-  </div>
-</MainSection>
-
-<MainSection id="konditionen" {color}>
-  <svelte:fragment slot="title">Konditionen</svelte:fragment>
-
-  <div class="useColumns">
-    <div class="column">
-      <div class="useBasicText">
-        <h4>Kosten</h4>
-        <Offers {color} />
-      </div>
+      <p>
+        Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die Lernerfahrung.
+        Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und Visualisierungen.
+        Immer mit Ihrem Einverständnis.
+      </p>
     </div>
 
-    <div class="column">
-      <div class="useBasicText">
-        <h4>Örtlichkeiten</h4>
+    <div class="useColumns">
+      <TextBoxCollapsible>
+        <svelte:fragment slot="title">
+          Sie haben ein berufliches und / oder privates Anliegen?
+        </svelte:fragment>
         <List>
-          <li>In meinen Räumlichkeiten</li>
-          <li>bei Ihnen zuhause</li>
-          <li>ab 2. Termin online möglich</li>
-          <li>bei einem Spaziergang draussen an der frischen Luft</li>
+          <li>Sie wollen aus einer belastenden oder herausfordernden Situation rauskommen.</li>
+          <li>Sie finden sich in immer gleichen Konflikten wieder und wollen Muster aufbrechen.</li>
+          <li>Ihre Lebens- oder Arbeitsqualität ist einschränkt.</li>
+          <li>Sie wissen nicht, was Sie verändern und was Sie beibehalten wollen.</li>
+          <li>Sie fragen sich welche nächsten Schritte Sie angehen; und wie.</li>
+          <li>Sie wünschen sich wieder mehr Handlungsspielraum.</li>
+          <li>
+            Sie suchen eine vertrauensvolle, neutrale Sparringpartnerin und einen Reflexionsraum.
+          </li>
         </List>
-        <h4>Tarife</h4>
-        <p>
-          Aktuell werden die Kosten für die Familienberatung und das freiwillige Case Management von
-          Ihnen selbst übernommen. Ich bin bemüht Lösungen mit Stiftungen zu finden, um die Tarife
-          besser nach Ihren familiären Möglichkeiten gestalten zu können.
-        </p>
-        <p>
-          Sollte es Ihnen nicht möglich sein, die aufgeführten Tarife zu leisten, bin ich bereit mit
-          Ihnen nach einer passenden Lösung zu suchen.
-        </p>
+      </TextBoxCollapsible>
+
+      <TextBoxCollapsible>
+        <svelte:fragment slot="title">So begleite ich Sie:</svelte:fragment>
+        <List>
+          <li>
+            In einem vertrauensvollen, zeitlich überschaubaren Rahmen mit professionellen Methoden
+            und vielen Fragen.
+          </li>
+          <li>Ich fordere Sie auf und heraus.</li>
+          <li>Gemeinsam entdecken wir Ihre Stärken und Ressourcen neu.</li>
+          <li>Ich helfe Ihnen sich zu strukturieren.</li>
+          <li>Ich unterstütze Sie dabei Ihre Sichtweise zu erweitern und Klarheit zu gewinnen.</li>
+          <li>Sie erweitern Ihre Möglichkeiten und entwickeln daraus Ihre eigenen Lösungen.</li>
+          <li>Sie begegnen neuen Herausforderungen nachhaltig gestärkt.</li>
+        </List>
+      </TextBoxCollapsible>
+    </div>
+  </MainSection>
+
+  <MainSection id="konditionen">
+    <svelte:fragment slot="title">Konditionen</svelte:fragment>
+
+    <div class="useColumns">
+      <div class="column">
+        <div class="useBasicText">
+          <h4>Kosten</h4>
+          <Offers>
+            <li class="offer">
+              <div class="price">180.- pro 60 Min.</div>
+            </li>
+
+            <li class="offer">
+              <p>Mein Beratungsangebot ist nicht Krankenkassenanerkannt.</p>
+            </li>
+          </Offers>
+
+          <h4>Bitte beachten Sie</h4>
+          <p>
+            Wenn ich einen dringlichen psycho<span class="useHighlight">therapeutischen</span> Bedarf
+            erkenne, werde ich Sie darauf ansprechen und Sie bei Bedarf dabei unterstützen entsprechende
+            Begleitung zu finden.
+          </p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="useBasicText">
+          <h4>Örtlichkeiten</h4>
+          <List>
+            <li>In meinen Räumlichkeiten</li>
+            <li>ab 2. Termin online möglich</li>
+            <li>bei einem Spaziergang draussen an der frischen Luft</li>
+          </List>
+        </div>
       </div>
     </div>
-  </div>
-</MainSection>
+  </MainSection>
+</Page>
 
 <style>
-  .style ~ :global(*) {
-    --highlighter-color: var(--green);
-  }
 </style>

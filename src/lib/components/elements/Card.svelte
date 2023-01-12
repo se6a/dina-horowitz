@@ -21,9 +21,9 @@
   @import "$lib/css/breakpoints.css";
 
   .CARD > :global(.HOVER-ARROW .icon) {
-    --icon-size: var(--font-size-l);
+    --icon-size: 1.8em;
     --icon-height: 100%;
-    --icon-width: var(--font-size-l);
+    --icon-width: 1.8em;
   }
 
   .ifCompact {

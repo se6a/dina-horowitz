@@ -1,8 +1,7 @@
 <script>
-  export let color = "";
 </script>
 
-<section class="TEXT-BOX useBasicText" style:--background="var(--{color}-light">
+<section class="TEXT-BOX useBasicText">
   <header class="header">
     <h3>
       <slot name="title" />
@@ -13,7 +12,7 @@
 
 <style>
   .TEXT-BOX {
-    background-color: var(--background, silver);
+    background-color: var(--colorPage-light);
     padding: var(--space-1);
   }
 

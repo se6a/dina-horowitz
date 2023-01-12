@@ -1,10 +1,9 @@
 <script>
   import Highlighter from "../fragments/Highlighter.svelte";
   export let id = "";
-  export let color = "";
 </script>
 
-<section {id} class="LAYOUT-SECTION" style:--background="var(--{color}-light)">
+<section {id} class="LAYOUT-SECTION">
   <h3>
     <Highlighter>
       <slot name="title" />
@@ -38,10 +37,10 @@
     transform: scaleX(1);
   }
 
-  .LAYOUT-SECTION:nth-child(even)::after {
+  .LAYOUT-SECTION:nth-child(odd)::after {
     content: "";
     display: block;
-    background-color: var(--background);
+    background-color: var(--colorPage-light);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -51,9 +50,10 @@
     z-index: -1;
   }
 
-  h3 {
+  .LAYOUT h3 {
     text-transform: uppercase;
     margin-left: var(--title-inset);
+    letter-spacing: 0.08em;
   }
 
   .content {
