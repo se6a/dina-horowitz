@@ -31,7 +31,7 @@ h4 {
 }
 
 h2 {
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-xl);
 }
 
 h3 {
@@ -127,6 +127,12 @@ blockquote {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+
+h3,
+p,
+li,
+blockquote {
   line-height: 1.46;
 }
 
