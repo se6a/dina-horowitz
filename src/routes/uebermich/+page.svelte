@@ -18,7 +18,7 @@
 <Page {color}>
   <svelte:fragment slot="header">
     <Title>
-      <h1 class="titleGroup">
+      <h1 class="titleGroup useText-xxl">
         <span>Dina Horowitz</span>
         <span>Familienberaterin, Supervisorin, Coach</span>
       </h1>

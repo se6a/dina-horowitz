@@ -152,8 +152,8 @@
   --useColumns: 8;
   --subColumns-m: 4;
   --subColumns-s: 3;
-  --useColumns-gap-x: 3rem;
-  --useColumns-gap-y: 3rem;
+  --useColumns-gap-x: 6rem;
+  --useColumns-gap-y: 6rem;
   --useColumns-layout-std: 3 / span 4;
 }
 
