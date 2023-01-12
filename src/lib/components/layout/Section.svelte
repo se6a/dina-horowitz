@@ -5,7 +5,11 @@
   export let title = "";
 </script>
 
-<section {id} class="LAYOUT-SECTION">
+<section class="LAYOUT-SECTION">
+  {#if id}
+    <div class="anchor" {id} />
+  {/if}
+
   <h2>
     <!-- {#each title.split(" ") as part} -->
     <Highlighter>
@@ -71,5 +75,15 @@
     display: flex;
     flex-direction: column;
     gap: var(--layoutSection-spacing-y);
+  }
+
+  .anchor {
+    width: 0px;
+    height: 0px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+    position: absolute;
+    top: calc(-1 * var(--header-height));
   }
 </style>
