@@ -17,16 +17,16 @@
 <section class="BOX-COLLAPSIBLE box">
   <input {id} type="checkbox" tabindex="-1" />
 
-  <header class="header">
-    <label class="title" for={id}>
+  <label class="title" for={id}>
+    <header class="header">
       <h3>
         <slot name="title" />
       </h3>
       <div class="icon">
         <IconArrow />
       </div>
-    </label>
-  </header>
+    </header>
+  </label>
 
   <div class="contentWrapper" style:--height="{contentHeight}px">
     <div class="content" use:observeHeight>
@@ -43,21 +43,20 @@
     --textBox-padding: var(--box-padding, 3rem);
   }
 
-  .header {
-    padding: var(--textBox-padding);
-  }
-
-  .content {
-    padding: 0 var(--textBox-padding) var(--textBox-padding) var(--textBox-padding);
-  }
-
-  .header {
+  .title {
+    width: 100%;
     user-select: none;
   }
 
-  .title {
+  .header {
+    padding: var(--textBox-padding);
     display: flex;
     justify-content: space-between;
+    transition: background-color var(--duration-middle);
+  }
+
+  .content {
+    padding: var(--textBox-padding);
   }
 
   .icon {
@@ -92,7 +91,12 @@
     height: var(--height);
   }
 
-  input:checked ~ .header .icon {
+  input:checked ~ .title .icon {
     transform: rotate(-90deg);
+  }
+
+  input:checked ~ .title .header,
+  .title:hover .header {
+    background-color: var(--colorPage);
   }
 </style>
