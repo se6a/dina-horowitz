@@ -3,7 +3,6 @@
 </script>
 
 <figure class="IMAGE">
-  <div class="pushHeight" />
   <picture>
     <!-- {#each sources as src}
       <source />
@@ -18,6 +17,10 @@
     position: relative;
     display: block;
     margin-bottom: auto;
+  }
+
+  picture {
+    display: flex;
   }
 
   img {

@@ -1,4 +1,4 @@
-<article>
+<article class="CONTACT-FORM box">
   <form action="">
     <div class="field">
       <input type="text" placeholder=" " />

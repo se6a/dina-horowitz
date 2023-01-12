@@ -8,8 +8,14 @@
 
 .useColumns {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 1fr;
   gap: var(--useColumns-gap-y) var(--useColumns-gap-x);
+}
+
+.useColumns > * {
+  /* overflow: hidden; */
+  min-height: 0;
+  min-width: 0;
 }
 
 @media (--vw-m) {
@@ -17,11 +23,6 @@
     grid-template-columns: 1fr;
     grid-auto-flow: row;
   }
-}
-
-.useColumns > .column {
-  display: flex;
-  flex-direction: column;
 }
 
 /* Grid
@@ -88,7 +89,6 @@
 
 .useQuote {
   position: relative;
-  font-size: var(--quote-size, var(--font-size-xl));
 }
 
 .useQuote::before {
@@ -101,7 +101,7 @@
   content: "»";
 }
 
-/* Typo
+/* HightLight
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 .useHighlight {
@@ -122,17 +122,21 @@
 /* Typo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-.useBasicText > * + * {
-  margin-top: var(--space-1);
+.useText-xxl,
+.useText-xxl * {
+  font-size: var(--font-size-xxl);
+  line-height: 1.15;
 }
 
-.useBasicText > * + h3 {
-  margin-top: var(--space-2);
-}
-
-.useBigText,
-.useBigText * {
+.useText-xl,
+.useText-xl * {
   font-size: var(--font-size-xl);
+  line-height: 1.4;
+}
+
+.useText-l,
+.useText-l * {
+  font-size: var(--font-size-l);
 }
 
 /* Space

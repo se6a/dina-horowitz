@@ -5,9 +5,7 @@
   import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
-  import TextBoxCollapsible from "$lib/components/elements/TextBoxCollapsible.svelte";
-  import TextBox from "$lib/components/fragments/TextBox.svelte";
-  import Offers from "$lib/components/elements/Offers.svelte";
+  import TextBoxCollapsible from "$lib/components/elements/BoxCollapsible.svelte";
 
   const pageNav = [
     {title: "Angebot", href: "#angebot"},
@@ -20,7 +18,7 @@
 <Page {color}>
   <svelte:fragment slot="header">
     <Title>
-      <h1 class="titleGroup">
+      <h1 class="titleGroup useText-xxl">
         <span>Für Alle</span>
         <span>Coaching &<br />psychologische Beratung</span>
       </h1>
@@ -33,16 +31,20 @@
     <svelte:fragment slot="title">Angebot</svelte:fragment>
 
     <div class="useColumns">
-      <p class="useBigText">
-        Sie geben das Ziel vor, ich begleite Sie auf Ihrem Weg – hypnosystemisch und
-        lösungsfokussiert.
-      </p>
+      <div class="box">
+        <p class="useText-xl">
+          Sie geben das Ziel vor, ich begleite Sie auf Ihrem Weg – hypnosystemisch und
+          lösungsfokussiert.
+        </p>
+      </div>
 
-      <p>
-        Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die Lernerfahrung.
-        Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und Visualisierungen.
-        Immer mit Ihrem Einverständnis.
-      </p>
+      <div class="box">
+        <p>
+          Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die
+          Lernerfahrung. Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und
+          Visualisierungen. Immer mit Ihrem Einverständnis.
+        </p>
+      </div>
     </div>
 
     <div class="useColumns">
@@ -85,37 +87,33 @@
     <svelte:fragment slot="title">Konditionen</svelte:fragment>
 
     <div class="useColumns">
-      <div class="column">
-        <div class="useBasicText">
-          <h4>Kosten</h4>
-          <Offers>
-            <li class="offer">
-              <div class="price">180.- pro 60 Min.</div>
-            </li>
+      <div class="box">
+        <h4>Kosten</h4>
+        <List hasBullets={false}>
+          <li class="box offer useBackground-light">
+            <div class="price">180.- pro 60 Min.</div>
+          </li>
 
-            <li class="offer">
-              <p>Mein Beratungsangebot ist nicht Krankenkassenanerkannt.</p>
-            </li>
-          </Offers>
-
-          <h4>Bitte beachten Sie</h4>
-          <p>
-            Wenn ich einen dringlichen psycho<span class="useHighlight">therapeutischen</span> Bedarf
-            erkenne, werde ich Sie darauf ansprechen und Sie bei Bedarf dabei unterstützen entsprechende
-            Begleitung zu finden.
-          </p>
-        </div>
+          <li class="box offer useBackground-light">
+            <p>Mein Beratungsangebot ist nicht Krankenkassenanerkannt.</p>
+          </li>
+        </List>
+      </div>
+      <div class="box">
+        <h4>Bitte beachten Sie</h4>
+        <p>
+          Wenn ich einen dringlichen psychotherapeutischen Bedarf erkenne, werde ich Sie darauf
+          ansprechen und Sie bei Bedarf dabei unterstützen entsprechende Begleitung zu finden.
+        </p>
       </div>
 
-      <div class="column">
-        <div class="useBasicText">
-          <h4>Örtlichkeiten</h4>
-          <List>
-            <li>In meinen Räumlichkeiten</li>
-            <li>ab 2. Termin online möglich</li>
-            <li>bei einem Spaziergang draussen an der frischen Luft</li>
-          </List>
-        </div>
+      <div class="box">
+        <h4>Örtlichkeiten</h4>
+        <List>
+          <li>In meinen Räumlichkeiten</li>
+          <li>ab 2. Termin online möglich</li>
+          <li>bei einem Spaziergang draussen an der frischen Luft</li>
+        </List>
       </div>
     </div>
   </MainSection>

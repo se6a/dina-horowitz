@@ -61,6 +61,7 @@
     transform: rotate(180deg);
   }
 
+  :global(.doPassHover:hover) .HOVER-ARROW,
   .HOVER-ARROW:hover {
     transform: translate(var(--slide), 0);
   }
@@ -69,6 +70,7 @@
     transform: translate(0, calc(-1 * var(--slide)));
   }
 
+  :global(.doPassHover:hover) .HOVER-ARROW > .icon,
   .HOVER-ARROW:hover > .icon {
     pointer-events: all;
     opacity: 1;

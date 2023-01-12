@@ -5,9 +5,7 @@
   import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
-  import TextBoxCollapsible from "$lib/components/elements/TextBoxCollapsible.svelte";
-  import TextBox from "$lib/components/fragments/TextBox.svelte";
-  import Offers from "$lib/components/elements/Offers.svelte";
+  import TextBoxCollapsible from "$lib/components/elements/BoxCollapsible.svelte";
 
   const pageNav = [
     {title: "Angebot", href: "#angebot"},
@@ -20,7 +18,7 @@
 <Page {color}>
   <svelte:fragment slot="header">
     <Title>
-      <h1 class="titleGroup">
+      <h1 class="titleGroup useText-xxl">
         <span>Für Fachpersonen</span>
         <span>Supervision &<br />Teamentwicklung</span>
       </h1>
@@ -32,14 +30,18 @@
   <MainSection id="angebot">
     <svelte:fragment slot="title">Angebot</svelte:fragment>
     <div class="useColumns">
-      <blockquote class="useQuote">
-        Begleitete Reflexion hilft, um im beruflichen Alltag nicht blind zu werden.
-      </blockquote>
-      <p>
-        Gerne begleite ich Ihren Prozess hypno- systemisch und lösungsfokussiert. Dabei bringe ich
-        mein Wissen und meine Erfahrung zur fachspezifischen Arbeit, zur interdisziplinären
-        Zusammenarbeit sowie zur Prozessgestaltung ein.
-      </p>
+      <div class="box">
+        <blockquote class="useQuote">
+          Begleitete Reflexion hilft, um im beruflichen Alltag nicht blind zu werden.
+        </blockquote>
+      </div>
+      <div class="box">
+        <p>
+          Gerne begleite ich Ihren Prozess hypno- systemisch und lösungsfokussiert. Dabei bringe ich
+          mein Wissen und meine Erfahrung zur fachspezifischen Arbeit, zur interdisziplinären
+          Zusammenarbeit sowie zur Prozessgestaltung ein.
+        </p>
+      </div>
     </div>
   </MainSection>
 
@@ -47,16 +49,14 @@
     <svelte:fragment slot="title">Fallsupervision (einzeln / im Team)</svelte:fragment>
 
     <div class="useColumns">
-      <div class="column useBasicText">
-        <p class="useBigText">
-          Für Fachpersonen rund um Schule, Familienarbeit und psychosozialen Beratungskontext.
-        </p>
-        <p class="useBigText">
-          Für Kinder- und Jugendpsycholog:innen in der Weiterbildung zum Fachtitel.
+      <div class="box">
+        <p class="useText-xl">
+          Für Fachpersonen rund um Schule, Familienarbeit und psychosozialen Beratungskontext. Für
+          Kinder- und Jugendpsycholog:innen in der Weiterbildung zum Fachtitel.
         </p>
       </div>
 
-      <div class="column useBasicText">
+      <div class="box">
         <p>
           Die Fallsupervision ermöglicht Qualitätssicherung und -steigerung im beruflichen Handeln.
           Verstrickungen, Haltungen, Rollen und Zusammenarbeiten innerhalb eines Teams und mit
@@ -76,14 +76,14 @@
     <svelte:fragment slot="title">Teamentwicklung (bis 6 Personen)</svelte:fragment>
 
     <div class="useColumns">
-      <div class="column useBasicText">
-        <p class="useBigText">
+      <div class="box">
+        <p class="useText-xl">
           Für Teams im pädagogischen, psychosozialen, beraterischen, kreativen, kulturellen und
           NGO-Kontext.
         </p>
       </div>
 
-      <div class="column useBasicText">
+      <div class="box">
         <p>
           Teamentwicklung dient dazu die Zusammenarbeit zu reflektieren, Störungen zu identifizieren
           und individuelle Stärken sowie Ressourcen aufzudecken. Dabei entwickeln wir gemeinsam, wie
@@ -106,26 +106,28 @@
     <svelte:fragment slot="title">Konditionen</svelte:fragment>
 
     <div class="useColumns">
-      <div class="column useBasicText">
+      <div class="box">
         <h3>Kosten</h3>
-        <Offers>
-          <li class="offer">
+        <List hasBullets={false}>
+          <li class="box offer useBackground-light">
             <p>Supervision einzeln</p>
+            <div class="space-1" />
             <div class="price">180.- pro 60 Min.</div>
           </li>
 
-          <li class="offer">
+          <li class="box offer useBackground-light">
             <p>Supervision in Gruppen / Teamentwicklung</p>
+            <div class="space-1" />
             <div class="price">250.- pro 60 Min.</div>
           </li>
 
-          <li class="offer">
+          <li class="box offer useBackground-light">
             <p>Spesen und Anreise nach Aufwand</p>
           </li>
-        </Offers>
+        </List>
       </div>
 
-      <div class="column useBasicText">
+      <div class="box">
         <h3>Örtlichkeiten</h3>
         <List>
           <li>In meinen Räumlichkeiten</li>

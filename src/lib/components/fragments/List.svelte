@@ -1,4 +1,8 @@
-<ul class="LIST">
+<script>
+  export let hasBullets = true;
+</script>
+
+<ul class="LIST" class:hasBullets>
   <slot />
 </ul>
 
@@ -7,11 +11,11 @@
     position: relative;
   }
 
-  .LIST > :global(li) {
+  .LIST.hasBullets > :global(li) {
     padding-left: 1em;
   }
 
-  .LIST > :global(li::before) {
+  .LIST.hasBullets > :global(li::before) {
     position: absolute;
     content: "•";
     left: 0;

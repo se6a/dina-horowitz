@@ -30,8 +30,10 @@
   <MainSection id="persoenlich">
     <svelte:fragment slot="title">Persönlich</svelte:fragment>
     <div class="useColumns">
-      <Image src="/images/portrait.jpg" />
-      <div class="useBigText">
+      <div class="box">
+        <Image src="/images/portrait.jpg" />
+      </div>
+      <div class="box useText-xl">
         <p>
           Fachpsychologin für Kinder- & Jugendpsychologie FSP Entwicklung- und
           Persönlichkeitspsychologin
@@ -46,14 +48,14 @@
     <svelte:fragment slot="title">Fokus</svelte:fragment>
 
     <div class="useColumns">
-      <div>
-        <p class="useBigText">
+      <div class="box useText-xl">
+        <p>
           Wertschätzend, strukturiert, neugierig, herausfordernd, transparent, das Grosse und Ganze
           im Blick, vernetzt und vernetzend
         </p>
       </div>
 
-      <div>
+      <div class="box">
         <p>
           Neugierde führt mich durch mein Leben. Ich bin fasziniert von der menschlichen Vielfalt,
           Kreativität und Energie. Die unbedingte Wertschätzung einer Person ist für zentral. Ich
@@ -78,8 +80,8 @@
   <MainSection id="werdegang">
     <svelte:fragment slot="title">Werdegang</svelte:fragment>
     <div class="useColumns">
-      <div>
-        <h4>Berufliche Erfahrung</h4>
+      <div class="box">
+        <h3>Berufliche Erfahrung</h3>
         <List>
           <li>Erziehungsberaterin</li>
           <li>Fachpsychologin im Kindesschutz</li>
@@ -90,8 +92,8 @@
         </List>
       </div>
 
-      <div>
-        <h4>Ausbildung</h4>
+      <div class="box">
+        <h3>Ausbildung</h3>
         <List>
           <li>
             Weiterbildungen in hypnosystemischer und lösungsfokussierter Beratung, Supervision &
@@ -103,8 +105,8 @@
         </List>
       </div>
 
-      <div>
-        <h4>Berufsverbände</h4>
+      <div class="box">
+        <h3>Berufsverbände</h3>
 
         <List>
           <li>Föderation der Schweizer Psychologen & Psychologinnen FSP</li>

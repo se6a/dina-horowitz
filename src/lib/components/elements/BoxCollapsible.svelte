@@ -14,7 +14,7 @@
   }
 </script>
 
-<section class="TEXT-BOX-COLLAPSIBLE useBasicText">
+<section class="BOX-COLLAPSIBLE box">
   <input {id} type="checkbox" tabindex="-1" />
 
   <header class="header">
@@ -36,7 +36,7 @@
 </section>
 
 <style>
-  .TEXT-BOX-COLLAPSIBLE {
+  .BOX-COLLAPSIBLE {
     width: 100%;
     margin-bottom: auto;
     background-color: var(--colorPage-light);
@@ -61,7 +61,10 @@
   }
 
   .icon {
-    --icon-width: 0.75em;
+    width: 1.2em;
+    height: 1.2em;
+    --icon-size: 1.2em;
+    margin: auto 0;
   }
 
   input {

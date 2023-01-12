@@ -1,14 +1,19 @@
 <script>
   import Highlighter from "../fragments/Highlighter.svelte";
   export let id = "";
+
+  export let title = "";
 </script>
 
 <section {id} class="LAYOUT-SECTION">
-  <h3>
+  <h2>
+    <!-- {#each title.split(" ") as part} -->
     <Highlighter>
+      <!-- {part} -->
       <slot name="title" />
     </Highlighter>
-  </h3>
+    <!-- {/each} -->
+  </h2>
 
   <div class="space-var" style:--space="var(--layoutSection-spacing-y)" />
 
@@ -50,7 +55,8 @@
     z-index: -1;
   }
 
-  .LAYOUT-SECTION h3 {
+  .LAYOUT-SECTION h2 {
+    font-size: var(--font-size-m);
     text-transform: uppercase;
     margin-left: var(--layout-inset-l);
     letter-spacing: 0.08em;

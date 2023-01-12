@@ -15,7 +15,7 @@
       <Card href="/angebot/familien">
         <h2 class="titleGroup" slot="title">
           <span>Für Familien</span>
-          <span>Beratung & Case Management</span>
+          <span>Beratung & <br />Case Management</span>
         </h2>
         <p slot="content">
           Sie sind als Familie in der Abklärungsspirale gelandet und hangeln sich von Fachstelle zu
@@ -29,7 +29,7 @@
       <Card href="/angebot/fachpersonen">
         <h2 class="titleGroup" slot="title">
           <span>Für Fachpersonen</span>
-          <span>Supervision & Teamentwicklung</span>
+          <span>Supervision & <br />Teamentwicklung</span>
         </h2>
 
         <p slot="content">
@@ -43,7 +43,7 @@
       <Card href="/angebot/alle">
         <h2 class="titleGroup" slot="title">
           <span> Für Alle </span>
-          <span>Coaching & psychologische Beratung</span>
+          <span>Coaching & <br />psychologische Beratung</span>
         </h2>
 
         <p slot="content">

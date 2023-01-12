@@ -9,7 +9,7 @@
 
   <div class="address useColumns">
     <div>
-      <ul class="useBigText">
+      <ul class="useText-xl">
         <li>
           <Highlighter color="blue">
             <a href="mailto:info@dinahorowitz.ch">info@dinahorowitz.ch</a>

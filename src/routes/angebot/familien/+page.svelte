@@ -5,8 +5,7 @@
   import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
-  import TextBoxCollapsible from "$lib/components/elements/TextBoxCollapsible.svelte";
-  import Offers from "$lib/components/elements/Offers.svelte";
+  import BoxCollapsible from "$lib/components/elements/BoxCollapsible.svelte";
 
   const pageNav = [
     {title: "Problemstellung", href: "#problemstellung"},
@@ -21,7 +20,7 @@
 <Page {color}>
   <svelte:fragment slot="header">
     <Title>
-      <h1 class="titleGroup">
+      <h1 class="titleGroup useText-xxl">
         <span>Für Familien</span>
         <span>Beratung &<br />Case Management</span>
       </h1>
@@ -32,18 +31,24 @@
   <MainSection id="problemstellung">
     <svelte:fragment slot="title">Problemstellung</svelte:fragment>
     <div class="useColumns">
-      <blockquote class="useQuote">
-        Wir möchten Ihr Kind gerne beim Schulpsychologischen Dienst abklären lassen.
-      </blockquote>
-      <p>
-        Ein grosser Schritt im Leben Ihres Kindes, im Leben Ihrer Familie: Ihr Kind kommt in den
-        Kindergarten / in die Schule. Viele Eltern kennen und fürchten diesen Satz. Und müssen
-        erstmal leer schlucken.
-      </p>
+      <div class="box">
+        <blockquote class="useQuote useText-xl">
+          Wir möchten Ihr Kind gerne beim Schulpsychologischen Dienst abklären lassen.
+        </blockquote>
+      </div>
+      <div class="box">
+        <p>
+          Ein grosser Schritt im Leben Ihres Kindes, im Leben Ihrer Familie: Ihr Kind kommt in den
+          Kindergarten / in die Schule. Viele Eltern kennen und fürchten diesen Satz. Und müssen
+          erstmal leer schlucken.
+        </p>
+      </div>
     </div>
     <div class="useColumns">
-      <Image src="/images/Dina_1_web.png" />
-      <TextBoxCollapsible>
+      <div class="box">
+        <Image src="/images/Dina_1_web.png" />
+      </div>
+      <BoxCollapsible>
         <svelte:fragment slot="title">Sie fragen sich...</svelte:fragment>
         <List>
           <li>Haben wir etwas falsch gemacht?</li>
@@ -51,10 +56,10 @@
           <li>Was müssen wir / was dürfen wir?</li>
           <li>Was wird von uns erwartet?</li>
           <li>Wird unser Kind stigmatisiert?</li>
-          <li>Landen wir in einer Abklärungssprirale?</li>
+          <li>Landen wir in einer Abklärungsspirale?</li>
           <li>Welchen Fachpersonen werden wir begegnen?</li>
         </List>
-      </TextBoxCollapsible>
+      </BoxCollapsible>
     </div>
   </MainSection>
 
@@ -62,21 +67,28 @@
     <svelte:fragment slot="title">Herausforderungen</svelte:fragment>
 
     <div class="useColumns">
-      <p class="useBigText">
-        Die Fragen sind schier endlos, die Sorgen und Nöte gross, das System, in dem Ihr/e Kind/er
-        und Sie sich bewegen komplex.
-      </p>
-      <p>
-        Der Aufwand solche Abklärungsprozesse zu durchgehen und zu managen kann einer unbezahlten
-        Teilzeitstelle gleichkommen und Familien an ihre Grenzen bringen. Viele Fachpersonen in
-        Kinder-, Jugend- und Familien-Fachstellen haben aufgrund enormer Fallzahlen oft wenig Zeit.
-        Wegen des begrenzten Auftrags dürfen sie Sie nur punktuell begleiten.
-      </p>
+      <div class="box">
+        <p class="useText-xl">
+          Die Fragen sind schier endlos, die Sorgen und Nöte gross, das System, in dem Ihr/e Kind/er
+          und Sie sich bewegen komplex.
+        </p>
+      </div>
+
+      <div class="box">
+        <p>
+          Der Aufwand solche Abklärungsprozesse zu durchgehen und zu managen kann einer unbezahlten
+          Teilzeitstelle gleichkommen und Familien an ihre Grenzen bringen. Viele Fachpersonen in
+          Kinder-, Jugend- und Familien-Fachstellen haben aufgrund enormer Fallzahlen oft wenig
+          Zeit. Wegen des begrenzten Auftrags dürfen sie Sie nur punktuell begleiten.
+        </p>
+      </div>
     </div>
 
     <div class="useColumns">
-      <Image src="/images/Dina_2_web.png" />
-      <TextBoxCollapsible>
+      <div class="box">
+        <Image src="/images/Dina_2_web.png" />
+      </div>
+      <BoxCollapsible>
         <svelte:fragment slot="title">Sie kennen folgende Stressfaktoren</svelte:fragment>
         <List>
           <li>
@@ -94,7 +106,7 @@
             Ihr/e Kind/er beschäftigen müssen?
           </li>
         </List>
-      </TextBoxCollapsible>
+      </BoxCollapsible>
     </div>
   </MainSection>
 
@@ -102,15 +114,20 @@
     <svelte:fragment slot="title">Angebot</svelte:fragment>
 
     <div class="useColumns">
-      <p class="useBigText">Ich begleite Sie von Anfang bis zum Ende.</p>
-      <p>
-        Fachberaterin, Coach, Case Managerin, Vertrauensperson - Sie entscheiden, welche Rolle Sie
-        sich von mir wünschen.
-      </p>
+      <div class="box">
+        <p class="useText-xl">Ich begleite Sie von Anfang bis zum Ende.</p>
+      </div>
+      <div class="box">
+        <p>
+          Fachberaterin, Coach, Case Managerin, Vertrauensperson - Sie entscheiden, welche Rolle Sie
+          sich von mir wünschen.
+        </p>
+      </div>
     </div>
+
     <div class="useColumns">
-      <div class="column">
-        <TextBoxCollapsible>
+      <div class="box">
+        <BoxCollapsible>
           <svelte:fragment slot="title">Ihr Bedarf</svelte:fragment>
           <List>
             <li>Sie möchten erfahren, was auf Sie als Familie zukommt</li>
@@ -132,29 +149,30 @@
 
             <li>Sie möchten administrativen und organisatorische Arbeiten abgeben können.</li>
           </List>
-        </TextBoxCollapsible>
-        <Image src="/images/Dina_3_web.png" />
+        </BoxCollapsible>
+
+        <div class="box">
+          <Image src="/images/Dina_3_web.png" />
+        </div>
       </div>
 
-      <div class="column">
-        <TextBoxCollapsible>
-          <svelte:fragment slot="title">Ihre Ziele</svelte:fragment>
-          <List>
-            <li>
-              Sie haben eine Klarheit, welche Unterstützung Sie für Ihr Kind in Anspruch wollen.
-            </li>
-            <li>Sie kennen Ihre Möglichkeiten.</li>
-            <li>Sie fühlen sich handlungsfähig.</li>
-            <li>Sie sind gestärkt, mit dem Druck von aussen umzugehen</li>
-            <li>Sie verfügen als Familie wieder über mehr zeitliche und emotionale Ressourcen.</li>
-            <li>Sie erlangen mehr Sicherheit im Gespräch mit Fachpersonen.</li>
-            <li>
-              Bei neu auftauchen Fragen haben Sie eine fachliche Ansprechperson, die Sie und Ihr
-              Kind kennt
-            </li>
-          </List>
-        </TextBoxCollapsible>
-      </div>
+      <BoxCollapsible>
+        <svelte:fragment slot="title">Ihre Ziele</svelte:fragment>
+        <List>
+          <li>
+            Sie haben eine Klarheit, welche Unterstützung Sie für Ihr Kind in Anspruch wollen.
+          </li>
+          <li>Sie kennen Ihre Möglichkeiten.</li>
+          <li>Sie fühlen sich handlungsfähig.</li>
+          <li>Sie sind gestärkt, mit dem Druck von aussen umzugehen</li>
+          <li>Sie verfügen als Familie wieder über mehr zeitliche und emotionale Ressourcen.</li>
+          <li>Sie erlangen mehr Sicherheit im Gespräch mit Fachpersonen.</li>
+          <li>
+            Bei neu auftauchen Fragen haben Sie eine fachliche Ansprechperson, die Sie und Ihr Kind
+            kennt
+          </li>
+        </List>
+      </BoxCollapsible>
     </div>
   </MainSection>
 
@@ -162,32 +180,28 @@
     <svelte:fragment slot="title">Konditionen</svelte:fragment>
 
     <div class="useColumns">
-      <div class="column">
-        <div class="useBasicText">
-          <h3>Kosten</h3>
-          <Offers>
-            <li class="offer">
-              <div class="prize">180.- pro 60 Min.</div>
-              <div class="space-1" />
-              <p>
-                Aktuell werden die Kosten für die Familienberatung und das freiwillige Case
-                Management von Ihnen selbst übernommen.
-              </p>
-            </li>
-          </Offers>
-        </div>
+      <div class="box">
+        <h3>Kosten</h3>
+        <List hasBullets={false}>
+          <li class="box offer useBackground-light">
+            <div class="prize">180.- pro 60 Min.</div>
+            <div class="space-1" />
+            <p>
+              Aktuell werden die Kosten für die Familienberatung und das freiwillige Case Management
+              von Ihnen selbst übernommen.
+            </p>
+          </li>
+        </List>
       </div>
 
-      <div class="column">
-        <div class="useBasicText">
-          <h3>Örtlichkeiten</h3>
-          <List>
-            <li>In meinen Räumlichkeiten</li>
-            <li>bei Ihnen zuhause</li>
-            <li>ab 2. Termin online möglich</li>
-            <li>bei einem Spaziergang draussen an der frischen Luft</li>
-          </List>
-        </div>
+      <div class="box">
+        <h3>Örtlichkeiten</h3>
+        <List>
+          <li>In meinen Räumlichkeiten</li>
+          <li>bei Ihnen zuhause</li>
+          <li>ab 2. Termin online möglich</li>
+          <li>bei einem Spaziergang draussen an der frischen Luft</li>
+        </List>
       </div>
     </div>
   </MainSection>
