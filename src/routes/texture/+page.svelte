@@ -26,6 +26,5 @@
     display: block;
     background-image: url("/images/texture.png");
     opacity: 0.2;
-    /* mix-blend-mode: ; */
   }
 </style>
