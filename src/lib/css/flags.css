@@ -128,17 +128,26 @@
 .useText-xxl * {
   font-size: var(--font-size-xxl);
   line-height: 1.15;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
 }
 
 .useText-xl,
 .useText-xl * {
   font-size: var(--font-size-xl);
   line-height: 1.35;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
 }
 
 .useText-l,
 .useText-l * {
   font-size: var(--font-size-l);
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
 }
 
 /* Space
