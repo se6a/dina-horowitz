@@ -99,4 +99,8 @@
   .title:hover .header {
     background-color: var(--colorPage);
   }
+
+  .BOX-COLLAPSIBLE :global(.LIST > li + li) {
+    margin-top: 1em;
+  }
 </style>
