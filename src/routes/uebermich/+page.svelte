@@ -103,13 +103,13 @@
         <h3>Ausbildung</h3>
         <List>
           <li>
-            Weiterbildungen in hypno-systemischer und lösungsfokussierter Beratung, Supervision &
+            Weiterbildungen in hypno-systemischer & lösungsfokussierter Beratung, Supervision &
             Organisationsentwicklung
           </li>
-          <li>Fachtitel in Kinder- und Jugendpsychologie FSP</li>
+          <li>Fachtitel in Kinder- & Jugendpsychologie FSP</li>
           <li>Master of Advanced Studies in Schulpsychologie</li>
           <li>
-            Psychologiestudium, Master- Abschluss in Entwicklungs- & Persönlichkeitspsychologie
+            Psychologiestudium, Master-Abschluss in Entwicklungs- & Persönlichkeitspsychologie
           </li>
           <li>Gestalterischer Vorkurs</li>
         </List>
