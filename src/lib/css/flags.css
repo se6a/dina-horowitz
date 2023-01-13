@@ -108,6 +108,7 @@
   position: relative;
   display: inline;
   white-space: nowrap;
+  display: inline-block;
 }
 
 .useHighlight::after {
