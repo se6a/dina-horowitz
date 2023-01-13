@@ -84,12 +84,12 @@
     top: calc(-1 * var(--header-height));
   }
 
-  .LAYOUT-SECTION :global(p.useText-xl) {
+  .LAYOUT-SECTION :global(.useText-xl) {
     margin-top: -0.45em;
   }
 
   @media (--vw-m) {
-    .LAYOUT-SECTION :global(p.useText-xl) {
+    .LAYOUT-SECTION :global(.useText-xl) {
       margin-top: 0;
     }
   }
