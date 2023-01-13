@@ -40,7 +40,7 @@
 
       <div class="box">
         <p>
-          {@html useHighlight`Sind sind Expert:in für Ihr Leben, ich bin es für die Prozessgestaltung`}
+          {@html useHighlight`Sie sind Expert:in für Ihr Leben, ich bin es für die Prozessgestaltung`}
           . Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die Lernerfahrung.
           Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und Visualisierungen. Immer
           mit Ihrem Einverständnis und in Ihrem Tempo.
