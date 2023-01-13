@@ -67,7 +67,7 @@
           display = createDisplay(display, randomWords());
         });
       }, interval);
-    }, 1000);
+    }, 100);
 
     return () => {
       if (i) clearInterval(i);
