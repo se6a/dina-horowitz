@@ -107,7 +107,7 @@
 .useHighlight {
   position: relative;
   display: inline;
-  white-space: nowrap;
+  white-space: pre;
   display: inline-block;
 }
 
