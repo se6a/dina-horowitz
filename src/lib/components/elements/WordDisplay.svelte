@@ -59,7 +59,7 @@
 
   onMount(async () => {
     if (!browser) return;
-    await timeout(100);
+    await timeout(1000);
     const t = setInterval(() => {
       requestAnimationFrame(() => {
         display = createDisplay(display, randomWords());
@@ -130,19 +130,6 @@
   .pushHeight {
     margin-bottom: 40%;
   }
-
-  /* .display {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-  } */
 
   .display {
     position: absolute;
