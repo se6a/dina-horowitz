@@ -12,19 +12,19 @@
       subItems: [
         {
           title: "Für Familien",
-          text: "Beratung und Case Management",
+          text: "Beratung & Case Management",
           href: "/angebot/familien",
           color: "var(--blue)"
         },
         {
           title: "Für Fachpersonen",
-          text: "Supervision und Teamentwicklung",
+          text: "Supervision & Teamentwicklung",
           href: "/angebot/fachpersonen",
           color: "var(--red)"
         },
         {
           title: "Für Alle",
-          text: "Coaching und Psychologische Beratung",
+          text: "Coaching & Psychologische Beratung",
           href: "/angebot/alle",
           color: "var(--green)"
         }
@@ -58,12 +58,14 @@
                   {href}
                   on:click={() => (isOpen = false)}
                 >
-                  <div class="arrow">
-                    <IconArrow />
-                  </div>
-                  <div class="text">
-                    <span>{title}</span>
-                    <span>{text}</span>
+                  <div class="subItemInner">
+                    <div class="arrow">
+                      <IconArrow />
+                    </div>
+                    <div class="text">
+                      <span>{title}</span>
+                      <span>{text}</span>
+                    </div>
                   </div>
                 </a>
               {/each}
@@ -130,7 +132,7 @@
     transition: transform var(--duration-middle);
   }
 
-  @media (--vw-m) {
+  @media (max-width: 1200px) {
     .subItems {
       flex-direction: column;
       height: 100%;
@@ -175,6 +177,11 @@
     font-size: var(--layoutNavSub-font-size);
     position: relative;
     width: 100%;
+  }
+
+  .subItemInner {
+    height: fit-content;
+    position: relative;
   }
 
   @media (--vw-m) {

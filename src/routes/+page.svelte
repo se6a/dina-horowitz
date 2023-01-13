@@ -34,7 +34,7 @@
 
         <p slot="content">
           Sie wollen als Fachpersonen Ihre Arbeit reflektieren oder wünschen sich eine Veränderung
-          im Team? Ich biete Ihnen Struktur und Orientierung in diesen Prozessen an.
+          im Team? Ich biete Ihnen Struktur und Orientierung in diesen Prozessen.
         </p>
       </Card>
     </div>

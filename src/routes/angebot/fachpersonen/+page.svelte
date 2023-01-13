@@ -9,6 +9,8 @@
 
   const pageNav = [
     {title: "Angebot", href: "#angebot"},
+    {title: "Fallsupervision", href: "#fallsupervision"},
+    {title: "Teamentwicklung", href: "#teamentwicklung"},
     {title: "Konditionen", href: "#konditionen"}
   ];
 
@@ -31,21 +33,22 @@
     <svelte:fragment slot="title">Angebot</svelte:fragment>
     <div class="useColumns">
       <div class="box">
-        <blockquote class="useQuote">
+        <blockquote class="useQuote useText-xl">
           Begleitete Reflexion hilft, um im beruflichen Alltag nicht blind zu werden.
         </blockquote>
       </div>
       <div class="box">
         <p>
-          Gerne begleite ich Ihren Prozess hypno- systemisch und lösungsfokussiert. Dabei bringe ich
-          mein Wissen und meine Erfahrung zur fachspezifischen Arbeit, zur interdisziplinären
-          Zusammenarbeit sowie zur Prozessgestaltung ein.
+          Gerne begleite ich Ihren Prozess <span class="useHighlight"
+            >hypno-systemisch und lösungsfokussiert</span
+          >. Dabei bringe ich mein Wissen und meine Erfahrung zur fachspezifischen Arbeit, zur
+          interdisziplinären Zusammenarbeit sowie zur Prozessgestaltung ein.
         </p>
       </div>
     </div>
   </MainSection>
 
-  <MainSection id="">
+  <MainSection id="fallsupervision">
     <svelte:fragment slot="title">Fallsupervision (einzeln / im Team)</svelte:fragment>
 
     <div class="useColumns">
@@ -58,10 +61,11 @@
 
       <div class="box">
         <p>
-          Die Fallsupervision ermöglicht Qualitätssicherung und -steigerung im beruflichen Handeln.
-          Verstrickungen, Haltungen, Rollen und Zusammenarbeiten innerhalb eines Teams und mit
-          relevanten Partner:innen können reflektiert und verbessert werden. So gewinnen Sie ein
-          umfassendes Verständnis einer komplexen Situation, weitere Handlungsoptionen, zusätzliche
+          Die Fallsupervision ermöglicht <span class="useHighlight"
+            >Qualitätssicherung und -steigerung</span
+          > im beruflichen Handeln. Verstrickungen, Haltungen, Rollen und Zusammenarbeiten innerhalb
+          eines Teams und mit relevanten Partner:innen können reflektiert und verbessert werden. So gewinnen
+          Sie ein umfassendes Verständnis einer komplexen Situation, weitere Handlungsoptionen, zusätzliche
           Kompetenzen und Klarheit.
         </p>
         <p>
@@ -72,7 +76,7 @@
     </div>
   </MainSection>
 
-  <MainSection>
+  <MainSection id="teamentwicklung">
     <svelte:fragment slot="title">Teamentwicklung (bis 6 Personen)</svelte:fragment>
 
     <div class="useColumns">
@@ -88,11 +92,9 @@
           Teamentwicklung dient dazu die Zusammenarbeit zu reflektieren, Störungen zu identifizieren
           und individuelle Stärken sowie Ressourcen aufzudecken. Dabei entwickeln wir gemeinsam, wie
           das Zusammenspiel im Team gewinnbringend gestärkt werden kann. Ich unterstütze Sie dabei
-          eine Teamkultur zu etablieren, in der Akzeptanz, Offenheit und Vertrauen gelebt werden.
-          Gerne begleite ich Ihren Prozess hypno- systemisch und lösungsfokussiert. Dabei bringe ich
-          mein Wissen und meine Erfahrung zur fachspezifischen Arbeit, zur interdisziplinären
-          Zusammenarbeit sowie zur Prozessgestaltung ein. Begleitete Reflexion hilft, um im
-          beruflichen Alltag nicht blind zu werden.
+          eine Teamkultur zu etablieren, in der <span class="useHighlight"
+            >Akzeptanz, Offenheit und Vertrauen gelebt</span
+          > werden.
         </p>
         <p>
           Sie haben als Team eine gut funktionierende Kultur etabliert und wollen diese präventiv

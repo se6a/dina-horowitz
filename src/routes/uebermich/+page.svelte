@@ -20,7 +20,7 @@
     <Title>
       <h1 class="titleGroup useText-xxl">
         <span>Dina Horowitz</span>
-        <span>Familienberaterin, Supervisorin, Coach</span>
+        <span>Familienberaterin, <br />Supervisorin, Coach</span>
       </h1>
     </Title>
   </svelte:fragment>
@@ -35,7 +35,7 @@
       </div>
       <div class="box useText-xl">
         <p>
-          Fachpsychologin für Kinder- & Jugendpsychologie FSP Entwicklung- und
+          Fachpsychologin für Kinder- & Jugendpsychologie FSP Entwicklungs- und
           Persönlichkeitspsychologin
         </p>
         <p>*1984</p>
@@ -50,7 +50,7 @@
     <div class="useColumns">
       <div class="box useText-xl">
         <p>
-          Wertschätzend, strukturiert, neugierig, herausfordernd, transparent, das Grosse und Ganze
+          wertschätzend, strukturiert, neugierig, herausfordernd, transparent, das Grosse und Ganze
           im Blick, vernetzt und vernetzend
         </p>
       </div>
@@ -64,9 +64,12 @@
           Integrität oder die von Mitmenschen eingeschränkt oder verletzt wird.
         </p>
         <p>
-          In meiner Arbeit als Familienberaterin Supervisorin und Coach biete ich Ihnen Zeit und
-          Raum für Ihre Veränderungen. Ich schaffe eine vertrauensvolle und positive Atmosphäre.
-          Mein Anspruch an mich ist es achtsam, sorgfältig, authentisch und direkt zu sein.
+          In meiner Arbeit als Familienberaterin, Supervisorin und Coach biete ich Ihnen <span
+            class="useHighlight">Zeit und Raum für Ihre Veränderungen</span
+          >. Ich schaffe eine
+          <span class="useHighlight">vertrauensvolle und positive Atmosphäre</span>. Mein Anspruch
+          an mich ist es
+          <span class="useHighlight">achtsam, sorgfältig, authentisch und direkt</span> zu sein.
         </p>
 
         <p>

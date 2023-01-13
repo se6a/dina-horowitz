@@ -90,7 +90,7 @@
           <div class="flipBox">
             {#each seq as ch, i}
               {@const isCurrent = i === seq.length - 1}
-              {@const thisDur = 100 + 1.5 * col + 1.5 * row + 3 * i}
+              {@const thisDur = flipDur + 1.5 * col + 1.5 * row + 3 * i}
               {@const thisDel = i * thisDur + col * 100 + row * 300}
               <div
                 class="char"
