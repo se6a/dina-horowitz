@@ -22,6 +22,6 @@
   }
 
   .LIST > :global(li + li) {
-    margin-top: var(--space-1);
+    margin-top: 0.5em;
   }
 </style>
