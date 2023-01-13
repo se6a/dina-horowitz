@@ -42,6 +42,8 @@
     pointer-events: none;
     opacity: 0;
     transition: opacity var(--duration-middle);
+    display: flex;
+    align-items: center;
   }
 
   .isVertical > .icon {
