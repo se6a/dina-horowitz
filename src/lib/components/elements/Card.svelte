@@ -32,12 +32,12 @@
 
   @media (--vw-m) {
     .CARD.doPassHover:hover > :global(.HOVER-ARROW) {
-      transform: translate(0, 0);
+      transform: translate(0, 0) !important;
     }
 
     .CARD.doPassHover:hover > :global(.HOVER-ARROW > .icon) {
-      pointer-events: none;
-      opacity: 0;
+      pointer-events: none !important;
+      opacity: 0 !important;
     }
 
     .ifCompact {
