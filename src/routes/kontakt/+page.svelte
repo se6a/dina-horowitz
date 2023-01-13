@@ -38,7 +38,7 @@
       <div class="space-l" />
     </div>
 
-    <div>
+    <!-- <div>
       <h2>
         <Highlighter color="yellow">Mitteilung</Highlighter>
       </h2>
@@ -46,7 +46,7 @@
       <div class="space-1" />
 
       <ContactForm />
-    </div>
+    </div> -->
   </div>
 </Page>
 
