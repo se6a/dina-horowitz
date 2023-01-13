@@ -1,5 +1,6 @@
 <script>
   import {browser} from "$app/environment";
+  import {timeout} from "$lib/functions/utility";
   import {onMount} from "svelte";
 
   const words = [
@@ -56,8 +57,9 @@
 
   let display = createDisplay([], randomWords());
 
-  onMount(() => {
+  onMount(async () => {
     if (!browser) return;
+    await timeout(100);
     const t = setInterval(() => {
       requestAnimationFrame(() => {
         display = createDisplay(display, randomWords());
