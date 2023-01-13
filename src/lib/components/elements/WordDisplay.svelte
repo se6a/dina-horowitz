@@ -55,18 +55,24 @@
   const rows = 4;
   const cols = 13;
 
-  let display = createDisplay([], randomWords());
+  let display;
 
   onMount(async () => {
     if (!browser) return;
-    await timeout(1000);
-    const t = setInterval(() => {
-      requestAnimationFrame(() => {
-        display = createDisplay(display, randomWords());
-      });
-    }, interval);
+    let i = null;
+    const t = setTimeout(() => {
+      display = createDisplay([], randomWords());
+      i = setInterval(() => {
+        requestAnimationFrame(() => {
+          display = createDisplay(display, randomWords());
+        });
+      }, interval);
+    }, 1000);
 
-    return () => clearInterval(t);
+    return () => {
+      if (i) clearInterval(i);
+      clearTimeout(t);
+    };
   });
 
   let displayWidth = 0;
