@@ -11,12 +11,9 @@
   {/if}
 
   <h2>
-    <!-- {#each title.split(" ") as part} -->
     <Highlighter>
-      <!-- {part} -->
       <slot name="title" />
     </Highlighter>
-    <!-- {/each} -->
   </h2>
 
   <div class="space-var" style:--space="var(--layoutSection-spacing-y)" />
@@ -85,5 +82,15 @@
     user-select: none;
     position: absolute;
     top: calc(-1 * var(--header-height));
+  }
+
+  .LAYOUT-SECTION :global(p.useText-xl) {
+    margin-top: -0.45em;
+  }
+
+  @media (--vw-m) {
+    .LAYOUT-SECTION :global(p.useText-xl) {
+      margin-top: 0;
+    }
   }
 </style>

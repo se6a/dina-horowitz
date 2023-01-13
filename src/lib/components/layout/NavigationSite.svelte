@@ -12,19 +12,19 @@
       subItems: [
         {
           title: "Für Familien",
-          text: "Beratung & Case Management",
+          text: "Beratung &\nCase Management",
           href: "/angebot/familien",
           color: "var(--blue)"
         },
         {
           title: "Für Fachpersonen",
-          text: "Supervision & Teamentwicklung",
+          text: "Supervision &\nTeamentwicklung",
           href: "/angebot/fachpersonen",
           color: "var(--red)"
         },
         {
           title: "Für Alle",
-          text: "Coaching & Psychologische Beratung",
+          text: "Coaching &\nPsychologische Beratung",
           href: "/angebot/alle",
           color: "var(--green)"
         }
@@ -202,6 +202,7 @@
 
   .text > * {
     display: block;
+    white-space: break-spaces;
     max-width: 20ch;
   }
 

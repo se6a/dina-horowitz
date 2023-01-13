@@ -17,6 +17,7 @@
     padding: 0 var(--page-padding-x);
     width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     margin-top: auto;
   }
 </style>

@@ -3,9 +3,9 @@
   import Title from "$lib/components/layout/Title.svelte";
   import NavigationPage from "$lib/components/layout/NavigationPage.svelte";
   import MainSection from "$lib/components/layout/Section.svelte";
-  import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
   import TextBoxCollapsible from "$lib/components/elements/BoxCollapsible.svelte";
+  import useHighlight from "$lib/functions/useHighlight";
 
   const pageNav = [
     {title: "Angebot", href: "#angebot"},
@@ -40,11 +40,10 @@
 
       <div class="box">
         <p>
-          <span class="useHighlight"
-            >Sind sind Expert:in für Ihr Leben, ich bin es für die Prozessgestaltung</span
-          >. Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die
-          Lernerfahrung. Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und
-          Visualisierungen. Immer mit Ihrem Einverständnis und in Ihrem Tempo.
+          {@html useHighlight`Sind sind Expert:in für Ihr Leben, ich bin es für die Prozessgestaltung`}
+          . Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die Lernerfahrung.
+          Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und Visualisierungen. Immer
+          mit Ihrem Einverständnis und in Ihrem Tempo.
         </p>
       </div>
     </div>
@@ -90,23 +89,26 @@
 
     <div class="useColumns">
       <div class="box">
-        <h4>Kosten</h4>
-        <List hasBullets={false}>
-          <li class="box offer useBackground-light">
-            <div class="price">180.- pro 60 Min.</div>
-          </li>
+        <div class="box">
+          <h4>Kosten</h4>
+          <List hasBullets={false}>
+            <li class="box offer useBackground-light">
+              <div class="price">180.- pro 60 Min.</div>
+            </li>
 
-          <li class="box offer useBackground-light">
-            <p>Mein Beratungsangebot ist nicht Krankenkassenanerkannt.</p>
-          </li>
-        </List>
-      </div>
-      <div class="box">
-        <h4><strong>Bitte beachten Sie</strong></h4>
-        <p>
-          Wenn ich einen dringlichen psycho<strong>therapeutischen</strong> Bedarf erkenne, werde ich
-          Sie darauf ansprechen und Sie bei Bedarf dabei unterstützen entsprechende Begleitung zu finden.
-        </p>
+            <li class="box offer useBackground-light">
+              <p>Mein Beratungsangebot ist nicht Krankenkassenanerkannt.</p>
+            </li>
+          </List>
+        </div>
+        <div class="box">
+          <h4><strong>{@html useHighlight`Bitte beachten Sie`}</strong></h4>
+          <p>
+            Wenn ich einen dringlichen psycho<strong>{@html useHighlight`therapeutischen`}</strong> Bedarf
+            erkenne, werde ich Sie darauf ansprechen und Sie bei Bedarf dabei unterstützen entsprechende
+            Begleitung zu finden.
+          </p>
+        </div>
       </div>
 
       <div class="box">

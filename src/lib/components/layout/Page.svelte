@@ -17,6 +17,7 @@
   class:isIE
   style:--colorPage={color ? `var(--${color})` : "silver"}
   style:--colorPage-light={color ? `var(--${color}-light)` : "gainsboro"}
+  style:--colorPage-highlight={color ? `var(--${color}-highlight)` : "gainsboro"}
 >
   <Header>
     <slot name="header" />

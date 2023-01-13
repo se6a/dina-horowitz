@@ -6,6 +6,7 @@
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
   import BoxCollapsible from "$lib/components/elements/BoxCollapsible.svelte";
+  import useHighlight from "$lib/functions/useHighlight";
 
   const pageNav = [
     {title: "Problemstellung", href: "#problemstellung"},
@@ -38,9 +39,9 @@
       </div>
       <div class="box">
         <p>
-          Ein grosser Schritt im Leben Ihres Kindes, im Leben Ihrer Familie: <span
-            class="useHighlight">Ihr Kind kommt in den Kindergarten / in die Schule</span
-          >. Viele Eltern kennen und fürchten diesen Satz. Und müssen erstmal leer schlucken.
+          Ein grosser Schritt im Leben Ihres Kindes, im Leben Ihrer Familie:
+          {@html useHighlight`Ihr Kind kommt in den Kindergarten / in die Schule`}. Viele Eltern
+          kennen und fürchten diesen Satz. Und müssen erstmal leer schlucken.
         </p>
       </div>
     </div>
@@ -77,11 +78,10 @@
       <div class="box">
         <p>
           Der Aufwand solche Abklärungsprozesse zu durchlaufen und zu managen kann einer unbezahlten
-          Teilzeitstelle gleichkommen und <span class="useHighlight"
-            >Familien an ihre Grenzen bringen</span
-          >. Viele Fachpersonen in Kinder-, Jugend- und Familien-Fachstellen haben aufgrund enormer
-          Fallzahlen oft wenig Zeit. Wegen des begrenzten Auftrags dürfen sie Sie nur punktuell
-          begleiten.
+          Teilzeitstelle gleichkommen und
+          {@html useHighlight`Familien an ihre Grenzen bringen`}. Viele Fachpersonen in Kinder-,
+          Jugend- und Familien-Fachstellen haben aufgrund enormer Fallzahlen oft wenig Zeit. Wegen
+          des begrenzten Auftrags dürfen sie Sie nur punktuell begleiten.
         </p>
       </div>
     </div>
@@ -121,8 +121,8 @@
       </div>
       <div class="box">
         <p>
-          <span class="useHighlight">Fachberaterin, Coach, Case Managerin, Vertrauensperson</span> -
-          Sie entscheiden, welche Rolle Sie sich von mir wünschen.
+          {@html useHighlight`Fachberaterin, Coach, Case Managerin, Vertrauensperson`}
+          - Sie entscheiden, welche Rolle Sie sich von mir wünschen.
         </p>
       </div>
     </div>
@@ -148,25 +148,33 @@
         </BoxCollapsible>
 
         <div class="box">
-          <Image src="/images/Dina_3_web.png" />
+          <Image src="/images/Dina_4_web.png" />
         </div>
       </div>
 
-      <BoxCollapsible>
-        <svelte:fragment slot="title">Ihre Ziele</svelte:fragment>
-        <List>
-          <li>Sie haben eine Klarheit, welche Unterstützung Sie für Ihr Kind in Anspruch wollen</li>
-          <li>Sie kennen Ihre Möglichkeiten</li>
-          <li>Sie fühlen sich handlungsfähig</li>
-          <li>Sie sind gestärkt, mit dem Druck von aussen umzugehen</li>
-          <li>Sie verfügen als Familie wieder über mehr zeitliche und emotionale Ressourcen</li>
-          <li>Sie erlangen mehr Sicherheit im Gespräch mit Fachpersonen</li>
-          <li>
-            Bei neu auftauchen Fragen haben Sie eine fachliche Ansprechperson, die Sie und Ihr Kind
-            kennt
-          </li>
-        </List>
-      </BoxCollapsible>
+      <div class="box">
+        <BoxCollapsible>
+          <svelte:fragment slot="title">Ihre Ziele</svelte:fragment>
+          <List>
+            <li>
+              Sie haben eine Klarheit, welche Unterstützung Sie für Ihr Kind in Anspruch wollen
+            </li>
+            <li>Sie kennen Ihre Möglichkeiten</li>
+            <li>Sie fühlen sich handlungsfähig</li>
+            <li>Sie sind gestärkt, mit dem Druck von aussen umzugehen</li>
+            <li>Sie verfügen als Familie wieder über mehr zeitliche und emotionale Ressourcen</li>
+            <li>Sie erlangen mehr Sicherheit im Gespräch mit Fachpersonen</li>
+            <li>
+              Bei neu auftauchen Fragen haben Sie eine fachliche Ansprechperson, die Sie und Ihr
+              Kind kennt
+            </li>
+          </List>
+        </BoxCollapsible>
+
+        <div class="box">
+          <Image src="/images/Dina_3_web.png" />
+        </div>
+      </div>
     </div>
   </MainSection>
 

@@ -31,11 +31,11 @@
   }
 
   @media (--vw-m) {
-    .CARD > :global(.HOVER-ARROW:hover) {
+    .CARD.doPassHover:hover > :global(.HOVER-ARROW) {
       transform: translate(0, 0);
     }
 
-    .CARD > :global(.HOVER-ARROW:hover > .icon) {
+    .CARD.doPassHover:hover > :global(.HOVER-ARROW > .icon) {
       pointer-events: none;
       opacity: 0;
     }

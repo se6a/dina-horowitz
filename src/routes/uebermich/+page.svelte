@@ -5,6 +5,7 @@
   import MainSection from "$lib/components/layout/Section.svelte";
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
+  import useHighlight from "$lib/functions/useHighlight";
 
   const pageNav = [
     {title: "Persönlich", href: "#persoenlich"},
@@ -64,17 +65,20 @@
           Integrität oder die von Mitmenschen eingeschränkt oder verletzt wird.
         </p>
         <p>
-          In meiner Arbeit als Familienberaterin, Supervisorin und Coach biete ich Ihnen <span
-            class="useHighlight">Zeit und Raum für Ihre Veränderungen</span
-          >. Ich schaffe eine
-          <span class="useHighlight">vertrauensvolle und positive Atmosphäre</span>. Mein Anspruch
-          an mich ist es
-          <span class="useHighlight">achtsam, sorgfältig, authentisch und direkt</span> zu sein.
+          In meiner Arbeit als Familienberaterin, Supervisorin und Coach biete ich Ihnen {@html useHighlight`Zeit und Raum für Ihre Veränderungen`}.
+          Ich schaffe eine
+          {@html useHighlight`vertrauensvolle und positive Atmosphäre`}. Mein Anspruch an mich ist
+          es
+          {@html useHighlight`achtsam, sorgfältig, authentisch und direkt`} zu sein.
         </p>
 
         <p>
-          Ich vertrete die Berufsethik des Fachverbands Schweizer Psychologinnen und Psychologen
-          FSP.
+          Ich vertrete die <a
+            class="textLink"
+            href="https://www.psychologie.ch/recht-qualitaet-im-beruf/ethik-qualitaet/berufsethik"
+            target="_blank"
+            rel="noreferrer">Berufsethik</a
+          > des Fachverbands Schweizer Psychologinnen und Psychologen FSP.
         </p>
       </div>
     </div>

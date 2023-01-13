@@ -191,6 +191,11 @@
   --red-light: hsla(var(--hsl-red), 0.1);
   --green-light: hsla(var(--hsl-green), 0.1);
   --yellow-light: hsla(var(--hsl-yellow), 0.1);
+
+  --blue-highlight: hsl(189, 59%, 80%);
+  --yellow-highlight: hsl(51, 100%, 68%);
+  --red-highlight: hsl(8, 100%, 86%);
+  --green-highlight: hsl(67, 57%, 64%);
 }
 
 /*  TIME

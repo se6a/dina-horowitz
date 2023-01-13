@@ -6,6 +6,7 @@
   import Image from "$lib/components/fragments/Image.svelte";
   import List from "$lib/components/fragments/List.svelte";
   import TextBoxCollapsible from "$lib/components/elements/BoxCollapsible.svelte";
+  import useHighlight from "$lib/functions/useHighlight";
 
   const pageNav = [
     {title: "Angebot", href: "#angebot"},
@@ -39,9 +40,8 @@
       </div>
       <div class="box">
         <p>
-          Gerne begleite ich Ihren Prozess <span class="useHighlight"
-            >hypno-systemisch und lösungsfokussiert</span
-          >. Dabei bringe ich mein Wissen und meine Erfahrung zur fachspezifischen Arbeit, zur
+          Gerne begleite ich Ihren Prozess {@html useHighlight`hypno-systemisch und lösungsfokussiert`}.
+          Dabei bringe ich mein Wissen und meine Erfahrung zur fachspezifischen Arbeit, zur
           interdisziplinären Zusammenarbeit sowie zur Prozessgestaltung ein.
         </p>
       </div>
@@ -61,12 +61,11 @@
 
       <div class="box">
         <p>
-          Die Fallsupervision ermöglicht <span class="useHighlight"
-            >Qualitätssicherung und -steigerung</span
-          > im beruflichen Handeln. Verstrickungen, Haltungen, Rollen und Zusammenarbeiten innerhalb
-          eines Teams und mit relevanten Partner:innen können reflektiert und verbessert werden. So gewinnen
-          Sie ein umfassendes Verständnis einer komplexen Situation, weitere Handlungsoptionen, zusätzliche
-          Kompetenzen und Klarheit.
+          Die Fallsupervision ermöglicht
+          {@html useHighlight`Qualitätssicherung und -steigerung`} im beruflichen Handeln. Verstrickungen,
+          Haltungen, Rollen und Zusammenarbeiten innerhalb eines Teams und mit relevanten Partner:innen
+          können reflektiert und verbessert werden. So gewinnen Sie ein umfassendes Verständnis einer
+          komplexen Situation, weitere Handlungsoptionen, zusätzliche Kompetenzen und Klarheit.
         </p>
         <p>
           Die Fallsupervision kann im Einzel- oder im Team durchgeführt werden. Ich bin gelistete
@@ -92,9 +91,8 @@
           Teamentwicklung dient dazu die Zusammenarbeit zu reflektieren, Störungen zu identifizieren
           und individuelle Stärken sowie Ressourcen aufzudecken. Dabei entwickeln wir gemeinsam, wie
           das Zusammenspiel im Team gewinnbringend gestärkt werden kann. Ich unterstütze Sie dabei
-          eine Teamkultur zu etablieren, in der <span class="useHighlight"
-            >Akzeptanz, Offenheit und Vertrauen gelebt</span
-          > werden.
+          eine Teamkultur zu etablieren, in der
+          {@html useHighlight`Akzeptanz, Offenheit und Vertrauen gelebt`} werden.
         </p>
         <p>
           Sie haben als Team eine gut funktionierende Kultur etabliert und wollen diese präventiv
