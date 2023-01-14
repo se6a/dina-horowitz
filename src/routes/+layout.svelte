@@ -14,6 +14,10 @@
 <svelte:head>
   <link rel="stylesheet" href={isIE ? "/css/ie.css" : ""} />
   <title>Dina Horowitz</title>
+  <meta
+    name="description"
+    content="Fachpsychologin für Kinder- & Jugendpsychologie FSP Entwicklungs- und Persönlichkeitspsychologin in Basel."
+  />
 </svelte:head>
 
 <slot />
