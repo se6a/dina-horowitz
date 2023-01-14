@@ -12,18 +12,16 @@
 
   <div class="useColumns">
     <div class="box">
+      <address>
+        <span>Dina Horowitz</span>
+        <span>Unterer Batterieweg 85</span>
+        <span>4059 Basel, Schweiz</span>
+        <a class="textLink" href="mailto:info@dinahorowitz.ch" target="_blank" rel="noreferrer">
+          info@dinahorowitz.ch
+        </a>
+      </address>
+      <div class="space-m" />
       <ul>
-        <li>
-          <address>
-            <span>Dina Horowitz</span>
-            <span>Unterer Batterieweg 85</span>
-            <span>4059 Basel, Schweiz</span>
-          </address>
-          <a class="textLink" href="mailto:info@dinahorowitz.ch" target="_blank" rel="noreferrer">
-            info@dinahorowitz.ch
-          </a>
-        </li>
-
         <li>
           <a class="textLink" href="https://www.dinahorowitz.ch" target="_blank" rel="noreferrer">
             Text, Redaktion & Angebot: Dina Horowitz
@@ -59,6 +57,10 @@
   address {
     display: flex;
     flex-direction: column;
+  }
+
+  ul {
+    font-size: var(--font-size-s);
   }
 
   li + li {

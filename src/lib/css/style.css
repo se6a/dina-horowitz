@@ -133,6 +133,7 @@ h3,
 p,
 blockquote {
   line-height: 1.46;
+  margin-top: -0.075em;
 }
 
 strong {

@@ -40,10 +40,10 @@
 
       <div class="box">
         <p>
-          {@html useHighlight`Sie sind Expert:in für Ihr Leben, ich bin es für die Prozessgestaltung`}
-          . Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die Lernerfahrung.
-          Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und Visualisierungen. Immer
-          mit Ihrem Einverständnis und in Ihrem Tempo.
+          {@html useHighlight`Sie sind Expert:in für Ihr Leben, ich bin es für die Prozessgestaltung`}.
+          Je mehr Kanäle eines Menschen angesprochen werden, desto nachhaltiger ist die
+          Lernerfahrung. Ich nutze dazu Körperwahrnehmungen, Gedankenexperimente, Metaphern und
+          Visualisierungen. Immer mit Ihrem Einverständnis und in Ihrem Tempo.
         </p>
       </div>
     </div>
@@ -51,7 +51,7 @@
     <div class="useColumns">
       <TextBoxCollapsible>
         <svelte:fragment slot="title">
-          Sie haben ein berufliches und / oder privates Anliegen
+          Sie haben ein berufliches / privates Anliegen
         </svelte:fragment>
         <List>
           <li>Sie wollen aus einer belastenden oder herausfordernden Situation rauskommen</li>
