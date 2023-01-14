@@ -13,6 +13,7 @@
 
 <svelte:head>
   <link rel="stylesheet" href={isIE ? "/css/ie.css" : ""} />
+  <title>Dina Horowitz</title>
 </svelte:head>
 
 <slot />
