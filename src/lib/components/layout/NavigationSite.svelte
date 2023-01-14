@@ -62,10 +62,10 @@
                     <div class="arrow">
                       <IconArrow />
                     </div>
-                    <div class="text">
+                    <h2 class="titleGroup">
                       <span>{title}</span>
                       <span>{text}</span>
-                    </div>
+                    </h2>
                   </div>
                 </a>
               {/each}
@@ -190,17 +190,17 @@
     }
   }
 
-  .text,
+  .titleGroup,
   .arrow {
     transition: transform var(--duration-middle), opacity var(--duration-middle);
   }
 
-  .text {
+  .titleGroup {
     transform: translateX(0);
     width: 100%;
   }
 
-  .text > * {
+  .titleGroup > * {
     display: block;
     white-space: break-spaces;
     max-width: 20ch;
@@ -219,11 +219,7 @@
     height: min-content;
   }
 
-  .text > :first-child {
-    color: white;
-  }
-
-  .subItem:hover .text {
+  .subItem:hover .titleGroup {
     transform: translateX(3rem);
   }
 
