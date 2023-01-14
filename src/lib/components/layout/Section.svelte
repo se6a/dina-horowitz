@@ -85,7 +85,8 @@
   }
 
   .LAYOUT-SECTION :global(.useText-xl) {
-    margin-top: -0.45em;
+    /* margin-top: -0.45em; */
+    margin-top: -0.23em;
   }
 
   @media (--vw-m) {
