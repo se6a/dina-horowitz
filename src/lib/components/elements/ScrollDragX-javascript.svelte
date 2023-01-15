@@ -2,10 +2,6 @@
   import {browser} from "$app/environment";
   import {onMount} from "svelte";
 
-  function init(N) {
-    console.log(N.children[0].clientWidth);
-  }
-
   let overflow = 0;
   let NContainer;
   let NDragable;
@@ -45,7 +41,7 @@
   }
 </script>
 
-<div class="SCROLL-DRAG-X" use:init bind:this={NContainer}>
+<div class="SCROLL-DRAG-X" bind:this={NContainer}>
   <div class="inner" style:--left={left + "px"} bind:this={NDragable} on:mousedown={dragStart}>
     <slot />
   </div>

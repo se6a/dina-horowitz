@@ -1,5 +1,5 @@
 <script>
-  import {afterUpdate, beforeUpdate, onDestroy} from "svelte";
+  import {afterUpdate} from "svelte";
 
   let observer;
   const observerOptions = {
@@ -18,21 +18,7 @@
     }, observerOptions);
 
     [...NMain.children].forEach((NChild) => observer.observe(NChild));
-    console.log("MOUNT");
-
     return () => [...NMain.children].forEach((NChild) => observer.unobserve(NChild));
-  });
-
-  onDestroy(() => {
-    console.log("DESTROY");
-  });
-
-  beforeUpdate(() => {
-    console.log("BEFORE UPDATE");
-  });
-
-  afterUpdate(() => {
-    console.log("AFTER UPDATE");
   });
 </script>
 
