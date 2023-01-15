@@ -241,6 +241,7 @@
 
     .subNav {
       z-index: 500;
+      background-color: white;
     }
 
     .subItem {
