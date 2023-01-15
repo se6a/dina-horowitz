@@ -6,8 +6,6 @@
 @custom-media --vw-above-s (min-width: 601px);
 @custom-media --vw-above-m (min-width: 1001px);
 
-@custom-media --ie screen and (min-width: 0\0) and (min-resolution: +72dpi);
+@custom-media --ie-medium (max-width: 800px);
 
-@custom-media --ie-medium screen and (min-width: 0\0) and (min-resolution: +72dpi) and (max-width: 800px);
-
-@custom-media --ie-small screen and (min-width: 0\0) and (min-resolution: +72dpi) and (max-width: 600px);
+@custom-media --ie-small (max-width: 600px);

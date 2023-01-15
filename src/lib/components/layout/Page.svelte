@@ -33,7 +33,7 @@
   <Footer {hasGoTopButton} />
 </div>
 
-<style>
+<style lang="postcss">
   .PAGE {
     position: relative;
     display: flex;
@@ -71,7 +71,7 @@
 ###############################################################################
 #############################################################################*/
 
-  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  :global(.isIE) {
     .PAGE {
       display: block;
       padding: 0 100px;
@@ -91,9 +91,11 @@
     }
   }
 
-  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) and (max-width: 800px) {
-    .PAGE {
-      padding: 0 5vw;
+  @media (--ie-medium) {
+    :global(.isIE) {
+      .PAGE {
+        padding: 0 5vw;
+      }
     }
   }
 </style>

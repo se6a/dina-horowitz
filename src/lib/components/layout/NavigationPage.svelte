@@ -58,7 +58,7 @@
 ###############################################################################
 #############################################################################*/
 
-  @media (--ie) {
+  :global(.isIE) {
     .PAGE-NAVIGATION {
       display: block;
       padding: 0 30px 30px;
@@ -73,9 +73,11 @@
   }
 
   @media (--ie-small) {
-    .anchor {
-      display: block;
-      margin-right: 0;
+    :global(.isIE) {
+      .anchor {
+        display: block;
+        margin-right: 0;
+      }
     }
   }
 </style>

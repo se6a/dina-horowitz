@@ -84,7 +84,7 @@
   <div class="angebote" />
 </nav>
 
-<style>
+<style lang="postcss">
   @import "$lib/css/breakpoints.css";
 
   .NAVIGATION {
@@ -233,7 +233,7 @@
 ###############################################################################
 #############################################################################*/
 
-  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  :global(.isIE) {
     .NAVIGATION {
       height: 50px;
       padding: 0 30px;

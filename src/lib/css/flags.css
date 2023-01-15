@@ -27,7 +27,7 @@
 
 /* INTERNET EXPLORER
 #############################################################################*/
-@media (--ie) {
+.isIE {
   .useColumns {
     display: block;
     grid-template-columns: none;
@@ -62,7 +62,7 @@
 
 /* INTERNET EXPLORER
 #############################################################################*/
-@media (--ie) {
+.isIE {
   .useGrid {
     display: block;
     grid-template-columns: none;
@@ -129,7 +129,7 @@
 
 /* INTERNET EXPLORER
 #############################################################################*/
-@media (--ie) {
+.isIE {
   .useBackground-fullwidth::after {
     display: none;
   }
@@ -225,7 +225,7 @@
 
 /* INTERNET EXPLORER
 #############################################################################*/
-@media (--ie) {
+.isIE {
   .isBlue.isBlue.HIGHLIGHTER,
   .isBlue .HIGHLIGHTER,
   .isBlue.isBlue.useHighlight,
@@ -287,7 +287,7 @@
 
 /* INTERNET EXPLORER
 #############################################################################*/
-@media (--ie) {
+.isIE {
   .useText-xxl,
   .useText-xxl * {
     font-size: 10rem;
@@ -305,36 +305,40 @@
 }
 
 @media (--ie-medium) {
-  .useText-xxl,
-  .useText-xxl * {
-    font-size: 5rem;
-  }
+  .isIE {
+    .useText-xxl,
+    .useText-xxl * {
+      font-size: 5rem;
+    }
 
-  .useText-xl,
-  .useText-xl * {
-    font-size: 4rem;
-  }
+    .useText-xl,
+    .useText-xl * {
+      font-size: 4rem;
+    }
 
-  .useText-l,
-  .useText-l * {
-    font-size: 3rem;
+    .useText-l,
+    .useText-l * {
+      font-size: 3rem;
+    }
   }
 }
 
 @media (--ie-small) {
-  .useText-xxl,
-  .useText-xxl * {
-    font-size: 4rem;
-  }
+  .isIE {
+    .useText-xxl,
+    .useText-xxl * {
+      font-size: 4rem;
+    }
 
-  .useText-xl,
-  .useText-xl * {
-    font-size: 3rem;
-  }
+    .useText-xl,
+    .useText-xl * {
+      font-size: 3rem;
+    }
 
-  .useText-l,
-  .useText-l * {
-    font-size: 2rem;
+    .useText-l,
+    .useText-l * {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -442,7 +446,7 @@
 
 /* INTERNET EXPLORER
 #############################################################################*/
-@media (--ie) {
+.isIE {
   .space-1 {
     height: 3rem;
     width: 3rem;

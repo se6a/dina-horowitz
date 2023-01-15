@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<style>
+<style lang="postcss">
   .HOVER-ARROW {
     display: flex;
     position: relative;
@@ -78,7 +78,7 @@
     opacity: 1;
   }
 
-  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  :global(.isIE) {
     .icon {
       display: none !important;
     }

@@ -16,7 +16,7 @@
   </button>
 {/if}
 
-<style>
+<style lang="postcss">
   .BUTTON {
     background-color: var(--button-background, white);
     color: var(--black);
@@ -30,7 +30,7 @@
     width: 2em;
   }
 
-  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  :global(.isIE) {
     .BUTTON {
       background-color: white;
     }

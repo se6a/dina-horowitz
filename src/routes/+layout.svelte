@@ -10,6 +10,7 @@
 
   export let data = {};
   const {isIE = false} = data;
+
   setContext("isIE", isIE);
 </script>
 
@@ -22,9 +23,15 @@
   />
 </svelte:head>
 
-<slot />
+{#if isIE}
+  <div class="isIE">
+    <slot />
+  </div>
+{:else}
+  <slot />
+{/if}
 
-<style>
+<style lang="postcss">
   :global(body) {
     scroll-behavior: smooth;
   }
@@ -33,7 +40,7 @@
 ###############################################################################
 #############################################################################*/
 
-  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  :global(.isIE) {
     :global(body) {
       font-size: 2.4rem;
       color: hsl(0, 0%, 22%);
