@@ -29,4 +29,15 @@
     /* Fix no width on FF: */
     width: 2em;
   }
+
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+    .BUTTON {
+      background-color: white;
+    }
+
+    .isVertical {
+      width: auto;
+      padding: 1em 1em;
+    }
+  }
 </style>

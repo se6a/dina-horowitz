@@ -3,6 +3,7 @@
   import Header from "$lib/components/layout/Header.svelte";
   import Main from "$lib/components/layout/Main.svelte";
   import Button from "$lib/components/elements/Button.svelte";
+  import {capitalize} from "$lib/functions/utility";
 
   export let data = {};
   export let color = "";
@@ -13,8 +14,7 @@
 </script>
 
 <div
-  class="PAGE"
-  class:isIE
+  class="PAGE is{capitalize(color)}"
   style:--colorPage={color ? `var(--${color})` : "silver"}
   style:--colorPage-light={color ? `var(--${color}-light)` : "gainsboro"}
   style:--colorPage-highlight={color ? `var(--${color}-highlight)` : "gainsboro"}
@@ -36,7 +36,6 @@
 <style>
   .PAGE {
     position: relative;
-    display: grid;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -68,9 +67,33 @@
     z-index: var(--zPos-front);
   }
 
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
   @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
     .PAGE {
-      border: 10px solid blue;
+      display: block;
+      padding: 0 100px;
+      max-width: 1000px;
+    }
+
+    .fixedButton {
+      left: -24px;
+      right: auto;
+      top: 0;
+      transform: rotate(-90deg);
+      pointer-events: none;
+    }
+
+    .fixedButton :global(*) {
+      pointer-events: all;
+    }
+  }
+
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) and (max-width: 800px) {
+    .PAGE {
+      padding: 0 5vw;
     }
   }
 </style>

@@ -4,7 +4,7 @@
   export let pageNav = [];
 </script>
 
-<nav class="PAGE-NAVIGATION anchors useFullwidthBg">
+<nav class="PAGE-NAVIGATION anchors useBackground-fullwidth">
   <ScrollDragX>
     {#each pageNav as { title, href }}
       <a class="anchor" {href}>{title}</a>
@@ -12,7 +12,9 @@
   </ScrollDragX>
 </nav>
 
-<style>
+<style lang="postcss">
+  @import "$lib/css/breakpoints.css";
+
   .PAGE-NAVIGATION {
     font-size: var(--font-size-m);
     height: var(--header-height);
@@ -50,5 +52,30 @@
 
   .anchor:hover {
     color: white;
+  }
+
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+  @media (--ie) {
+    .PAGE-NAVIGATION {
+      display: block;
+      padding: 0 30px 30px;
+    }
+
+    .anchor {
+      left: 0;
+      display: inline-block;
+      margin-right: 30px;
+      line-height: 2;
+    }
+  }
+
+  @media (--ie-small) {
+    .anchor {
+      display: block;
+      margin-right: 0;
+    }
   }
 </style>

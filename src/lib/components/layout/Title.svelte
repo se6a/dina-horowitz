@@ -1,11 +1,13 @@
 <script>
 </script>
 
-<div class="LAYOUT-TITLE layout useFullwidthBg">
+<div class="LAYOUT-TITLE layout useBackground-fullwidth">
   <slot />
 </div>
 
-<style>
+<style lang="postcss">
+  @import "$lib/css/breakpoints.css";
+
   .LAYOUT-TITLE {
     padding: var(--layoutTitle-padding-t) 0 var(--layoutTitle-padding-b) var(--layout-inset-l);
     height: auto;
@@ -14,20 +16,13 @@
     justify-content: space-between;
   }
 
-  .useFullwidthBg {
-    position: relative;
-  }
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
 
-  .useFullwidthBg::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100vw;
-    top: 0;
-    bottom: 0;
-    margin-left: 50%;
-    left: -50vw;
-    z-index: -1;
-    background-color: var(--colorPage);
+  @media (--ie) {
+    .LAYOUT-TITLE {
+      padding: 30px;
+    }
   }
 </style>

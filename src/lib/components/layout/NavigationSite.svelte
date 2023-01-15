@@ -2,7 +2,7 @@
   import Link from "../elements/Link.svelte";
   import IconClose from "$lib/components/icons/Close.svelte";
   import IconArrow from "$lib/components/icons/ArrowBig.svelte";
-  import {createId} from "$lib/functions/utility";
+  import {capitalize, createId} from "$lib/functions/utility";
   import HoverArrow from "../elements/HoverArrow.svelte";
 
   const items = [
@@ -14,19 +14,19 @@
           title: "Für Familien",
           text: "Beratung &\nCase Management",
           href: "/angebot/familien",
-          color: "var(--blue)"
+          color: "blue"
         },
         {
           title: "Für Fachpersonen",
           text: "Supervision &\nTeamentwicklung",
           href: "/angebot/fachpersonen",
-          color: "var(--red)"
+          color: "red"
         },
         {
           title: "Für Alle",
           text: "Coaching &\nPsychologische Beratung",
           href: "/angebot/alle",
-          color: "var(--green)"
+          color: "green"
         }
       ]
     },
@@ -53,8 +53,8 @@
             <ul class="subItems">
               {#each item.subItems as { title, text, color, href }}
                 <a
-                  class="subItem"
-                  style:--colorItem={color}
+                  class="subItem is{capitalize(color)} useBackground"
+                  style:--colorItem="var(--{color})"
                   {href}
                   on:click={() => (isOpen = false)}
                 >
@@ -229,6 +229,36 @@
     opacity: 1;
   }
 
-  /*
-###############################################################################################*/
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+    .NAVIGATION {
+      height: 50px;
+      padding: 0 30px;
+    }
+
+    .subNav {
+      z-index: 500;
+    }
+
+    .subItem {
+      padding: 30px;
+    }
+
+    .arrow {
+      display: none;
+    }
+
+    .buttonClose {
+      top: 30px !important;
+      right: 30px !important;
+    }
+
+    .subItem:hover .titleGroup {
+      transform: none;
+      opacity: 0.7;
+    }
+  }
 </style>

@@ -2,16 +2,21 @@
   import Page from "$lib/components/layout/Page.svelte";
   import WordDisplay from "$lib/components/elements/WordDisplay.svelte";
   import Card from "$lib/components/elements/Card.svelte";
+  import {getContext} from "svelte";
 
   const color = "blue";
+
+  const isIE = getContext("isIE");
 </script>
 
 <Page {color}>
   <div class="useGrid">
-    <div class="cell" style:--colorCell="var(--blue)">
-      <WordDisplay />
-    </div>
-    <div class="cell" style:--colorCell="var(--blue)">
+    {#if !isIE}
+      <div class="cell" style:--colorCell="var(--blue)">
+        <WordDisplay />
+      </div>
+    {/if}
+    <div class="isBlue cell useBackground-fullwidth" style:--colorCell="var(--blue)">
       <Card href="/angebot/familien">
         <h2 class="titleGroup" slot="title">
           <span>Für Familien</span>
@@ -25,7 +30,7 @@
       </Card>
     </div>
 
-    <div class="cell" style:--colorCell="var(--red)">
+    <div class="isRed cell useBackground-fullwidth" style:--colorCell="var(--red)">
       <Card href="/angebot/fachpersonen">
         <h2 class="titleGroup" slot="title">
           <span>Für Fachpersonen</span>
@@ -39,7 +44,7 @@
       </Card>
     </div>
 
-    <div class="cell" style:--colorCell="var(--green)">
+    <div class="isGreen cell useBackground-fullwidth" style:--colorCell="var(--green)">
       <Card href="/angebot/alle">
         <h2 class="titleGroup" slot="title">
           <span> Für Alle </span>
@@ -79,6 +84,8 @@
     top: 0;
     bottom: 0;
     width: 50vw;
+    left: unset;
+    margin-left: unset;
     background-color: var(--colorCell);
   }
 
@@ -88,10 +95,6 @@
 
   .cell:nth-child(even)::after {
     left: 0;
-  }
-
-  .ifCompact {
-    display: none;
   }
 
   @media (--vw-m) {
@@ -104,6 +107,24 @@
       width: 100vw;
       margin-left: 50%;
       left: -50vw;
+    }
+  }
+
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+  @media (--ie) {
+    .isBlue.cell {
+      background-color: hsl(189, 59%, 65%) !important;
+    }
+
+    .isRed.cell {
+      background-color: hsl(8, 100%, 77%) !important;
+    }
+
+    .isGreen.cell {
+      background-color: hsl(67, 57%, 47%) !important;
     }
   }
 </style>

@@ -25,6 +25,21 @@
   }
 }
 
+/* INTERNET EXPLORER
+#############################################################################*/
+@media (--ie) {
+  .useColumns {
+    display: block;
+    grid-template-columns: none;
+    gap: none;
+  }
+
+  .useColumns > * + * {
+    margin-top: 50px !important;
+  }
+}
+/*###########################################################################*/
+
 /* Grid
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -45,6 +60,26 @@
   }
 }
 
+/* INTERNET EXPLORER
+#############################################################################*/
+@media (--ie) {
+  .useGrid {
+    display: block;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-auto-flow: none;
+  }
+
+  .useGrid > * {
+    padding: 50px !important;
+  }
+
+  .useGrid > * + * {
+    margin-top: 0 !important;
+  }
+}
+/*###########################################################################*/
+
 /* Border
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -64,14 +99,14 @@
   pointer-events: none;
 }
 
-/* Fullwidth Background
+/* Background
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-.useFullwidthBg {
+.useBackground-fullwidth {
   position: relative;
 }
 
-.useFullwidthBg::after {
+.useBackground-fullwidth::after {
   content: "";
   display: block;
   position: absolute;
@@ -81,8 +116,73 @@
   margin-left: 50%;
   left: -50vw;
   z-index: -1;
+}
+
+.useBackground-fullwidth::after,
+.useBackground {
   background-color: var(--colorPage, silver);
 }
+
+.useBackground-light {
+  background-color: var(--colorPageligth, gainsboro);
+}
+
+/* INTERNET EXPLORER
+#############################################################################*/
+@media (--ie) {
+  .useBackground-fullwidth::after {
+    display: none;
+  }
+
+  .isBlue.isBlue.useBackground,
+  .isBlue.isBlue.useBackground-fullwidth,
+  .isBlue .useBackground,
+  .isBlue .useBackground-fullwidth {
+    background-color: hsl(189, 59%, 65%);
+  }
+
+  .isRed.isRed.useBackground,
+  .isRed.isRed.useBackground-fullwidth,
+  .isRed .useBackground,
+  .isRed .useBackground-fullwidth {
+    background-color: hsl(8, 100%, 77%);
+  }
+
+  .isGreen.isGreen.useBackground,
+  .isGreen.isGreen.useBackground-fullwidth,
+  .isGreen .useBackground,
+  .isGreen .useBackground-fullwidth {
+    background-color: hsl(67, 57%, 47%);
+  }
+
+  .isYellow.isYellow.useBackground,
+  .isYellow.isYellow.useBackground-fullwidth,
+  .isYellow .useBackground,
+  .isYellow .useBackground-fullwidth {
+    background-color: hsl(51, 100%, 68%);
+  }
+
+  .isBlue.isBlue.useBackground-light,
+  .isBlue .useBackground-light {
+    background-color: hsla(189, 59%, 65%, 0.4);
+  }
+
+  .isRed.isRed.useBackground-light,
+  .isRed .useBackground-light {
+    background-color: hsla(8, 100%, 77%, 0.4);
+  }
+
+  .isGreen.isGreen.useBackground-light,
+  .isGreen .useBackground-light {
+    background-color: hsla(67, 57%, 47%, 0.4);
+  }
+
+  .isYellow.isYellow.useBackground-light,
+  .isYellow .useBackground-light {
+    background-color: hsla(51, 100%, 68%, 0.4);
+  }
+}
+/*###########################################################################*/
 
 /* Quote
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -151,7 +251,61 @@
   -ms-hyphens: manual;
   hyphens: manual;
 }
-l
+
+/* INTERNET EXPLORER
+#############################################################################*/
+@media (--ie) {
+  .useText-xxl,
+  .useText-xxl * {
+    font-size: 10rem;
+  }
+
+  .useText-xl,
+  .useText-xl * {
+    font-size: 5rem;
+  }
+
+  .useText-l,
+  .useText-l * {
+    font-size: 4rem;
+  }
+}
+
+@media (--ie-medium) {
+  .useText-xxl,
+  .useText-xxl * {
+    font-size: 5rem;
+  }
+
+  .useText-xl,
+  .useText-xl * {
+    font-size: 4rem;
+  }
+
+  .useText-l,
+  .useText-l * {
+    font-size: 3rem;
+  }
+}
+
+@media (--ie-small) {
+  .useText-xxl,
+  .useText-xxl * {
+    font-size: 4rem;
+  }
+
+  .useText-xl,
+  .useText-xl * {
+    font-size: 3rem;
+  }
+
+  .useText-l,
+  .useText-l * {
+    font-size: 2rem;
+  }
+}
+
+/*###########################################################################*/
 
 /* Space
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -252,3 +406,28 @@ l
   height: var(--space-xs);
   width: var(--space-xs);
 }
+
+/* INTERNET EXPLORER
+#############################################################################*/
+@media (--ie) {
+  .space-1 {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .space-2 {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .space-3 {
+    height: 9rem;
+    width: 9rem;
+  }
+
+  .space-4 {
+    height: 12rem;
+    width: 12rem;
+  }
+}
+/*###########################################################################*/

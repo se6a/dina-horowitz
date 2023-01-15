@@ -1,0 +1,28 @@
+/* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+@media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  /* .PAGE {
+    border: 2px solid blue;
+  }
+
+  .HEADER {
+    border: 2px solid red;
+  }
+
+  .FOOTER {
+    border: 2px solid pink;
+  }
+
+  .MAIN {
+    border: 2px solid green;
+  }
+
+  .useGrid {
+    border: 2px solid gray;
+  } */
+}
+
+@media screen and (min-width: 0\0) and (min-resolution: +72dpi) and (min-width: 400px) {
+}

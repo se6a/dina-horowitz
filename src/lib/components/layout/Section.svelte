@@ -68,12 +68,6 @@
     flex-direction: column;
   }
 
-  .content :global(.column) {
-    display: flex;
-    flex-direction: column;
-    gap: var(--layoutSection-spacing-y);
-  }
-
   .anchor {
     width: 0px;
     height: 0px;
@@ -92,6 +86,50 @@
   @media (--vw-m) {
     .LAYOUT-SECTION :global(.useText-xl) {
       margin-top: 0;
+    }
+  }
+
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+  @media (--ie) {
+    .LAYOUT-SECTION {
+      padding: 30px !important;
+    }
+
+    .content {
+      display: block;
+      flex-direction: none;
+    }
+
+    .content > :global(* > *) {
+      margin-top: 50px;
+    }
+
+    .LAYOUT-SECTION h2 {
+      font-size: 3rem;
+      display: inline-block;
+    }
+
+    :global(.isBlue) .LAYOUT-SECTION:nth-child(odd),
+    :global(.isBlue) .LAYOUT-SECTION h2 {
+      background-color: hsla(189, 59%, 65%, 0.2) !important;
+    }
+
+    :global(.isRed) .LAYOUT-SECTION:nth-child(odd),
+    :global(.isRed) .LAYOUT-SECTION h2 {
+      background-color: hsla(8, 100%, 77%, 0.2) !important;
+    }
+
+    :global(.isGreen) .LAYOUT-SECTION:nth-child(odd),
+    :global(.isGreen) .LAYOUT-SECTION h2 {
+      background-color: hsla(67, 57%, 47%, 0.2) !important;
+    }
+
+    :global(.isYellow) .LAYOUT-SECTION:nth-child(odd),
+    :global(.isYellow) .LAYOUT-SECTION h2 {
+      background-color: hsla(51, 100%, 68%, 0.2) !important;
     }
   }
 </style>

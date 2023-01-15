@@ -1,7 +1,10 @@
 <script>
   import IconGoUp from "$lib/components/icons/GoUp.svelte";
+  import {getContext} from "svelte";
 
   export let hasGoTopButton = true;
+
+  const isIE = getContext("isIE");
 
   function goUp() {
     document.body.scrollTo({
@@ -13,7 +16,7 @@
 </script>
 
 <footer class="FOOTER">
-  {#if hasGoTopButton}
+  {#if hasGoTopButton && !isIE}
     <button class="button button-goUp" on:click={goUp}>
       <IconGoUp />
     </button>
@@ -48,5 +51,19 @@
 
   .footerNavigation > * + * {
     margin-top: var(--space-half);
+  }
+
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+    .FOOTER {
+      padding: 4rem;
+    }
+
+    a {
+      line-height: 2;
+    }
   }
 </style>

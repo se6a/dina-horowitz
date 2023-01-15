@@ -14,7 +14,7 @@
   }
 </script>
 
-<section class="BOX-COLLAPSIBLE box">
+<section class="BOX-COLLAPSIBLE box useBackground-light">
   <input {id} type="checkbox" tabindex="-1" />
 
   <label class="title" for={id}>
@@ -35,7 +35,9 @@
   </div>
 </section>
 
-<style>
+<style lang="postcss">
+  @import "$lib/css/breakpoints.css";
+
   .BOX-COLLAPSIBLE {
     width: 100%;
     margin-bottom: auto;
@@ -102,5 +104,20 @@
 
   .BOX-COLLAPSIBLE :global(.LIST > li + li) {
     margin-top: 1em;
+  }
+
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+  @media (--ie) {
+    .contentWrapper {
+      height: 100% !important;
+      max-width: 60ch;
+    }
+
+    .title .icon {
+      display: none;
+    }
   }
 </style>

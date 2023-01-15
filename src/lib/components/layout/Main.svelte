@@ -43,10 +43,29 @@
 <style lang="postcss">
   @import "$lib/css/breakpoints.css";
 
-  .MAIN {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-top: var(--main-marginTop);
+  :global(.isNotIE) {
+    .MAIN {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-top: var(--main-marginTop);
+    }
+  }
+
+  /* INTERNET EXPLORER
+###############################################################################
+#############################################################################*/
+
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+    .MAIN {
+      display: block;
+      flex-direction: none;
+      flex: none;
+      margin-top: 0;
+    }
+
+    .MAIN > :global(* + *) {
+      margin-top: 100px;
+    }
   }
 </style>

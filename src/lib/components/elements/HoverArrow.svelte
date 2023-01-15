@@ -77,4 +77,17 @@
     pointer-events: all;
     opacity: 1;
   }
+
+  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+    .icon {
+      display: none !important;
+    }
+
+    .HOVER-ARROW.isVertical,
+    .isVertical .content {
+      display: block;
+      writing-mode: none;
+      transform: none;
+    }
+  }
 </style>
