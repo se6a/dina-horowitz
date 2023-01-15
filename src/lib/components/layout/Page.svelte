@@ -36,6 +36,7 @@
 <style>
   .PAGE {
     position: relative;
+    display: grid;
     display: flex;
     flex-direction: column;
     min-height: 100%;

@@ -2,6 +2,9 @@
   "map": false,
   "plugins": {
     "postcss-custom-media": {},
-    "postcss-nested": {}
+    "postcss-nested": {},
+    "autoprefixer": {
+      "grid": "autoplace"
+    }
   }
 }
