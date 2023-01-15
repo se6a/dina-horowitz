@@ -30,7 +30,9 @@
   </nav>
 </footer>
 
-<style>
+<style lang="postcss">
+  @import "$lib/css/breakpoints.css";
+
   .FOOTER {
     width: 100%;
     height: var(--footer-height);
@@ -57,7 +59,7 @@
 ###############################################################################
 #############################################################################*/
 
-  @media screen and (min-width: 0\0) and (min-resolution: +72dpi) {
+  @media (--ie) {
     .FOOTER {
       padding: 4rem;
     }
