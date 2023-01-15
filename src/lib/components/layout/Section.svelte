@@ -111,25 +111,5 @@
       font-size: 3rem;
       display: inline-block;
     }
-
-    :global(.isBlue) .LAYOUT-SECTION:nth-child(odd),
-    :global(.isBlue) .LAYOUT-SECTION h2 {
-      background-color: hsla(189, 59%, 65%, 0.2) !important;
-    }
-
-    :global(.isRed) .LAYOUT-SECTION:nth-child(odd),
-    :global(.isRed) .LAYOUT-SECTION h2 {
-      background-color: hsla(8, 100%, 77%, 0.2) !important;
-    }
-
-    :global(.isGreen) .LAYOUT-SECTION:nth-child(odd),
-    :global(.isGreen) .LAYOUT-SECTION h2 {
-      background-color: hsla(67, 57%, 47%, 0.2) !important;
-    }
-
-    :global(.isYellow) .LAYOUT-SECTION:nth-child(odd),
-    :global(.isYellow) .LAYOUT-SECTION h2 {
-      background-color: hsla(51, 100%, 68%, 0.2) !important;
-    }
   }
 </style>

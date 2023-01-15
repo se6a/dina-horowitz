@@ -223,6 +223,39 @@
   background-color: var(--colorPage-highlight, gainsboro);
 }
 
+/* INTERNET EXPLORER
+#############################################################################*/
+@media (--ie) {
+  .isBlue.isBlue.HIGHLIGHTER,
+  .isBlue .HIGHLIGHTER,
+  .isBlue.isBlue.useHighlight,
+  .isBlue .useHighlight {
+    background-color: hsl(189, 59%, 80%);
+  }
+
+  .isRed.isRed.HIGHLIGHTER,
+  .isRed .HIGHLIGHTER,
+  .isRed.isRed.useHighlight,
+  .isRed .useHighlight {
+    background-color: hsl(8, 100%, 86%);
+  }
+
+  .isGreen.isGreen.HIGHLIGHTER,
+  .isGreen .HIGHLIGHTER,
+  .isGreen.isGreen.useHighlight,
+  .isGreen .useHighlight {
+    background-color: hsl(67, 57%, 64%);
+  }
+
+  .isYellow.isYellow.HIGHLIGHTER,
+  .isYellow .HIGHLIGHTER,
+  .isYellow.isYellow.useHighlight,
+  .isYellow .useHighlight {
+    background-color: hsl(51, 100%, 68%);
+  }
+}
+/*###########################################################################*/
+
 /* Typo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
