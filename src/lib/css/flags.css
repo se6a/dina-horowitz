@@ -124,7 +124,7 @@
 }
 
 .useBackground-light {
-  background-color: var(--colorPageligth, gainsboro);
+  background-color: var(--colorPage-light, gainsboro);
 }
 
 /* INTERNET EXPLORER
