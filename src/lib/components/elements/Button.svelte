@@ -3,15 +3,16 @@
   export let isVertical = false;
   export let href = "";
   export let onClick = () => null;
+  export let ariaLabel = "";
 </script>
 
 {#if href}
   {@const target = href.startsWith("/") ? "_self" : "_blank"}
-  <a class="BUTTON" class:isVertical {href} {target}>
+  <a class="BUTTON" class:isVertical {href} {target} aria-label={ariaLabel}>
     <HoverArrow {isVertical}><slot /></HoverArrow>
   </a>
 {:else}
-  <button class="BUTTON" class:isVertical on:click={onClick}>
+  <button class="BUTTON" class:isVertical on:click={onClick} aria-label={ariaLabel}>
     <HoverArrow {isVertical}><slot /></HoverArrow>
   </button>
 {/if}

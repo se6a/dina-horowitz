@@ -17,7 +17,7 @@
 
 <footer class="FOOTER">
   {#if hasGoTopButton && !isIE}
-    <button class="button button-goUp" on:click={goUp}>
+    <button class="button button-goUp" on:click={goUp} aria-label="Zum Seitenanfang scrollen">
       <IconGoUp />
     </button>
   {/if}

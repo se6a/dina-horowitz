@@ -27,7 +27,7 @@
   </Main>
   {#if hasContactButton}
     <div class="fixedButton">
-      <Button href="/kontakt" isVertical={true}>Kontakt</Button>
+      <Button href="/kontakt" isVertical={true} ariaLabel="Gehe zur Kontaktseite">Kontakt</Button>
     </div>
   {/if}
   <Footer {hasGoTopButton} />

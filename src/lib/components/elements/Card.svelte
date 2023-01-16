@@ -13,7 +13,7 @@
   <slot name="content" />
   <div class="ifCompact">
     <div class="space-2" />
-    <Button>Mehr</Button>
+    <Button ariaLabel="Gehe zum Angebot">Mehr</Button>
   </div>
 </a>
 
