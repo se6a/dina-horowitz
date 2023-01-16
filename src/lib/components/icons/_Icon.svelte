@@ -6,7 +6,7 @@
   export let viewBox = [0, 0, 10, 10];
   export let useNonScalingStroke = true;
 
-  const preserveAspectRatio = preserveRatio ? "xMinYMin" : "none";
+  const preserveAspectRatio = preserveRatio ? "xMidYMid meet" : "none";
 </script>
 
 <svg
