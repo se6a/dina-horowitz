@@ -419,10 +419,6 @@
         Inhalten, die möglicherweise straf- oder haftungsrechtlich relevant sind oder gegen die
         guten Sitten verstoßen.
       </p>
-    </div>
-
-    <div class="box">
-      <h3>Haftungsausschluss</h3>
       <p>
         Der Autor übernimmt keine Gewähr für die Richtigkeit, Genauigkeit, Aktualität,
         Zuverlässigkeit und Vollständigkeit der Informationen.
