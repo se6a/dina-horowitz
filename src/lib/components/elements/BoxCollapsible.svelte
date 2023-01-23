@@ -41,6 +41,7 @@
   .BOX-COLLAPSIBLE {
     width: 100%;
     margin-bottom: auto;
+    padding: 0;
     background-color: var(--colorPage-light);
     --textBox-padding: var(--box-padding, 3rem);
   }
