@@ -73,7 +73,7 @@
             In einem vertrauensvollen, zeitlich überschaubaren Rahmen mit professionellen Methoden
             und vielen Fragen
           </li>
-          <li>Ich fordere Sie auf und heraus.</li>
+          <li>Ich fordere Sie auf und heraus</li>
           <li>Gemeinsam entdecken wir Ihre Stärken und Ressourcen neu</li>
           <li>Ich helfe Ihnen sich zu strukturieren</li>
           <li>Ich unterstütze Sie dabei Ihre Sichtweise zu erweitern und Klarheit zu gewinnen</li>
@@ -97,7 +97,7 @@
             </li>
 
             <li class="box offer useBackground-light">
-              <p>Mein Beratungsangebot ist nicht Krankenkassenanerkannt.</p>
+              <p>Mein Beratungsangebot ist nicht krankenkassenanerkannt.</p>
             </li>
           </List>
         </div>

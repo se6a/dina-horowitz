@@ -59,9 +59,9 @@
       <div class="box">
         <p>
           Neugierde führt mich durch mein Leben. Ich bin fasziniert von der menschlichen Vielfalt,
-          Kreativität und Energie. Die unbedingte Wertschätzung einer Person ist für zentral. Ich
-          pflege einen bewussten Umgang mit der Haltung, dass jede Person gute Gründe hat sich so zu
-          verhalten, wie sie es tut. Die Grenzen eines Verhaltens sind dort, wo die eigene
+          Kreativität und Energie. Die unbedingte Wertschätzung einer Person ist für mich zentral.
+          Ich pflege einen bewussten Umgang mit der Haltung, dass jede Person gute Gründe hat sich
+          so zu verhalten, wie sie es tut. Die Grenzen eines Verhaltens sind dort, wo die eigene
           Integrität oder die von Mitmenschen eingeschränkt oder verletzt wird.
         </p>
         <p>

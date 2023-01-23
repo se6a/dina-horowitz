@@ -16,7 +16,7 @@
 
 <svelte:head>
   <link rel="stylesheet" href={isIE ? "/css/ie.css" : ""} />
-  <title>Dina Horowitz</title>
+  <title>Dina Horowitz - Psychologin - Basel</title>
   <meta
     name="description"
     content="Fachpsychologin für Kinder- & Jugendpsychologie FSP Entwicklungs- und Persönlichkeitspsychologin in Basel."
