@@ -43,7 +43,9 @@
     </Header>
 
     <Main>
-        <NavigationPage {sections} />
+        {#if sections.filter((s) => s.title || s.navigationName).length}
+            <NavigationPage {sections} />
+        {/if}
 
         <slot />
 

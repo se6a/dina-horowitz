@@ -70,6 +70,13 @@ export const page = `
     _type == "start" => {
         display,
     },
+
+    _type == "kontakt" => {
+        email,
+        phone,
+        address,
+        googleMaps,
+    },
   
 
 }
