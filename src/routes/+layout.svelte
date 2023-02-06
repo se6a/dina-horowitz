@@ -32,7 +32,7 @@
 {/if}
 
 <style lang="postcss">
-    :global(body) {
+    :global(html) {
         scroll-behavior: smooth;
     }
 
