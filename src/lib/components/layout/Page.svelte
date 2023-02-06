@@ -29,7 +29,7 @@
 </script>
 
 <div
-    class="PAGE is{capitalize(color)}"
+    class="PAGE is{capitalize(color)} useTexture"
     style:--colorPage={color ? `var(--${color})` : "silver"}
     style:--colorPage-light={color ? `var(--${color}-light)` : "gainsboro"}
     style:--colorPage-highlight={color ? `var(--${color}-highlight)` : "gainsboro"}
@@ -46,7 +46,6 @@
         {#if sections.filter((s) => s.title || s.navigationName).length}
             <NavigationPage {sections} />
         {/if}
-
         <slot />
 
         {#if sections}

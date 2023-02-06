@@ -21,7 +21,7 @@
 </script>
 
 <Page data={{pageData}} {color} usePageTitle={false}>
-    <div class="useGrid">
+    <div class="useGrid useTexture-fullwidth">
         {#if !isIE}
             <div class="cell" style:--colorCell="var(--blue)">
                 <WordDisplay content={display} />
@@ -61,7 +61,7 @@
         padding-right: 0;
     }
 
-    .cell::after {
+    .cell::before {
         content: "";
         position: absolute;
         z-index: -1;
@@ -74,11 +74,11 @@
         background-color: var(--colorCell);
     }
 
-    .cell:nth-child(odd)::after {
+    .cell:nth-child(odd)::before {
         right: 0;
     }
 
-    .cell:nth-child(even)::after {
+    .cell:nth-child(even)::before {
         left: 0;
     }
 
@@ -87,8 +87,8 @@
             padding: var(--space-2) 0;
         }
 
-        .cell:nth-child(odd)::after,
-        .cell:nth-child(even)::after {
+        .cell:nth-child(odd)::before,
+        .cell:nth-child(even)::before {
             width: 100vw;
             margin-left: 50%;
             left: -50vw;

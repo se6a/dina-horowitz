@@ -4,7 +4,7 @@
     export let sections = {};
 </script>
 
-<nav class="PAGE-NAVIGATION anchors useBackground-fullwidth">
+<nav class="PAGE-NAVIGATION anchors useBackground-fullwidth useTexture-fullwidth">
     <ScrollDragX>
         {#each sections as { title = "", navigationName = "", slug = "" }}
             {#if slug && title}

@@ -53,7 +53,7 @@
                         <ul class="subItems">
                             {#each item.subItems as { title, color, href }}
                                 <a
-                                    class="subItem is{capitalize(color)} useBackground"
+                                    class="subItem is{capitalize(color)} useBackground useTexture"
                                     style:--colorItem="var(--{color})"
                                     {href}
                                     on:click={() => (isOpen = false)}
