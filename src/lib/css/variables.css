@@ -2,7 +2,9 @@
 
 /*  SPACE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
   --space: var(--font-size-m);
   --space-quarter: calc(var(--space) * 0.25);
   --space-third: calc(var(--space) * 0.33);
@@ -20,7 +22,9 @@
 }
 
 @media (--vw-m) {
-  :root {
+  :root,
+  :before,
+  :after {
     --space-xs: 3rem;
     --space-s: 4rem;
     --space-m: 5rem;
@@ -28,7 +32,9 @@
 }
 
 @media (--vw-s) {
-  :root {
+  :root,
+  :before,
+  :after {
     --space-xs: 2rem;
     --space-s: 3rem;
     --space-m: 4rem;
@@ -39,7 +45,9 @@
 
 /* Z-INDEX
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
   --zPos-front: 100;
   --zPos-midFront: 75;
   --zPos-center: 50;
@@ -50,7 +58,9 @@
 
 /*  FONT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
   --font-size-xs: 1.4rem;
   --font-size-s: 2rem;
   --font-size-m: 2.6rem;
@@ -60,13 +70,17 @@
 }
 
 @media (--vw-m) {
-  :root {
+  :root,
+  :before,
+  :after {
     --font-size-xxl: 7rem;
   }
 }
 
 @media (--vw-s) {
-  :root {
+  :root,
+  :before,
+  :after {
     --font-size-m: 2rem;
     --font-size-l: 2rem;
     --font-size-xl: 2.8rem;
@@ -76,7 +90,9 @@
 
 /*  PAGE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
   --page-width: 100%;
   --page-maxWidth: 1440px;
 
@@ -90,14 +106,18 @@
 }
 
 @media (--vw-m) {
-  :root {
+  :root,
+  :before,
+  :after {
     --page-padding-x: 4rem;
     --header-height: 6rem;
   }
 }
 
 @media (--vw-s) {
-  :root {
+  :root,
+  :before,
+  :after {
     --page-padding-x: 2rem;
     --header-height: 5rem;
   }
@@ -106,7 +126,9 @@
 /*  LAYOUT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
   --layoutSection-padding-t: 10rem;
   --layoutSection-padding-b: 10rem;
   --layoutSection-spacing-y: 10rem;
@@ -118,7 +140,9 @@
 }
 
 @media (--vw-m) {
-  :root {
+  :root,
+  :before,
+  :after {
     --layoutSection-padding-t: 8rem;
     --layoutSection-padding-b: 8rem;
     --layoutSection-spacing-y: 8rem;
@@ -128,7 +152,9 @@
 }
 
 @media (--vw-s) {
-  :root {
+  :root,
+  :before,
+  :after {
     --layoutSection-padding-b: 4rem;
     --layoutSection-spacing-y: 4rem;
     --layoutSection-spacing-x: 3rem;
@@ -141,14 +167,18 @@
 /*  ELEMENTS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
   --box-padding: 3rem;
 }
 
 /*  COLUMNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
   --useColumns: 8;
   --subColumns-m: 4;
   --subColumns-s: 3;
@@ -160,21 +190,27 @@
 /*  TYPO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
   --layoutNav-font-size: 2.6rem;
   /* --layoutNavSub-font-size: 4.2rem; */
   --layoutNavSub-font-size: var(--font-size-xl);
 }
 
 @media (--vw-s) {
-  :root {
+  :root,
+  :before,
+  :after {
     --layoutNav-font-size: 1.8rem;
   }
 }
 
 /*  COLORS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
   --hsl-black: 0, 0%, 22%;
   --hsl-blue: 189, 59%, 65%;
   --hsl-green: 67, 57%, 47%;
@@ -200,7 +236,9 @@
 
 /*  TIME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
   --duration-slow: 600ms;
   --duration-middle: 300ms;
   --duration-fast: 100ms;
