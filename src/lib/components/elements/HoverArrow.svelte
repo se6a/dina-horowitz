@@ -35,7 +35,7 @@
   .icon {
     position: absolute;
     --icon-height: 1em;
-    --icon-width: fit-content;
+    --icon-width: 1em;
     padding-right: var(--slide);
     transform: translate(-100%, 0);
     height: 100%;
