@@ -39,7 +39,6 @@
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    border: 4px solid red;
     padding: 0 var(--page-padding-x);
     max-width: var(--page-maxWidth);
     margin: 0 auto;
