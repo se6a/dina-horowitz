@@ -130,7 +130,7 @@
         height: 100%;
         position: relative;
         isolation: isolate;
-        z-index: -1;
+        z-index: 0;
         transform: translate3d(0);
     }
 
@@ -181,7 +181,6 @@
         animation-fill-mode: both;
         animation-timing-function: var(--flipEase);
         background-color: var(--blue);
-        /* box-shadow: inset 0px 0px 100px hsla(189, 93%, 18%, 0.1); */
     }
 
     @keyframes flip {
