@@ -77,7 +77,11 @@
     }
 
     .PAGE > :global(.MAIN) {
-        z-index: var(--zPos-middle);
+        z-index: var(--zPos-center);
+    }
+
+    .PAGE > :global(.FOOTER) {
+        z-index: var(--zPos-midBack);
     }
 
     /* INTERNET EXPLORER

@@ -162,7 +162,6 @@
 
 :root {
     --layoutNav-font-size: 2.6rem;
-    /* --layoutNavSub-font-size: 4.2rem; */
     --layoutNavSub-font-size: var(--font-size-xl);
 }
 
