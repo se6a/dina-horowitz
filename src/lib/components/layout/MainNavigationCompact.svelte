@@ -42,7 +42,6 @@
     .MAIN-NAVIGATION-COMPACT {
         position: fixed;
         height: var(--header-height);
-        z-index: 100;
         width: 100%;
         left: 0;
         right: 0;
@@ -52,10 +51,6 @@
         justify-content: space-between;
         align-items: center;
         isolation: isolate;
-    }
-
-    .MAIN-NAVIGATION-COMPACT > * {
-        z-index: 100;
     }
 
     input {
@@ -81,7 +76,6 @@
     .content {
         position: absolute;
         background-color: white;
-        z-index: -1;
         top: var(--header-height);
         left: 0;
         right: 0;

@@ -38,7 +38,7 @@
 
     .HEADER {
         /* transform: translateZ(0); */
-        z-index: 1000;
+        /* z-index: 1000; */
     }
 
     .HEADER.HEADER > :global(.MAIN-NAVIGATION-COMPACT) {
