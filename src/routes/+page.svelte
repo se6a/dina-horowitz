@@ -22,11 +22,11 @@
 
 <Page data={{pageData}} {color} usePageTitle={false}>
     <div class="useGrid">
-        {#if !isIE}
+        <!-- {#if !isIE}
             <div class="cell" style:--colorCell="var(--blue)">
                 <WordDisplay content={display} />
             </div>
-        {/if}
+        {/if} -->
 
         {#each siteNavigation as angebot}
             {@const color = colors[angebot.id]}
