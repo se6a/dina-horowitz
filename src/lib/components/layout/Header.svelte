@@ -49,4 +49,18 @@
             display: none;
         }
     }
+
+    /* INTERNET EXPLORER
+    ###############################################################################
+    #############################################################################*/
+
+    :global(.isIE) {
+        .HEADER > :global(.MAIN-NAVIGATION-COMPACT) {
+            display: none !important;
+        }
+
+        .HEADER > :global(.MAIN-NAVIGATION) {
+            display: flex !important;
+        }
+    }
 </style>

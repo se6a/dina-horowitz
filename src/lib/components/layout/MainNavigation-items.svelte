@@ -252,25 +252,36 @@
 #############################################################################*/
 
     :global(.isIE) {
-        .NAVIGATION {
-            height: 50px;
-            padding: 0 30px;
+        .items {
+            height: auto !important;
+            padding: 16px 30px !important;
+            display: block !important;
+            margin-top: 0 !important;
+        }
+
+        .item {
+            margin-right: 3rem;
+            display: inline-block;
         }
 
         .subNav {
             z-index: 500;
             background-color: white;
+            position: fixed !important;
+            height: 100vh;
         }
 
         .subItem {
             padding: 30px;
         }
 
-        .arrow {
-            display: none;
+        .arrow,
+        .buttonClose-compact {
+            display: none !important;
         }
 
         .buttonClose {
+            display: block !important;
             top: 30px !important;
             right: 30px !important;
         }
