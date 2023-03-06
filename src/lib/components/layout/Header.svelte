@@ -37,8 +37,12 @@
     @import "$lib/css/breakpoints.css";
 
     .HEADER {
-        /* transform: translateZ(0); */
-        /* z-index: 1000; */
+        isolation: isolate;
+    }
+
+    .HEADER > :global(.MAIN-NAVIGATION),
+    .HEADER > :global(.MAIN-NAVIGATION-COMPACT) {
+        z-index: var(--zPos-midFront);
     }
 
     .HEADER.HEADER > :global(.MAIN-NAVIGATION-COMPACT) {
