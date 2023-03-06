@@ -130,6 +130,9 @@
         width: 100%;
         height: 100%;
         position: relative;
+        isolation: isolate;
+        z-index: 0;
+        transform: translate3d(0);
     }
 
     .pushHeight {

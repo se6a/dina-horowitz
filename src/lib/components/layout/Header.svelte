@@ -37,7 +37,7 @@
     @import "$lib/css/breakpoints.css";
 
     .HEADER {
-        transform: translateZ(0);
+        /* transform: translateZ(0); */
     }
 
     .HEADER.HEADER > :global(.MAIN-NAVIGATION-COMPACT) {
