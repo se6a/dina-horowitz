@@ -1,12 +1,11 @@
 <script>
     import Header from "$lib/components/layout/Header.svelte";
     import Footer from "$lib/components/layout/Footer.svelte";
-    import NavigationPage from "$lib/components/layout/NavigationPage.svelte";
+    import SectionNavigation from "$lib/components/layout/SectionNavigation.svelte";
     import Main from "$lib/components/layout/Main.svelte";
     import Title from "$lib/components/layout/Title.svelte";
     import TitleGroup from "$lib/components/elements/TitleGroup.svelte";
     import MainSection from "$lib/components/layout/Section.svelte";
-    import Button from "$lib/components/elements/Button.svelte";
     import {capitalize, slugify} from "$lib/functions/utility";
     import {pageData as _pageData} from "$lib/store";
 
@@ -14,7 +13,6 @@
 
     export let color = "";
     export let hasGoTopButton = true;
-    export let hasContactButton = true;
     export let usePageTitle = true;
 
     const pageData = data?.pageData || {};
@@ -29,7 +27,7 @@
 </script>
 
 <div
-    class="PAGE is{capitalize(color)} useTexture"
+    class="PAGE is{capitalize(color)}"
     style:--colorPage={color ? `var(--${color})` : "silver"}
     style:--colorPage-light={color ? `var(--${color}-light)` : "gainsboro"}
     style:--colorPage-highlight={color ? `var(--${color}-highlight)` : "gainsboro"}
@@ -44,7 +42,7 @@
 
     <Main>
         {#if sections.filter((s) => s.title || s.navigationName).length}
-            <NavigationPage {sections} />
+            <SectionNavigation {sections} />
         {/if}
         <slot />
 
@@ -55,13 +53,6 @@
         {/if}
     </Main>
 
-    {#if hasContactButton}
-        <div class="fixedButton">
-            <Button href="/kontakt" isVertical={true} ariaLabel="Gehe zur Kontaktseite"
-                >Kontakt</Button
-            >
-        </div>
-    {/if}
     <Footer {hasGoTopButton} />
 </div>
 
@@ -89,16 +80,6 @@
         z-index: var(--zPos-middle);
     }
 
-    .fixedButton {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        align-items: center;
-        --button-background: hsla(0, 0%, 100%, 0.8);
-        z-index: var(--zPos-front);
-    }
-
     /* INTERNET EXPLORER
 ###############################################################################
 #############################################################################*/
@@ -108,18 +89,6 @@
             display: block;
             padding: 0 100px;
             max-width: 1000px;
-        }
-
-        .fixedButton {
-            left: -24px;
-            right: auto;
-            top: 0;
-            transform: rotate(-90deg);
-            pointer-events: none;
-        }
-
-        .fixedButton :global(*) {
-            pointer-events: all;
         }
     }
 

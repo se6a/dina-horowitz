@@ -1,8 +1,8 @@
-import sanityClient from "@sanity/client";
+import createClient from "@sanity/client";
 import {SECRET_DATASET, SECRET_PROJECT_ID} from "$env/static/private";
-import {mainNavigation, site, post, page} from "./queries";
+import {site, page} from "./queries";
 
-export const sanity = sanityClient({
+export const sanity = createClient({
     projectId: SECRET_PROJECT_ID,
     dataset: SECRET_DATASET,
     apiVersion: "2021-10-21",

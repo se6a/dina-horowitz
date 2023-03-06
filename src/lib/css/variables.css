@@ -3,205 +3,205 @@
 /*  SPACE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-  --space: var(--font-size-m);
-  --space-quarter: calc(var(--space) * 0.25);
-  --space-third: calc(var(--space) * 0.33);
-  --space-half: calc(var(--space) * 0.5);
-  --space-1: calc(var(--space) * 1);
-  --space-2: calc(var(--space) * 2);
-  --space-3: calc(var(--space) * 3);
-  --space-4: calc(var(--space) * 4);
+    --space: var(--font-size-m);
+    --space-quarter: calc(var(--space) * 0.25);
+    --space-third: calc(var(--space) * 0.33);
+    --space-half: calc(var(--space) * 0.5);
+    --space-1: calc(var(--space) * 1);
+    --space-2: calc(var(--space) * 2);
+    --space-3: calc(var(--space) * 3);
+    --space-4: calc(var(--space) * 4);
 
-  --space-xs: 4rem;
-  --space-s: 5rem;
-  --space-m: 7.5rem;
-  --space-l: 8rem;
-  --space-xl: 10rem;
+    --space-xs: 4rem;
+    --space-s: 5rem;
+    --space-m: 7.5rem;
+    --space-l: 8rem;
+    --space-xl: 10rem;
 }
 
 @media (--vw-m) {
-  :root {
-    --space-xs: 3rem;
-    --space-s: 4rem;
-    --space-m: 5rem;
-  }
+    :root {
+        --space-xs: 3rem;
+        --space-s: 4rem;
+        --space-m: 5rem;
+    }
 }
 
 @media (--vw-s) {
-  :root {
-    --space-xs: 2rem;
-    --space-s: 3rem;
-    --space-m: 4rem;
-    --space-l: 5rem;
-    --space-xl: 8rem;
-  }
+    :root {
+        --space-xs: 2rem;
+        --space-s: 3rem;
+        --space-m: 4rem;
+        --space-l: 5rem;
+        --space-xl: 8rem;
+    }
 }
 
 /* Z-INDEX
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-  --zPos-front: 100;
-  --zPos-midFront: 75;
-  --zPos-center: 50;
-  --zPos-midBack: 25;
-  --zPos-back: 0;
-  --zPos-negative: -1;
+    --zPos-front: 100;
+    --zPos-midFront: 75;
+    --zPos-center: 50;
+    --zPos-midBack: 25;
+    --zPos-back: 0;
+    --zPos-negative: -1;
 }
 
 /*  FONT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-  --font-size-xs: 1.4rem;
-  --font-size-s: 2rem;
-  --font-size-m: 2.6rem;
-  --font-size-l: 3rem;
-  --font-size-xl: 5rem;
-  --font-size-xxl: 10rem;
+    --font-size-xs: 1.4rem;
+    --font-size-s: 2rem;
+    --font-size-m: 2.6rem;
+    --font-size-l: 3rem;
+    --font-size-xl: 5rem;
+    --font-size-xxl: 10rem;
 }
 
 @media (--vw-m) {
-  :root {
-    --font-size-xxl: 7rem;
-  }
+    :root {
+        --font-size-xxl: 7rem;
+    }
 }
 
 @media (--vw-s) {
-  :root {
-    --font-size-m: 2rem;
-    --font-size-l: 2rem;
-    --font-size-xl: 2.8rem;
-    --font-size-xxl: 3.8rem;
-  }
+    :root {
+        --font-size-m: 2rem;
+        --font-size-l: 2rem;
+        --font-size-xl: 2.8rem;
+        --font-size-xxl: 3.8rem;
+    }
 }
 
 /*  PAGE
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-  --page-width: 100%;
-  --page-maxWidth: 1440px;
+    --page-width: 100%;
+    --page-maxWidth: 1440px;
 
-  --page-padding-x: 7.5rem;
+    --page-padding-x: 7.5rem;
 
-  --header-height: 8rem;
+    --header-height: 8rem;
 
-  --main-minHeight: calc(100vh - var(--footer-height) - var(--header-height));
+    --main-minHeight: calc(100vh - var(--footer-height) - var(--header-height));
 
-  --footer-height: auto;
+    --footer-height: auto;
 }
 
 @media (--vw-m) {
-  :root {
-    --page-padding-x: 4rem;
-    --header-height: 6rem;
-  }
+    :root {
+        --page-padding-x: 4rem;
+        --header-height: 6rem;
+    }
 }
 
 @media (--vw-s) {
-  :root {
-    --page-padding-x: 2rem;
-    --header-height: 5rem;
-  }
+    :root {
+        --page-padding-x: 2rem;
+        --header-height: 5rem;
+    }
 }
 
 /*  LAYOUT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-  --layoutSection-padding-t: 10rem;
-  --layoutSection-padding-b: 10rem;
-  --layoutSection-spacing-y: 10rem;
+    --layoutSection-padding-t: 10rem;
+    --layoutSection-padding-b: 10rem;
+    --layoutSection-spacing-y: 10rem;
 
-  --layoutTitle-padding-t: 10rem;
-  --layoutTitle-padding-b: 8rem;
+    --layoutTitle-padding-t: 10rem;
+    --layoutTitle-padding-b: 8rem;
 
-  --layout-inset-l: 10rem;
+    --layout-inset-l: 10rem;
 }
 
 @media (--vw-m) {
-  :root {
-    --layoutSection-padding-t: 8rem;
-    --layoutSection-padding-b: 8rem;
-    --layoutSection-spacing-y: 8rem;
+    :root {
+        --layoutSection-padding-t: 8rem;
+        --layoutSection-padding-b: 8rem;
+        --layoutSection-spacing-y: 8rem;
 
-    --layout-inset-l: 0rem;
-  }
+        --layout-inset-l: 0rem;
+    }
 }
 
 @media (--vw-s) {
-  :root {
-    --layoutSection-padding-b: 4rem;
-    --layoutSection-spacing-y: 4rem;
-    --layoutSection-spacing-x: 3rem;
+    :root {
+        --layoutSection-padding-b: 4rem;
+        --layoutSection-spacing-y: 4rem;
+        --layoutSection-spacing-x: 3rem;
 
-    --layoutTitle-padding-t: 4rem;
-    --layoutTitle-padding-b: 3rem;
-  }
+        --layoutTitle-padding-t: 4rem;
+        --layoutTitle-padding-b: 3rem;
+    }
 }
 
 /*  ELEMENTS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-  --box-padding: 3rem;
+    --box-padding: 3rem;
 }
 
 /*  COLUMNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-  --useColumns: 8;
-  --subColumns-m: 4;
-  --subColumns-s: 3;
-  --useColumns-gap-x: 6rem;
-  --useColumns-gap-y: 6rem;
-  --useColumns-layout-std: 3 / span 4;
+    --useColumns: 8;
+    --subColumns-m: 4;
+    --subColumns-s: 3;
+    --useColumns-gap-x: 6rem;
+    --useColumns-gap-y: 6rem;
+    --useColumns-layout-std: 3 / span 4;
 }
 
 /*  TYPO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 :root {
-  --layoutNav-font-size: 2.6rem;
-  /* --layoutNavSub-font-size: 4.2rem; */
-  --layoutNavSub-font-size: var(--font-size-xl);
+    --layoutNav-font-size: 2.6rem;
+    /* --layoutNavSub-font-size: 4.2rem; */
+    --layoutNavSub-font-size: var(--font-size-xl);
 }
 
 @media (--vw-s) {
-  :root {
-    --layoutNav-font-size: 1.8rem;
-  }
+    :root {
+        --layoutNav-font-size: 1.8rem;
+    }
 }
 
 /*  COLORS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-  --hsl-black: 0, 0%, 22%;
-  --hsl-blue: 189, 59%, 65%;
-  --hsl-green: 67, 57%, 47%;
-  --hsl-red: 8, 100%, 77%;
-  --hsl-yellow: 51, 100%, 68%;
+    --hsl-black: 0, 0%, 22%;
+    --hsl-blue: 189, 59%, 65%;
+    --hsl-green: 67, 57%, 47%;
+    --hsl-red: 8, 100%, 77%;
+    --hsl-yellow: 51, 100%, 68%;
 
-  --black: hsl(var(--hsl-black));
-  --blue: hsl(var(--hsl-blue));
-  --red: hsl(var(--hsl-red));
-  --green: hsl(var(--hsl-green));
-  --yellow: hsl(var(--hsl-yellow));
+    --black: hsl(var(--hsl-black));
+    --blue: hsl(var(--hsl-blue));
+    --red: hsl(var(--hsl-red));
+    --green: hsl(var(--hsl-green));
+    --yellow: hsl(var(--hsl-yellow));
 
-  --blue-light: hsla(var(--hsl-blue), 0.1);
-  --red-light: hsla(var(--hsl-red), 0.1);
-  --green-light: hsla(var(--hsl-green), 0.1);
-  --yellow-light: hsla(var(--hsl-yellow), 0.1);
+    --blue-light: hsla(var(--hsl-blue), 0.1);
+    --red-light: hsla(var(--hsl-red), 0.1);
+    --green-light: hsla(var(--hsl-green), 0.1);
+    --yellow-light: hsla(var(--hsl-yellow), 0.1);
 
-  --blue-highlight: hsl(189, 59%, 80%);
-  --yellow-highlight: hsl(51, 100%, 68%);
-  --red-highlight: hsl(8, 100%, 86%);
-  --green-highlight: hsl(67, 57%, 64%);
+    --blue-highlight: hsl(189, 59%, 80%);
+    --yellow-highlight: hsl(51, 100%, 68%);
+    --red-highlight: hsl(8, 100%, 86%);
+    --green-highlight: hsl(67, 57%, 64%);
 }
 
 /*  TIME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
-  --duration-slow: 600ms;
-  --duration-middle: 300ms;
-  --duration-fast: 100ms;
+    --duration-slow: 600ms;
+    --duration-middle: 300ms;
+    --duration-fast: 100ms;
 }

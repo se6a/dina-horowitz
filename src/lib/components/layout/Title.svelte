@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<div class="LAYOUT-TITLE layout useBackground-fullwidth useTexture-fullwidth">
+<div class="LAYOUT-TITLE layout useBackground-fullwidth">
     <slot />
 </div>
 

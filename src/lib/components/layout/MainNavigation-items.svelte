@@ -4,99 +4,68 @@
     import IconArrow from "$lib/components/icons/ArrowBig.svelte";
     import {capitalize, createId} from "$lib/functions/utility";
     import HoverArrow from "../elements/HoverArrow.svelte";
-    import {siteData} from "$lib/store";
     import TitleGroup from "../elements/TitleGroup.svelte";
 
-    $: angebote = $siteData?.siteNavigation || [];
-
-    $: items = [
-        {title: "Dina Horowitz", href: "/"},
-
-        {
-            title: "Angebot",
-            subItems:
-                angebote?.map(({title, id}) => {
-                    return {
-                        title: title,
-                        href: `/angebot/${id}`,
-                        color: id === "alle" ? "green" : id === "fachpersonen" ? "red" : "blue"
-                    };
-                }) || []
-        },
-
-        {title: "Über mich", href: "/uebermich"}
-    ];
+    export let items = [];
 
     let isOpen = false;
 </script>
 
-<nav class="NAVIGATION">
-    <ul class="items">
-        {#each items as item}
-            <li class="item">
-                {#if "subItems" in item}
-                    {@const id = createId()}
-                    <label for={id}>
-                        <HoverArrow>
-                            {item.title}
-                        </HoverArrow>
-                    </label>
-                    <input
-                        class="toggle toggleSubNav"
-                        type="checkbox"
-                        bind:checked={isOpen}
-                        name=""
-                        {id}
-                    />
+<ul class="MAIN-NAVIGATION-ITEMS items">
+    {#each items as item}
+        <li class="item">
+            {#if "subItems" in item}
+                {@const id = createId()}
+                <label for={id}>
+                    <HoverArrow>
+                        {item.title}
+                    </HoverArrow>
+                </label>
+                <input
+                    class="toggle toggleSubNav"
+                    type="checkbox"
+                    bind:checked={isOpen}
+                    name=""
+                    {id}
+                />
 
-                    <div class="subNav">
-                        <ul class="subItems">
-                            {#each item.subItems as { title, color, href }}
-                                <a
-                                    class="subItem is{capitalize(color)} useBackground useTexture"
-                                    style:--colorItem="var(--{color})"
-                                    {href}
-                                    on:click={() => (isOpen = false)}
-                                >
-                                    <div class="subItemInner">
-                                        <div class="arrow">
-                                            <IconArrow />
-                                        </div>
-
-                                        <div class="text">
-                                            <TitleGroup h={2} {title} />
-                                        </div>
-                                        <!-- <h2 class="titleGroup">
-                                            <span>{title}</span>
-                                            <span>{text}</span>
-                                        </h2> -->
+                <div class="subNav">
+                    <ul class="subItems">
+                        {#each item.subItems as { title, color, href }}
+                            <a
+                                class="subItem is{capitalize(color)} useBackground"
+                                style:--colorItem="var(--{color})"
+                                {href}
+                                on:click={() => (isOpen = false)}
+                            >
+                                <div class="subItemInner">
+                                    <div class="arrow">
+                                        <IconArrow />
                                     </div>
-                                </a>
-                            {/each}
-                        </ul>
-                        <label class="buttonClose" for={id}>
-                            <IconClose />
-                        </label>
-                    </div>
-                {:else}
-                    <Link data={item} />
-                {/if}
-            </li>
-        {/each}
-    </ul>
 
-    <div class="angebote" />
-</nav>
+                                    <div class="text">
+                                        <TitleGroup h={2} {title} />
+                                    </div>
+                                </div>
+                            </a>
+                        {/each}
+                    </ul>
+
+                    <label class="buttonClose" for={id}>
+                        <IconClose />
+                    </label>
+
+                    <label class="buttonClose-compact" for={id}><IconArrow /></label>
+                </div>
+            {:else}
+                <Link data={item} />
+            {/if}
+        </li>
+    {/each}
+</ul>
 
 <style lang="postcss">
     @import "$lib/css/breakpoints.css";
-
-    .NAVIGATION {
-        position: relative;
-        height: var(--header-height);
-        z-index: 100;
-    }
-
     /* Items
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -231,6 +200,51 @@
         transform: translateX(calc(-100% + 3rem));
         pointer-events: all;
         opacity: 1;
+    }
+
+    /* COMPACT VERSION
+###############################################################################
+#############################################################################*/
+
+    .buttonClose-compact {
+        display: none;
+    }
+
+    @media (--vw-m) {
+        .MAIN-NAVIGATION-ITEMS {
+            height: 30vh;
+            margin-top: 15vh;
+            flex-direction: column;
+        }
+
+        .item {
+            font-size: var(--font-size-xl);
+        }
+
+        .buttonClose {
+            display: none;
+        }
+
+        .buttonClose-compact {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: var(--page-padding-x);
+            width: 4rem;
+            height: 4rem;
+            transform: translateY(-100px) rotate(-90deg);
+            transition: transform var(--duration-middle);
+            --icon-color: var(--black);
+            --icon-strokeWidth: 0.25px;
+        }
+
+        .subNav {
+            position: absolute;
+        }
+
+        .toggleSubNav:checked + .subNav > .buttonClose-compact {
+            transform: translateY(0) rotate(-90deg);
+        }
     }
 
     /* INTERNET EXPLORER

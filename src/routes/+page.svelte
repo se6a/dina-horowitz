@@ -21,7 +21,7 @@
 </script>
 
 <Page data={{pageData}} {color} usePageTitle={false}>
-    <div class="useGrid useTexture-fullwidth">
+    <div class="useGrid">
         {#if !isIE}
             <div class="cell" style:--colorCell="var(--blue)">
                 <WordDisplay content={display} />

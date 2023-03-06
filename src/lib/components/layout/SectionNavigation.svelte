@@ -4,7 +4,7 @@
     export let sections = {};
 </script>
 
-<nav class="PAGE-NAVIGATION anchors useBackground-fullwidth useTexture-fullwidth">
+<nav class="SECTION-NAVIGATION anchors useBackground-fullwidth">
     <ScrollDragX>
         {#each sections as { title = "", navigationName = "", slug = "" }}
             {#if slug && title}
@@ -17,7 +17,7 @@
 <style lang="postcss">
     @import "$lib/css/breakpoints.css";
 
-    .PAGE-NAVIGATION {
+    .SECTION-NAVIGATION {
         font-size: var(--font-size-m);
         height: var(--header-height);
         background-color: var(--color);
@@ -32,7 +32,7 @@
         z-index: var(--zPos-front);
     }
 
-    .PAGE-NAVIGATION > * {
+    .SECTION-NAVIGATION > * {
         flex-shrink: 0;
     }
 
@@ -61,7 +61,7 @@
 #############################################################################*/
 
     :global(.isIE) {
-        .PAGE-NAVIGATION {
+        .SECTION-NAVIGATION {
             display: block;
             padding: 0 30px 30px;
         }

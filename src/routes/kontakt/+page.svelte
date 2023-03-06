@@ -9,7 +9,7 @@
     const address = (pageData?.address || "").split("\n").map((s) => s.split(" "));
 </script>
 
-<Page hasGoTopButton={false} hasContactButton={false} usePageTitle={false}>
+<Page hasGoTopButton={false} usePageTitle={false}>
     <div class="space-4" />
 
     <div class="address useColumns">
