@@ -61,7 +61,7 @@
         padding-right: 0;
     }
 
-    /* .cell::after {
+    .cell::after {
         content: "";
         position: absolute;
         z-index: -1;
@@ -80,19 +80,19 @@
 
     .cell:nth-child(even)::after {
         left: 0;
-    } */
+    }
 
     @media (--vw-m) {
         .cell {
             padding: var(--space-2) 0;
         }
 
-        /* .cell:nth-child(odd)::after,
+        .cell:nth-child(odd)::after,
         .cell:nth-child(even)::after {
             width: 100vw;
             margin-left: 50%;
             left: -50vw;
-        } */
+        }
     }
 
     /* INTERNET EXPLORER
