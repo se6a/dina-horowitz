@@ -49,6 +49,7 @@
         padding: 0 var(--page-padding-x);
         display: flex;
         justify-content: space-between;
+        z-index: 9999;
         align-items: center;
         isolation: isolate;
     }
