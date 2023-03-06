@@ -76,13 +76,13 @@
         z-index: var(--zPos-midFront);
     }
 
-    .PAGE > :global(.MAIN) {
+    /* .PAGE > :global(.MAIN) {
         z-index: var(--zPos-center);
     }
 
     .PAGE > :global(.FOOTER) {
         z-index: var(--zPos-midBack);
-    }
+    } */
 
     /* INTERNET EXPLORER
 ###############################################################################
