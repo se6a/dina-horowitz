@@ -36,6 +36,10 @@
 <style global lang="postcss">
     @import "$lib/css/breakpoints.css";
 
+    .HEADER {
+        transform: translateZ(0);
+    }
+
     .HEADER.HEADER > :global(.MAIN-NAVIGATION-COMPACT) {
         display: none;
     }
