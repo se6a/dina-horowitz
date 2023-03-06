@@ -126,12 +126,11 @@
         --box-width: calc(var(--display-width) / var(--cols) - var(--box-gap));
         --box-height: calc(var(--box-width) * 1.5);
         --letter-size: calc(var(--box-height) * 0.8);
-        --perspective: perspective(100em);
         width: 100%;
         height: 100%;
         position: relative;
         isolation: isolate;
-        z-index: 0;
+        z-index: -1;
         transform: translate3d(0);
     }
 
