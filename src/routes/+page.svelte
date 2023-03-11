@@ -29,7 +29,7 @@
     @import "$lib/css/breakpoints.css";
 
     .test {
-        position: absolute;
+        position: fixed;
         height: 50vh;
         width: 100%;
         top: 0;
