@@ -34,7 +34,7 @@
     }
 
     main {
-        transform: translateZ(0);
+        /* transform: translateZ(0); */
     }
 
     .test {
