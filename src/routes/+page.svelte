@@ -34,12 +34,12 @@
     }
 
     main {
-        /* z-index: 10; */
+        z-index: 10;
         /* transform: translateZ(0); */
     }
 
     .test {
-        /* z-index: 100; */
+        z-index: 100;
         transform: translateZ(0);
     }
 
