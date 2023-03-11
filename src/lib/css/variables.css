@@ -92,14 +92,13 @@
 @media (--vw-m) {
     :root {
         --page-padding-x: 4rem;
-        --header-height: 6rem;
     }
 }
 
 @media (--vw-s) {
     :root {
         --page-padding-x: 2rem;
-        --header-height: 5rem;
+        --header-height: 7.5rem;
     }
 }
 
