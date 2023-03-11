@@ -40,7 +40,7 @@
 
     .test {
         z-index: 100;
-        transform: translateZ(0);
+        /* transform: translateZ(0); */
     }
 
     .test {
