@@ -82,7 +82,7 @@
 /* Border
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/* .useBorder {
+.useBorder {
     position: relative;
 }
 
@@ -96,12 +96,12 @@
     left: 0;
     border: 1px solid hsla(0, 0%, 50%, 0.2);
     pointer-events: none;
-} */
+}
 
 /* Background
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/* .useBackground-fullwidth {
+.useBackground-fullwidth {
     position: relative;
 }
 
@@ -124,7 +124,7 @@
 
 .useBackground-light {
     background-color: var(--colorPage-light, gainsboro);
-} */
+}
 
 /* Texture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

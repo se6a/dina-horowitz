@@ -20,9 +20,30 @@
     };
 </script>
 
-<main>
-    <WordDisplay content={display} />
-</main>
+<Page data={{pageData}} {color} usePageTitle={false}>
+    <div class="useGrid">
+        {#if !isIE}
+            <div class="cell" style:--colorCell="var(--blue)">
+                <WordDisplay content={display} />
+            </div>
+        {/if}
+
+        {#each siteNavigation as angebot}
+            {@const color = colors[angebot.id]}
+            <div class="isBlue cell useBackground-fullwidth" style:--colorCell="var(--{color})">
+                <Card href="/angebot/{angebot.id}">
+                    <svelte:fragment slot="title">
+                        <TitleGroup h={2} title={angebot.title} />
+                    </svelte:fragment>
+
+                    <p slot="content">
+                        {angebot.metaDescription}
+                    </p>
+                </Card>
+            </div>
+        {/each}
+    </div>
+</Page>
 
 <style lang="postcss">
     @import "$lib/css/breakpoints.css";
