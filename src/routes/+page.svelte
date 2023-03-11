@@ -45,7 +45,7 @@
 
     .test {
         position: fixed;
-        height: 50vh;
+        height: 20vh;
         width: 100%;
         top: 0;
         background-color: antiquewhite;
