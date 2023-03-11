@@ -35,10 +35,12 @@
 
     main {
         z-index: 10;
+        transform: translateZ(0);
     }
 
     .test {
         z-index: 100;
+        transform: translateZ(0);
     }
 
     .test {
