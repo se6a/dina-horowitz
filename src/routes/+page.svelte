@@ -28,6 +28,11 @@
 <style lang="postcss">
     @import "$lib/css/breakpoints.css";
 
+    main,
+    .test {
+        isolation: isolate;
+    }
+
     .test {
         position: fixed;
         height: 50vh;
