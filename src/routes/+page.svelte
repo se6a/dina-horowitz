@@ -33,7 +33,7 @@
         height: 50vh;
         width: 100%;
         top: 0;
-        /* background-color: antiquewhite; */
+        background-color: antiquewhite;
     }
     .cell {
         position: relative;
