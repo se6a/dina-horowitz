@@ -45,8 +45,18 @@
     </div>
 </Page>
 
+<div class="test" />
+
 <style lang="postcss">
     @import "$lib/css/breakpoints.css";
+
+    .test {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        background-color: aqua;
+        top: 0;
+    }
 
     .cell {
         position: relative;
