@@ -76,8 +76,7 @@
 
     .content {
         position: absolute;
-        background-color: red;
-        z-index: 9999;
+        background-color: white;
         top: var(--header-height);
         left: 0;
         right: 0;
