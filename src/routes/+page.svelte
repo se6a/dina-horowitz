@@ -23,10 +23,18 @@
 <main>
     <WordDisplay content={display} />
 </main>
+<div class="test" />
 
 <style lang="postcss">
     @import "$lib/css/breakpoints.css";
 
+    .test {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        background-color: antiquewhite;
+    }
     .cell {
         position: relative;
         display: flex;

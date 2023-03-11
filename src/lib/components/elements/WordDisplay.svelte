@@ -131,9 +131,9 @@
         position: relative;
     }
 
-    .pushHeight {
+    /* .pushHeight {
         margin-bottom: 40%;
-    }
+    } */
 
     .display {
         position: absolute;
