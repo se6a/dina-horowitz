@@ -40,7 +40,7 @@
     }
 
     .MAIN-NAVIGATION-COMPACT {
-        position: absolute;
+        position: fixed;
         height: var(--header-height);
         width: 100%;
         left: 0;
