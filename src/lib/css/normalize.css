@@ -13,9 +13,9 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-body > * {
+/* body > * {
     isolation: isolate;
-}
+} */
 
 * {
     box-sizing: border-box;
