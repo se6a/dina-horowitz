@@ -164,7 +164,7 @@
         bottom: -1px;
         left: -1px;
         margin: em;
-        position: absolute;
+        /* position: absolute; */
         font-size: var(--letter-size);
         font-weight: 600;
         display: flex;
