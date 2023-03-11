@@ -33,6 +33,14 @@
         isolation: isolate;
     }
 
+    main {
+        z-index: 10;
+    }
+
+    .test {
+        z-index: 100;
+    }
+
     .test {
         position: fixed;
         height: 50vh;
