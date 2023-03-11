@@ -35,7 +35,7 @@
 
     main {
         z-index: 10;
-        /* transform: translateZ(0); */
+        transform: translateZ(0);
     }
 
     .test {
