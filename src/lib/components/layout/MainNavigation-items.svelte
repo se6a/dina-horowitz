@@ -228,11 +228,11 @@
         .buttonClose-compact {
             display: block;
             position: absolute;
-            top: 1rem;
+            top: 3rem;
             right: var(--page-padding-x);
             width: 4rem;
             height: 4rem;
-            transform: translateY(-100px) rotate(-90deg);
+            transform: translateX(-100vw) rotate(-180deg);
             transition: transform var(--duration-middle);
             --icon-color: var(--black);
             --icon-strokeWidth: 0.25px;
@@ -243,7 +243,13 @@
         }
 
         .toggleSubNav:checked + .subNav > .buttonClose-compact {
-            transform: translateY(0) rotate(-90deg);
+            transform: translateX(0) rotate(-180deg);
+        }
+
+        .subItems {
+            display: flex;
+            transform: translateX(-100%);
+            transition: transform var(--duration-middle);
         }
     }
 

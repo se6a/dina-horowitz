@@ -41,6 +41,7 @@
 
     .MAIN-NAVIGATION-COMPACT {
         position: fixed;
+        font-size: var(--layoutNav-font-size);
         height: var(--header-height);
         width: 100%;
         left: 0;
