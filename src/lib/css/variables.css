@@ -106,13 +106,17 @@
 }
 
 @media (--vw-m) {
-    :root {
+    :root,
+    :before,
+    :after {
         --page-padding-x: 4rem;
     }
 }
 
 @media (--vw-s) {
-    :root {
+    :root,
+    :before,
+    :after {
         --page-padding-x: 2rem;
         --header-height: 7.5rem;
     }
@@ -121,7 +125,9 @@
 /*  LAYOUT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
     --layoutSection-padding-t: 10rem;
     --layoutSection-padding-b: 10rem;
     --layoutSection-spacing-y: 10rem;
@@ -133,7 +139,9 @@
 }
 
 @media (--vw-m) {
-    :root {
+    :root,
+    :before,
+    :after {
         --layoutSection-padding-t: 8rem;
         --layoutSection-padding-b: 8rem;
         --layoutSection-spacing-y: 8rem;
@@ -143,7 +151,9 @@
 }
 
 @media (--vw-s) {
-    :root {
+    :root,
+    :before,
+    :after {
         --layoutSection-padding-b: 4rem;
         --layoutSection-spacing-y: 4rem;
         --layoutSection-spacing-x: 3rem;
@@ -156,14 +166,18 @@
 /*  ELEMENTS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
     --box-padding: 3rem;
 }
 
 /*  COLUMNS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
     --useColumns: 8;
     --subColumns-m: 4;
     --subColumns-s: 3;
@@ -175,20 +189,26 @@
 /*  TYPO
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-:root {
+:root,
+:before,
+:after {
     --layoutNav-font-size: 2.6rem;
     --layoutNavSub-font-size: var(--font-size-xl);
 }
 
 @media (--vw-s) {
-    :root {
-        --layoutNav-font-size: 1.8rem;
+    :root,
+    :before,
+    :after {
+        --layoutNav-font-size: var(--font-size-xl);
     }
 }
 
 /*  COLORS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
     --hsl-black: 0, 0%, 22%;
     --hsl-blue: 189, 59%, 65%;
     --hsl-green: 67, 57%, 47%;
@@ -214,7 +234,9 @@
 
 /*  TIME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+:root,
+:before,
+:after {
     --duration-slow: 600ms;
     --duration-middle: 300ms;
     --duration-fast: 100ms;
