@@ -79,7 +79,9 @@
         top: var(--header-height);
         left: 0;
         right: 0;
+        bottom: 0;
         height: calc(100vh - var(--header-height));
+        height: calc(100dvh - var(--header-height));
         display: none;
         justify-content: center;
     }
